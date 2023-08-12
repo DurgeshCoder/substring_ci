@@ -18,8 +18,8 @@
         <div class="hidden md:flex space-x-4" id="desktopMenu">
             <a href="<?= base_url('/') ?>" class="text-white hover:text-blue-200">Home</a>
             <a href="<?= base_url('/about') ?>" class="text-white hover:text-blue-200">About</a>
-            <a href="#" class="text-white hover:text-blue-200">Services</a>
-            <a href="#" class="text-white hover:text-blue-200">Contact</a>
+            <a href="<?= base_url('/services') ?>" class="text-white hover:text-blue-200">Services</a>
+            <a href="<?= base_url('/contact-us') ?>" class="text-white hover:text-blue-200">Contact</a>
         </div>
     </div>
 

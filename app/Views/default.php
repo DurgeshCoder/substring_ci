@@ -12,6 +12,7 @@
 <body>
 
 <?= $this->include('menubar'); ?>
+<!--content data is inserted here-->
 <?= $this->renderSection("content") ?>
 <script src="<?= base_url('/static/js/main.js') ?>">
 </script>
