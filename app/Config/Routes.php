@@ -31,6 +31,9 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'PageController::index');
 $routes->get("/about", "PageController::about");
+$routes->get("/services", "PageController::services");
+$routes->get("/contact-us", "PageController::contact");
+$routes->get("test_view", "PageController::testing");
 
 /*
  * --------------------------------------------------------------------
