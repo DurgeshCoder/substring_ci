@@ -11,11 +11,6 @@ Contact US | Substring Technologies
 <?= $this->section('content') ?>
 
 
-<?= $this->include("page_section/hero_section"); ?>
-<?= $this->include("page_section/about_section"); ?>
-<?= $this->include("page_section/values_section"); ?>
-<?= $this->include("page_section/counts_section"); ?>
-<?= $this->include("page_section/features_section"); ?>
 
 
 

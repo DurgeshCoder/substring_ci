@@ -21,8 +21,7 @@
 <!--content data is inserted here-->
 <?= $this->renderSection("content") ?>
 
-<!--Footer-->
-<?= $this->include('footer'); ?>
+
 <!-- Vendor JS Files -->
     <script src="<?= base_url('/static/vendor/purecounter/purecounter_vanilla.js') ?>"></script>
         <script src="<?= base_url('/static/vendor/aos/aos.js') ?>"></script>

@@ -1,22 +1,8 @@
-<?= $this->extend('default') ?>
-
-
-<!--pageTitle section start-->
-
-<?= $this->section('pageTitle') ?>
-Services | Substring Technologies
-<?= $this->endSection() ?>
-<!--pageTitle section end-->
-
-<?= $this->section('content') ?>
-
-
-
-<section id="hero" class="hero flex items-center py-15 overflow-hidden w-full h-screen bg-cover bg-center bg-no-repeat bg-hero-image">
-
-    <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class=" flex flex-col justify-center">
+<!--Hero section-->
+<section class="hero" id="hero">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:px-24 md:py-40">
+            <div class=" ">
                 <h1 class="" data-aos="fade-up">We offer modern solutions for growing your business</h1>
                 <h2 class="" data-aos-delay="400">We are team of talented designers making websites with Tailwind CSS</h2>
                 <div class=" md:text-left" data-aos-delay="600">
@@ -26,15 +12,11 @@ Services | Substring Technologies
                         <i class="bi bi-arrow-right ml-2  text-base "></i>
                     </a>
                 </div>
-            </div>
-            <div class="hero-img " data-aos="zoom-out" data-aos-delay="200">
+
+        </div>
+            <div class="md:px-16 ">
                 <img src="static/img/hero-img.png" class="" alt="">
             </div>
-        </div>
     </div>
-
-</section><!-- End Hero -->
-
-
-<?= $this->endSection() ?>
-
+</section>
+<!--End Hero Section-->

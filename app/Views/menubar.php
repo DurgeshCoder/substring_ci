@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="bg-white p-4 fixed-top">
+<nav class="bg-white p-4 fixed-top ">
     <div class="container mx-auto flex items-center justify-between">
         <!-- Logo -->
         <a href="<?= base_url('/') ?>" class="text-blue-900 font-bold text-xl md:text-xl xl:text-2xl">Substring Technologies</a>
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Mobile Menu (Hidden on larger screens) -->
-    <div class="sm:hidden bg-white shadow-lg rounded-4 mt-6 hidden text-center p-2 min-vh-75 " id="mobileMenu">
+    <div class="md:hidden bg-white shadow-lg rounded-4 mt-6 hidden text-center p-2 min-vh-75 " id="mobileMenu">
         <div class="w-50 bg-white shadow-lg rounded-2 mt-6 text-center mx-auto">
             <a href="#" class="block text-blue-900 py-2">Home</a>
         </div>
