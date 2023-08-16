@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 
-use App\Models\Emp;
+use App\Models\User;
 
 class PageController extends BaseController
 {
@@ -18,10 +18,10 @@ class PageController extends BaseController
     {
         $data = ["friends" => [
 
-            new Emp(12, "Gautam", "215235", "Lucknow"),
-            new Emp(13, "Ankit", "215235", "Lucknow"),
-            new Emp(14, "Uttam", "215235", "Lucknow"),
-            new Emp(15, "Durgesh", "215235", "Lucknow"),
+            new User(12, "Gautam", "215235", "Lucknow"),
+            new User(13, "Ankit", "215235", "Lucknow"),
+            new User(14, "Uttam", "215235", "Lucknow"),
+            new User(15, "Durgesh", "215235", "Lucknow"),
 
         ]];
         return view("about_view", $data);

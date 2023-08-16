@@ -33,6 +33,7 @@ $routes->get('/', 'PageController::index');
 $routes->get("/about", "PageController::about");
 $routes->get("/services", "PageController::services");
 $routes->get("/contact-us", "PageController::contact");
+$routes->get("/users", "UserController");
 
 /*
  * --------------------------------------------------------------------
