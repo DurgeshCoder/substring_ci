@@ -3,6 +3,8 @@
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
+use App\Controllers\TrainingCourses;
+
 $routes = Services::routes();
 
 /*
@@ -35,6 +37,7 @@ $routes->get("/services", "PageController::services");
 $routes->get("/contact-us", "PageController::contact");
 $routes->get("/users", "UserController");
 
+$routes->resource('trainingCourses');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

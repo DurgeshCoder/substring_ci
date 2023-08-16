@@ -38,3 +38,5 @@ php spark  migrate:create <updatename>
 
 Create you change in up method
 then run the migration
+
+
