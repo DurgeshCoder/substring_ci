@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?= $this->renderSection('pageTitle') ?></title>
     <?= link_tag('static/css/custom_style.css') ?>
-    <?= link_tag('static/vendor/bootstrap/css/bootstrap.min.css') ?>
+
     <?= link_tag('static/vendor/bootstrap-icons/bootstrap-icons.css') ?>
     <?= link_tag('static/vendor/glightbox/css/glightbox.min.css') ?>
     <?= link_tag('static/vendor/remixicon/remixicon.css') ?>
@@ -26,7 +26,7 @@
 <!-- Vendor JS Files -->
     <script src="<?= base_url('/static/vendor/purecounter/purecounter_vanilla.js') ?>"></script>
         <script src="<?= base_url('/static/vendor/aos/aos.js') ?>"></script>
-            <script src="<?= base_url('/static/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+
                 <script src="<?= base_url('/static/vendor/glightbox/js/glightbox.min.js') ?>"></script>
                     <script src="<?= base_url('/static/vendor/isotope-layout/isotope.pkgd.min.js') ?>"></script>
                         <script src="<?= base_url('/static/vendor/swiper/swiper-bundle.min.js') ?>"></script>
