@@ -1,6 +1,6 @@
 <!--About Section-->
 <section class="about" id="about">
-    <div class="container mx-auto">
+    <div class="container mx-auto" data-aos="fade-up">
         <div class="flex flex-col lg:flex-row">
             <div class="col-lg-6 lg:w-1/2 flex flex-col justify-center" ">
                 <div class="p-4 lg:p-8 bg-blue-50" data-aos="fade-up" data-aos-delay="200">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 lg:w-1/2 flex items-center"data-aos="zoom-out" data-aos-duration="10">
+            <div class="col-lg-6 lg:w-1/2 flex items-center"  data-aos="zoom-out" data-aos-delay="200">
                 <img src="static/img/about.jpg" class="w-full h-auto" alt="">
             </div>
         </div>

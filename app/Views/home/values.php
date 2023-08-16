@@ -1,12 +1,12 @@
 <!--Value Section-->
 <section class="values" id="values">
-    <header class="section-header">
-        <h2>Our Values</h2>
-        <p>Odit est perspiciatis laborum et dicta</p>
-    </header>
-    <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ">
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" >
+    <div class="container mx-auto" data-aos="fade-up">
+        <header class="section-header" >
+            <h2>Our Values</h2>
+            <p>Odit est perspiciatis laborum et dicta</p>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 " >
+            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="200">
                 <div class=" box p-4 rounded-lg  text-center">
                     <img src="static/img/values-1.png" class="w-50 h-auto mx-auto mb-4" alt="">
                     <h3 class="text-lg font-semibold">Ad cupiditate sed est odio</h3>
@@ -14,7 +14,7 @@
                 </div>
             </div>
 
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0 ">
+            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0 " data-aos="fade-up" data-aos-delay="400">
                 <div class="box p-4  rounded-lg text-center">
                     <img src="static/img/values-2.png" class="w-50 h-auto mx-auto mb-4" alt="">
                     <h3 class="text-lg font-semibold">Voluptatem voluptatum alias</h3>
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" >
+            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="600">
                 <div class="box p-4   rounded-lg text-center">
                     <img src="static/img/values-3.png" class="w-50 h-auto mx-auto mb-4" alt="">
                     <h3 class="text-lg font-semibold">Fugit cupiditate alias nobis.</h3>

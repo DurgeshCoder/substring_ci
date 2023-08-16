@@ -9,7 +9,7 @@
             <div class="mt-8 mx-auto max-w-md">
                 <form action="" method="post" class="bg-white">
                     <div class="flex items-center">
-                        <input type="email" name="email" class="w-full px-4 py-2 rounded-l-md bg-gray-800  focus:outline-none focus:bg-gray-700">
+                        <input type="email" name="email" class="border border-black border-opacity-0 hover:border-opacity-100 focus:border-opacity-100 focus:ring-0 bg-transparent py-2 px-4 outline-none transition-all duration-300 w-full">
                         <input type="submit" value="Subscribe" class="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 cursor-pointer">
                     </div>
                 </form>
@@ -79,3 +79,6 @@
         </div>
     </div>
 </footer><!-- End Footer -->
+
+<!--Scroll button-->
+<a href="#" class="back-to-top flex items-center justify-center"><i class="bi bi-arrow-up-short"></i></a>

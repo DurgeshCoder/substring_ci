@@ -1,6 +1,6 @@
 
 <!-- Feature Section -->
-<section class="feature" id="feature">
+<section class="features" id="features">
 <div class="container mx-auto">
     <header class="section-header">
         <h2 class="text-3xl font-semibold">Our Features</h2>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="col-span-1 lg:col-span-1 mt-5 lg:mt-0 flex">
-            <div class="grid grid-cols-1 gap-4 self-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 self-center">
 
                 <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="200">
                     <div class="feature-box flex items-center">
@@ -105,6 +105,68 @@
         </div>
     </div><!-- End Feature Tabs -->
     <!-- Feature Icons -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 feature-icons" data-aos="fade-up">
+        <h3 class="col-span-full text-center md:col-span-2">Ratione mollitia eos ab laudantium rerum beatae quo</h3>
+
+        <div class="col-span-1 md:col-span-1" data-aos="fade-right" data-aos-delay="100">
+            <img src="static/img/features-3.png" class="ms-lg-8" alt="" width="450px">
+        </div>
+
+        <div class="col-span-1 md:col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:content-center">
+
+                <div class="icon-box" data-aos="fade-up">
+                    <i class="ri-line-chart-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Corporis voluptates sit</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ri-stack-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Ullamco laboris nisi</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ri-brush-4-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Labore consequatur</h4>
+                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <i class="ri-magic-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Beatae veritatis</h4>
+                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <i class="ri-command-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Molestiae dolor</h4>
+                        <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+                    <i class="ri-radar-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Explicabo consectetur</h4>
+                        <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <!-- End Feature Icons -->
 </div>
 </section>
