@@ -1,4 +1,7 @@
 // JavaScript function to toggle mobile menu
+let x = 3;
+console.log(x)
+
 document.getElementById("mobileMenuButton").addEventListener("click", function () {
     var mobileMenu = document.getElementById("mobileMenu");
     mobileMenu.classList.toggle("hidden");
@@ -299,5 +302,4 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
     new PureCounter();
 
 })();
-
 

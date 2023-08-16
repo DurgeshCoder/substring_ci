@@ -13,6 +13,7 @@ Welcome to Substring Technologies
 <?= $this->include('home/hero'); ?>
 <?= $this->include('home/about'); ?>
 <?= $this->include('home/values'); ?>
+<?= $this->include('home/counts'); ?>
 <?= $this->include('home/features'); ?>
 <?= $this->include('home/why'); ?>
 <?= $this->include('home/success_stories'); ?>
