@@ -16,16 +16,7 @@ About Substring Technologies
 
 
     <div class="row  flex my-2  space-x-3 border  justify-end">
-        <?php
-
-
-        /**
-         *
-         * @var array $friends
-         *
-         */
-
-        foreach ($friends as $key => $value) {
+        <?php foreach ($friends as $key => $value) {
 
             ?>
 

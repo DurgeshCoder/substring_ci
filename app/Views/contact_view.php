@@ -11,7 +11,9 @@ Contact US | Substring Technologies
 <?= $this->section('content') ?>
 
 
-<h1 class="text-3xl">this is contact page</h1>
+
+
+
 
 
 

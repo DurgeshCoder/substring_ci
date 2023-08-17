@@ -10,11 +10,20 @@ Welcome to Substring Technologies
 <!--content of the page -->
 <?= $this->section("content"); ?>
 
-
-<?= $this->include('home/banner'); ?>
+<?= $this->include('home/hero'); ?>
+<?= $this->include('home/about'); ?>
+<?= $this->include('home/values'); ?>
+<?= $this->include('home/counts'); ?>
 <?= $this->include('home/features'); ?>
-<?= $this->include('home/why'); ?>
-<?= $this->include('home/success_stories'); ?>
+<?= $this->include('home/services'); ?>
+<?= $this->include('home/pricing');?>
+<?php //= $this->include('home/faq');?>
+<?= $this->include('home/portfolio') ?>
+<?= $this->include('home/testimonials');?>
+<?= $this->include('home/team'); ?>
+<?= $this->include('home/clients'); ?>
+<?= $this->include('home/recent_blog_posts'); ?>
+<?= $this->include('home/contact'); ?>
 <?= $this->include('home/footer'); ?>
 
 

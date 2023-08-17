@@ -1,41 +1,172 @@
 
 <!-- Feature Section -->
-<section class="bg-gray-100 py-16">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Features</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
-            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M5 13l4 4L19 7"></path>
-                </svg>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Expert Trainers</h3>
-                <p class="text-gray-600">Learn from industry experts with real-world experience and deep knowledge.</p>
-            </div>
+<section class="features" id="features">
+<div class="container mx-auto">
+    <header class="section-header">
+        <h2 class="text-3xl font-semibold">Our Features</h2>
+        <p>Laboriosam et omnis fuga quis dolor direda fara</p>
+    </header>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            <!-- Feature 2 -->
-            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Hands-on Projects</h3>
-                <p class="text-gray-600">Get practical experience by working on real projects during the training.</p>
-            </div>
+        <div class="col-span-1 lg:col-span-1">
+            <img src="static/img/features.png" class="img-fluid" alt="">
+        </div>
 
-            <!-- Feature 3 -->
-            <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
-                <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">Flexible Learning</h3>
-                <p class="text-gray-600">Choose from online, in-person, or blended learning options to fit your schedule.</p>
+        <div class="col-span-1 lg:col-span-1 mt-5 lg:mt-0 flex">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 self-center">
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="200">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Eos aspernatur rem</h3>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Facilis neque ipsa</h3>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="400">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Volup amet voluptas</h3>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="500">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Rerum omnis sint</h3>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="600">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Alias possimus</h3>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1" data-aos="zoom-out" data-aos-delay="700">
+                    <div class="feature-box flex items-center">
+                        <i class="bi bi-check"></i>
+                        <h3 class="ml-2">Repellendus mollitia</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8" data-aos="fade-up">
+        <div class="col-span-1 lg:col-span-1">
+            <h3 class="text-2xl font-semibold">Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3 mt-4">
+                <li>
+                    <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
+                </li>
+                <li>
+                    <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
+                </li>
+                <li>
+                    <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
+                </li>
+            </ul><!-- End Tabs -->
+            <!-- Tab Content -->
+            <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="tab1">
+                    <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-check2"></i>
+                        <h4 class="ml-2">Repudiandae rerum velit modi et officia quasi facilis</h4>
+                    </div>
+                    <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-check2"></i>
+                        <h4 class="ml-2">Incidunt non veritatis illum ea ut nisi</h4>
+                    </div>
+                    <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                </div><!-- End Tab 1 Content -->
+                <div class="tab-pane fade show" id="tab2">
+                    <!-- Tab 2 Content -->
+                </div>
+                <div class="tab-pane fade show" id="tab3">
+                    <!-- Tab 3 Content -->
+                </div>
+            </div>
+        </div>
+        <div class="col-span-1 lg:col-span-1">
+            <img src="static/img/features-2.png" class="img-fluid" alt="">
+        </div>
+    </div><!-- End Feature Tabs -->
+    <!-- Feature Icons -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 feature-icons" data-aos="fade-up">
+        <h3 class="col-span-full text-center md:col-span-2">Ratione mollitia eos ab laudantium rerum beatae quo</h3>
+
+        <div class="col-span-1 md:col-span-1" data-aos="fade-right" data-aos-delay="100">
+            <img src="static/img/features-3.png" class="ms-lg-8" alt="" width="450px">
+        </div>
+
+        <div class="col-span-1 md:col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:content-center">
+
+                <div class="icon-box" data-aos="fade-up">
+                    <i class="ri-line-chart-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Corporis voluptates sit</h4>
+                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ri-stack-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Ullamco laboris nisi</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ri-brush-4-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Labore consequatur</h4>
+                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <i class="ri-magic-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Beatae veritatis</h4>
+                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <i class="ri-command-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Molestiae dolor</h4>
+                        <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                    </div>
+                </div>
+
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+                    <i class="ri-radar-line"></i>
+                    <div>
+                        <h4 class="text-center md:text-left">Explicabo consectetur</h4>
+                        <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- End Feature Icons -->
+</div>
 </section>
