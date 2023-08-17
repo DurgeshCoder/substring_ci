@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body data-aos-duration="1000" data-aos-delay="0">
 <!--Header-->
 <?= $this->include('menubar'); ?>
 <!--content data is inserted here-->
@@ -23,18 +23,17 @@
 
 
 <!-- Vendor JS Files -->
-<script src="static/animation/purecounter/purecounter_vanilla.js"></script>
-<script src="static/animation/aos/aos.js"></script>
-
-<script src="static/animation/glightbox/js/glightbox.min.js"></script>
-<script src="static/animation/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="static/animation/swiper/swiper-bundle.min.js"></script>
-<script src="static/animation/php-email-form/validate.js"></script>
+<script src="<?= base_url('static/animation/purecounter/purecounter_vanilla.js') ?>"></script>
+<script src="<?= base_url('static/animation/aos/aos.js') ?>"></script>
+<script src="<?= base_url('static/animation/glightbox/js/glightbox.min.js') ?>"></script>
+<script src="<?= base_url('static/animation/isotope-layout/isotope.pkgd.min.js') ?>"></script>
+<script src="<?= base_url('static/animation/swiper/swiper-bundle.min.js') ?>"></script>
+<script src="<?= base_url('static/animation/php-email-form/validate.js') ?>"></script>
 <script>
     AOS.init();
 </script>
 
- <script src="<?= base_url('static/js/main.js') ?>">
+<script src="<?= base_url('static/js/main.js') ?>">
 </script>
 </body>
 </html>
