@@ -10,12 +10,20 @@
     <?= link_tag('static/animation/glightbox/css/glightbox.min.css') ?>
     <?= link_tag('static/animation/remixicon/remixicon.css') ?>
     <?= link_tag('static/animation/swiper/swiper-bundle.min.css') ?>
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                darkMode: 'false',
+
+            }
+        }
+
+    </script>
 
 
 </head>
-<body data-aos-duration="1000" data-aos-delay="0">
+<body data-aos-duration="1000" class="dark:bg-gray-900 dark:text-blue-50" data-aos-delay="0">
 <!--Header-->
 <?= $this->include('menubar'); ?>
 <!--content data is inserted here-->
@@ -30,8 +38,11 @@
 <script src="<?= base_url('static/animation/swiper/swiper-bundle.min.js') ?>"></script>
 <script src="<?= base_url('static/animation/php-email-form/validate.js') ?>"></script>
 <script>
-    AOS.init();
+    AOS.init({
+        duration: 500
+    });
 </script>
+
 
 <script src="<?= base_url('static/js/main.js') ?>">
 </script>

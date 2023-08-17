@@ -1,6 +1,4 @@
 // JavaScript function to toggle mobile menu
-let x = 3;
-console.log(x)
 
 document.getElementById("mobileMenuButton").addEventListener("click", function () {
     var mobileMenu = document.getElementById("mobileMenu");
@@ -14,7 +12,7 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -48,7 +46,6 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
     }
 
 
-
     /**
      * Back to top button
      */
@@ -68,7 +65,7 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
     /**
      * Scrool with ofset on links with a class name .scrollto
      */
-    on('click', '.scrollto', function(e) {
+    on('click', '.scrollto', function (e) {
         if (select(this.hash)) {
             e.preventDefault()
 
@@ -98,34 +95,19 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
      * Clients Slider
      */
     new Swiper('.clients-slider', {
-        speed: 400,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-        breakpoints: {
+        speed: 400, loop: true, autoplay: {
+            delay: 5000, disableOnInteraction: false
+        }, slidesPerView: 'auto', pagination: {
+            el: '.swiper-pagination', type: 'bullets', clickable: true
+        }, breakpoints: {
             320: {
-                slidesPerView: 2,
-                spaceBetween: 40
-            },
-            480: {
-                slidesPerView: 3,
-                spaceBetween: 60
-            },
-            640: {
-                slidesPerView: 4,
-                spaceBetween: 80
-            },
-            992: {
-                slidesPerView: 6,
-                spaceBetween: 120
+                slidesPerView: 2, spaceBetween: 40
+            }, 480: {
+                slidesPerView: 3, spaceBetween: 60
+            }, 640: {
+                slidesPerView: 4, spaceBetween: 80
+            }, 992: {
+                slidesPerView: 6, spaceBetween: 120
             }
         }
     });
@@ -135,22 +117,13 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
      * Testimonials slider
      */
     new Swiper('.testimonials-slider', {
-        speed: 600,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-        breakpoints: {
+        speed: 600, loop: true, autoplay: {
+            delay: 5000, disableOnInteraction: false
+        }, slidesPerView: 'auto', pagination: {
+            el: '.swiper-pagination', type: 'bullets', clickable: true
+        }, breakpoints: {
             320: {
-                slidesPerView: 1,
-                spaceBetween: 40
+                slidesPerView: 1, spaceBetween: 40
             },
 
             1200: {
@@ -164,12 +137,10 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
      */
     function aos_init() {
         AOS.init({
-            duration: 1000,
-            easing: "ease-in-out",
-            once: true,
-            mirror: false
+            duration: 500, easing: "ease-in-out", once: true, mirror: false
         });
     }
+
     window.addEventListener('load', () => {
         aos_init();
     });

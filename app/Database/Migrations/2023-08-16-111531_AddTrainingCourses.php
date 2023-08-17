@@ -59,6 +59,10 @@ class AddTrainingCourses extends Migration
             ],
             'start_date' => [
                 'type' => "DATETIME"
+            ],
+            'slug' => [
+                'type' => 'VARCHAR',
+                'constraint' => 500,
             ]
 
         ]);
