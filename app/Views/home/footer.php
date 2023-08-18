@@ -3,7 +3,7 @@
     <div class="footer-newsletter py-10">
         <div class="container mx-auto">
             <div class="text-center text-dark">
-                <h4 class="text-2xl font-semibold">Our Newsletter</h4>
+                <h4 class="text-2xl font-semibold dark:text-blue-500">Our Newsletter</h4>
                 <p class="mt-2">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             </div>
             <div class="mt-8 mx-auto max-w-md">
@@ -19,7 +19,7 @@
 
     <div class="footer-top bg-white py-10 ">
         <div class="container mx-auto ">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-dark">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
                 <div class="footer-info col-span-1 md:col-span-2 lg:col-span-1 ">
                     <a href="index.html" class="logo flex items-center">
                         <img src="static/img/logo.png" alt="" class="w-8 h-8">
@@ -81,4 +81,4 @@
 </footer><!-- End Footer -->
 
 <!--Scroll button-->
-<a href="#" class="back-to-top flex items-center justify-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top flex items-center justify-center    bg-blue-900 w-40 h-40 rounded-2xl transition-all duration-400 hover:bg-blue-800 hover:text-white"><i class="bi bi-arrow-up-short "></i></a>

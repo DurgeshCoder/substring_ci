@@ -3,8 +3,7 @@
 
         <header class="text-center mb-8">
             <h2 class="text-2xl font-semibold dark:text-blue-50 text-blue-600">FEATURES</h2>
-            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Laboriosam et omnis fuga quis dolor
-                direda fara</p>
+            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Of course! Here are six important things a software training and development company should have:</p>
         </header>
 
         <div class="grid md:grid-cols-2 gap-6">
@@ -20,42 +19,44 @@
                     >
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot dark:text-blue-50 fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Expertise and Skillsets</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Paths Just for You:</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800  p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot   dark:text-blue-50  fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Agile Methodologies</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning by Doing:</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800   p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot  dark:text-blue-50  fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Quality Assurance Practices</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Courses About What's Happening Now:</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800   p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot fa-xl  dark:text-blue-50  text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Customization and Tailoring</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Teachers Who Know Their Stuff:</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800  p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center mt-3">
                             <i class="fa-solid fa-check-to-slot fa-xl   dark:text-blue-50 text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Effective Communication</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Together:
+                            </h3>
                         </div>
                     </div>
                     <div class="aos-init   dark:bg-gray-800  p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot fa-xl   dark:text-blue-50 text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Continuous Learning and Innovation</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Certificates for Your Hard Work:
+                            </h3>
                         </div>
                     </div>
                     <!-- ... Repeat for other features ... -->

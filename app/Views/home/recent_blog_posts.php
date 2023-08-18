@@ -3,9 +3,9 @@
 
     <div class="container mx-auto" data-aos="fade-up">
 
-        <header class="section-header">
-            <h2>Blog</h2>
-            <p>Recent posts form our Blog</p>
+        <header class="section-header text-center">
+            <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600 uppercase" >BLOG</h2>
+            <p class="text-blue-900 text-4xl  dark:text-blue-50  font-bold mb-8">Recent posts from our Blog</p>
         </header>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 
