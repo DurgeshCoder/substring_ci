@@ -1,13 +1,13 @@
 <section id="pricing" class="pricing py-16">
-    <div class="container mx-auto px-4  aos-init aos-animate" data-aos="fade-up">
+    <div class="container mx-auto px-4 " data-aos="fade-up">
         <header class="section-header text-center">
             <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600 ">PRICING</h2>
             <p class="text-blue-900 text-4xl  dark:text-blue-50  font-bold mb-8">Check our Pricing</p>
         </header>
 
-        <div class="flex flex-wrap -mx-4 xl:px-24  aos-init aos-animate" data-aos="fade-left">
+        <div class="flex flex-wrap -mx-4 xl:px-24  " data-aos="fade-left">
             <!-- Free Plan -->
-            <div class="w-full md:w-1/4 px-4 mb-8  aos-init aos-animate" data-aos="zoom-in"
+            <div class="w-full md:w-1/4 px-4 mb-8  " data-aos="zoom-in"
                  data-aos-delay="100">
                 <div class="bg-white   dark:bg-gray-800 p-6 text-center shadow-2xl  hover:scale-110 transition-transform duration-300 ease-in-out">
                     <h3 class="text-teal-500 text-xl font-semibold mb-2">Free Plan</h3>
@@ -27,7 +27,7 @@
             </div>
 
             <!-- Starter Plan -->
-            <div class="w-full md:w-1/4 px-4 mb-8 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+            <div class="w-full md:w-1/4 px-4 mb-8 " data-aos="zoom-in" data-aos-delay="200">
                 <div class="bg-white    dark:bg-gray-800 p-6 text-center relative  shadow-2xl hover:scale-110 transition-transform duration-300 ease-in-out">
                     <div class="absolute top-18 right-[-10px] transform rotate-45 z-10 bg-blue-700 text-white font-semibold text-sm px-6">
                         Featured
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Business Plan -->
-            <div class="w-full md:w-1/4 px-4 mb-8 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+            <div class="w-full md:w-1/4 px-4 mb-8 " data-aos="zoom-in" data-aos-delay="300">
                 <div class="bg-white   dark:bg-gray-800  p-6 text-center  shadow-2xl  hover:scale-110 transition-transform duration-300 ease-in-out">
                     <h3 class="text-orange-500 text-xl font-semibold mb-2">Business Plan</h3>
                     <div class="text-3xl font-semibold mb-4"><sup>$</sup>29<span class="text-gray-500"> / mo</span>
@@ -70,7 +70,7 @@
             </div>
 
             <!-- Ultimate Plan -->
-            <div class="w-full md:w-1/4 px-4 mb-8 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+            <div class="w-full md:w-1/4 px-4 mb-8" data-aos="zoom-in" data-aos-delay="400">
                 <div class="bg-white  dark:bg-gray-800  p-6 text-center  shadow-2xl  hover:scale-110 transition-transform duration-300 ease-in-out">
                     <h3 class="text-pink-500 text-xl font-semibold mb-2">Ultimate Plan</h3>
                     <div class="text-3xl font-semibold mb-4"><sup>$</sup>49<span class="text-gray-500"> / mo</span>
