@@ -3,9 +3,11 @@
 <section class="bg-white text-black  dark:text-blue-50 dark:bg-gray-900">
     <div class=" flex  flex-col md:flex-row lg:gap-x-40 xl:gap-x-80 justify-center w-full align-center   py-2  md:py-16 px-8   ">
         <div class="flex mt-5 text-center md:mt-5 md:text-start flex-col  justify-center">
-            <h1 data-aos="fade-up" class="max-w-2xl mb-4 text-4xl font-semibold tracking-tight leading-none md:text-3xl xl:text-6xl ">
+            <h1 data-aos="fade-up"
+                class="max-w-2xl mb-4 dark:text-blue-50 text-blue-900 text-4xl font-semibold tracking-tight leading-none md:text-3xl xl:text-6xl ">
                 Where Code Meets Creativity: Empowering Your Digital Future.</h1>
-            <p data-aos="fade-up" data-aos-delay="100" class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Your
+            <p data-aos="fade-up" data-aos-delay="100"
+               class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Your
                 Vision, Our Code: Building Tomorrow's Solutions Today.</p>
             <div>
                 <a href="#"
@@ -20,7 +22,7 @@
         </div>
 
         <div class="xl:mt-2  order-first md:order-last  flex aos-init aos-animate" data-aos="zoom-in">
-            <img data-aos="fade-up"   class="w-full" src=" <?= base_url('static/img/hero-img.png') ?> " alt="mockup">
+            <img data-aos="fade-up" class="w-full" src=" <?= base_url('static/img/hero-img.png') ?> " alt="mockup">
         </div>
     </div>
 </section>

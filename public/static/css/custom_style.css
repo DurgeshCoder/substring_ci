@@ -5,4 +5,7 @@
 
 /*100*/
 
-
+body {
+    background: url(../img/background.svg) fixed ;
+    background-size: cover;
+}
