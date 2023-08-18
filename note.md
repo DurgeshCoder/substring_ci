@@ -39,4 +39,6 @@ php spark  migrate:create <updatename>
 Create you change in up method
 then run the migration
 
+### Deploy Build  command
 
+```composer update --no-dev```

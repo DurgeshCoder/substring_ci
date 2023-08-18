@@ -3,7 +3,8 @@
 
         <header class="text-center mb-8">
             <h2 class="text-2xl font-semibold dark:text-blue-50 text-blue-600">FEATURES</h2>
-            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Of course! Here are six important things a software training and development company should have:</p>
+            <!--            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Of course! Here are six important things-->
+            <!--                a software training and development company should have:</p>-->
         </header>
 
         <div class="grid md:grid-cols-2 gap-6">
@@ -19,35 +20,35 @@
                     >
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot dark:text-blue-50 fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Paths Just for You:</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Paths Just for You</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800  p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot   dark:text-blue-50  fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning by Doing:</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning by Doing</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800   p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot  dark:text-blue-50  fa-xl text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Courses About What's Happening Now:</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Courses About What's Happening Now</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800   p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot fa-xl  dark:text-blue-50  text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Teachers Who Know Their Stuff:</h3>
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Teachers Who Know Their Stuff</h3>
                         </div>
                     </div>
                     <div class="aos-init  dark:bg-gray-800  p-6 shadow-xl" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="flex items-center mt-3">
                             <i class="fa-solid fa-check-to-slot fa-xl   dark:text-blue-50 text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Together:
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Learning Together
                             </h3>
                         </div>
                     </div>
@@ -55,7 +56,7 @@
                          data-aos-delay="200">
                         <div class="flex items-center">
                             <i class="fa-solid fa-check-to-slot fa-xl   dark:text-blue-50 text-blue-900"></i>
-                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Certificates for Your Hard Work:
+                            <h3 class="ml-2 text-gray-800 dark:text-blue-50">Certificates for Your Hard Work
                             </h3>
                         </div>
                     </div>
@@ -165,8 +166,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-6 gap-8 feature-icons animate__animated animate__fadeIn mt-12"
              data-aos="fade-up">
-            <h3 class="col-span-full text-center dark:text-blue-50 mb-6 text-3xl font-bold text-blue-900">Ratione mollitia eos ab
-                laudantium rerum beatae quo</h3>
+            <h3 class="col-span-full text-center dark:text-blue-50 mb-6 text-3xl font-bold text-blue-900">Why Substring
+                Technologies ?</h3>
 
             <div class="col-span-1 md:col-span-2 text-center animate__animated animate__fadeInRight"
                  data-aos="fade-right" data-aos-delay="100">
@@ -178,8 +179,9 @@
                     <div class="icon-box">
                         <i class="fa-solid fa-chart-line fa-2xl text-blue-900"></i>
                         <div class="mt-4">
-                            <h4 class="text-lg font-semibold">Corporis voluptates sit</h4>
-                            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                            <h4 class="text-lg font-semibold">High Quality of Work</h4>
+                            <p>We provide the best possible high end solution at a cost, much lesser than the present
+                                industry standard without doing any compromise with the quality.</p>
                         </div>
                     </div>
 
@@ -187,40 +189,48 @@
 
                         <div class="mt-4">
                             <i class="fa-solid fa-brush fa-2xl text-blue-900"></i>
-                            <h4 class="text-lg font-semibold">Ullamco laboris nisi</h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                            <h4 class="text-lg font-semibold">Our Promise</h4>
+                            <p>At Substring Technologies we promise that no matter what you need, you can rest assured
+                                that we will deliver a premium software solution with the best price/performance ratio
+                                in the IT Industry</p>
                         </div>
                     </div>
 
                     <div class="icon-box animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="200">
                         <i class="fa-solid fa-brush fa-2xl text-blue-900"></i>
                         <div class="mt-4">
-                            <h4 class="text-lg font-semibold">Labore consequatur</h4>
-                            <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                            <h4 class="text-lg font-semibold">Best IT Training</h4>
+                            <p>Substring Technologies provides best training on different technologies such as c, c++,
+                                java, python, javascript etc.</p>
                         </div>
                     </div>
 
                     <div class="icon-box animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="300">
                         <i class="fa-solid fa-wand-magic-sparkles fa-2xl text-blue-900"></i>
                         <div class="mt-4">
-                            <h4 class="text-lg font-semibold">Beatae veritatis</h4>
-                            <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                            <h4 class="text-lg font-semibold">Internship</h4>
+                            <p>We are always ready to help our customer to provide best service .</p>
                         </div>
                     </div>
 
                     <div class="icon-box animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="400">
                         <i class="fa-regular fa-snowflake fa-2xl text-blue-900"></i>
                         <div class="mt-4">
-                            <h4 class="text-lg font-semibold">Molestiae dolor</h4>
-                            <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                            <h4 class="text-lg font-semibold">Support</h4>
+                            <p>You will get an opportunity to work on live projects and we make our students learn what
+                                actually a Technologies is . And we make them understand how to transform your idea to
+                                real world implementation.</p>
                         </div>
                     </div>
 
                     <div class="icon-box animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="500">
                         <i class="fa-solid fa-satellite-dish fa-2xl text-blue-900"></i>
                         <div class="mt-4">
-                            <h4 class="text-lg font-semibold">Explicabo consectetur</h4>
-                            <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                            <h4 class="text-lg font-semibold">Hands-on Practical Experience </h4>
+                            <p>We believe in providing not just theoretical knowledge, but also real-world application
+                                through extensive practical exercises and projects. This approach ensures that our
+                                students not only understand the concepts but also gain the skills and confidence needed
+                                to excel in the software industry.</p>
                         </div>
                     </div>
                 </div>
