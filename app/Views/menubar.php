@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="bg-white shadow dark:bg-gray-800 dark:text-blue-50 p-4 fixed-top ">
+<nav class="bg-white border-b dark:border-0 shadow-lg dark:bg-gray-800 dark:text-blue-50 p-4 fixed-top ">
     <div class="container mx-auto flex items-center justify-between">
         <!-- Logo -->
         <a href="<?= base_url('/') ?>"

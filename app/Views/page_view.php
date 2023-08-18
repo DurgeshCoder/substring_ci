@@ -18,7 +18,7 @@ Welcome to Substring Technologies
 <?= $this->include('home/services'); ?>
 <?= $this->include('home/pricing');?>
 <?php //= $this->include('home/faq');?>
-<?= $this->include('home/portfolio') ?>
+<?php //= $this->include('home/portfolio') ?>
 <?= $this->include('home/testimonials');?>
 <?= $this->include('home/team'); ?>
 <?= $this->include('home/clients'); ?>

@@ -10,11 +10,12 @@
     <?= link_tag('static/animation/glightbox/css/glightbox.min.css') ?>
     <?= link_tag('static/animation/remixicon/remixicon.css') ?>
     <?= link_tag('static/animation/swiper/swiper-bundle.min.css') ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <?= link_tag('static/css/output.css') ?>
 
 </head>
-<body data-aos-duration="1000" class="dark:bg-gray-900 dark:text-blue-50" data-aos-delay="0">
+<body data-aos-duration="1000" class="  dark:bg-gray-900 dark:text-blue-50" data-aos-delay="0">
 <!--Header-->
 <?= $this->include('menubar'); ?>
 <!--content data is inserted here-->
@@ -22,6 +23,7 @@
 
 
 <!-- Vendor JS Files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 <script src="<?= base_url('static/animation/purecounter/purecounter_vanilla.js') ?>"></script>
 <script src="<?= base_url('static/animation/aos/aos.js') ?>"></script>
 <script src="<?= base_url('static/animation/glightbox/js/glightbox.min.js') ?>"></script>

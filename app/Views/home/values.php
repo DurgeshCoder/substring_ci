@@ -1,9 +1,10 @@
 <!--Value Section-->
 <section class="values" id="values">
     <div class="container mx-auto aos-animate" data-aos="fade-up">
-        <header class="section-header">
-            <h2>Our Values</h2>
-            <p>Odit est perspiciatis laborum et dicta</p>
+        <header class="section-header text-center mb-8">
+            <h2 class="text-2xl font-semibold dark:text-blue-50 text-blue-600">Our Values</h2>
+            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Odit est perspiciatis laborum et
+                dicta</p>
         </header>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ">
             <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="200">

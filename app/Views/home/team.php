@@ -1,6 +1,6 @@
 <!--Team Section-->
-<section class="team" id="team">
-    <div class="container mx-auto"  data-aos="fade-up">
+<section class="team mt-10" id="team">
+    <div class="container mx-auto" data-aos="fade-up">
         <header class="section-header">
             <h2>Team</h2>
             <p>Our hard working team</p>
@@ -21,7 +21,8 @@
                     <div class="member-info text-center mt-2">
                         <h4 class="font-semibold">Walter White</h4>
                         <span class="block">Chief Executive Officer</span>
-                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae
+                            aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
                     </div>
                 </div>
             </div>
@@ -39,7 +40,8 @@
                     <div class="member-info text-center mt-2">
                         <h4 class="font-semibold">Walter White</h4>
                         <span class="block">Chief Executive Officer</span>
-                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae
+                            aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
                     </div>
                 </div>
             </div>
@@ -57,7 +59,8 @@
                     <div class="member-info text-center mt-2">
                         <h4 class="font-semibold">Walter White</h4>
                         <span class="block">Chief Executive Officer</span>
-                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae
+                            aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +78,8 @@
                     <div class="member-info text-center mt-2">
                         <h4 class="font-semibold">Walter White</h4>
                         <span class="block">Chief Executive Officer</span>
-                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                        <p class="mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae
+                            aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
                     </div>
                 </div>
             </div>
