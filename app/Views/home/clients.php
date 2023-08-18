@@ -1,5 +1,5 @@
 <!--Clients Section-->
-<section class="clients" id="clients">
+<section class="clients mt-16" id="clients">
     <div class="container mx-auto " data-aos="fade-up">
         <header class="section-header text-center">
             <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600 uppercase" >OUR CLIENTS</h2>

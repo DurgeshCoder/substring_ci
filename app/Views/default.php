@@ -9,10 +9,12 @@
     <?= link_tag('static/animation/bootstrap-icons/bootstrap-icons.css') ?>
     <?= link_tag('static/animation/glightbox/css/glightbox.min.css') ?>
     <?= link_tag('static/animation/remixicon/remixicon.css') ?>
-    <?= link_tag('static/animation/swiper/swiper-bundle.min.css') ?>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <?= link_tag('static/css/output.css') ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
 </head>
 <body data-aos-duration="1000" class="  dark:bg-gray-900 dark:text-blue-50" data-aos-delay="0">
