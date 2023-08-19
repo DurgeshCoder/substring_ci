@@ -16,7 +16,7 @@
                     You get to choose what and when to learn, so it's all about what works best for you.
                 </p>
                 <div class="lg:text-left mt-4">
-                    <a href="#" class="btn-read-more  inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-12 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a  href="https://learncodewithdurgesh.com/" target="_blank" class="btn-read-more  inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-12 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <span class="mr-2 ">Read More</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -33,7 +33,7 @@
     <div class="container mx-auto mt-16" data-aos="fade-up">
         <div class="flex flex-col lg:flex-row">
             <div class="col-lg-6 lg:w-1/2 flex items-center" data-aos="zoom-out" data-aos-delay="200">
-                <img src="static/img/about.jpg" class="w-full h-auto" alt="">
+                <img src="<?= base_url('static/img/about1.jpg') ?>" class="w-full h-auto" alt="">
             </div>
             <div class="col-lg-6 lg:w-1/2 flex flex-col justify-center"
             ">
@@ -51,7 +51,7 @@
 
                 </p>
                 <div class="lg:text-left mt-4">
-                    <a href="#" class="btn-read-more  inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-12 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a  href="https://learncodewithdurgesh.com/" target="_blank" class="btn-read-more  inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-12 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <span class="mr-2 ">Read More</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>

@@ -1,135 +1,71 @@
-<!--Testimonials Section-->
-<section class="testimonials" id="testimonials">
-    <div class="container mx-auto" data-aos="fade-up">
-        <header class="section-header text-center ">
-            <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600 uppercase">TESTIMONIALS</h2>
-            <p class="text-blue-900 text-4xl  dark:text-blue-50  font-bold mb-8"> What they are saying about us</p>
+<section id="testimonies" class="testimonies mt-16">
+    <div class="container  mx-auto px-4 xl:px-28 aos-init aos-animate" data-aos="fade-up">
+        <header class="section-header text-center mb-8">
+            <h2 class="text-xl font-bold text-blue-600 dark:text-blue-50 ">TESTIMONIES</h2>
+            <p class="text-blue-900 font-bold text-4xl my-3 dark:text-blue-50">What students and clients are saying about
+                us</p>
         </header>
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-            <div class="swiper-wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" virtual="true">
 
-                <div class="swiper-slide">
-                    <div class="testimonial-item   ">
-                       <div class="card dark:bg-gray-800 bg-white shadow-xl border-gray-100 rounded border p-3 mx-2">
-                           <div class="flex items-center mb-2">
-                               <i class="bi bi-star-fill text-yellow-500"></i>
-                               <i class="bi bi-star-fill text-yellow-500"></i>
-                               <i class="bi bi-star-fill text-yellow-500"></i>
-                               <i class="bi bi-star-fill text-yellow-500"></i>
-                               <i class="bi bi-star-fill text-yellow-500"></i>
-                           </div>
-                           <p class="mb-4">
-                               Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                               Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                           </p>
-                           <div class="flex items-start">
-                               <img src="static/img/testimonials/testimonials-1.jpg"
-                                    class="testimonial-img w-12 h-12 rounded-full" alt="">
-                               <div class="ml-4">
-                                   <h3 class="text-lg font-semibold">Saul Goodman</h3>
-                                   <h4 class="text-sm text-gray-600">Ceo & Founder</h4>
-                               </div>
-                           </div>
-                       </div>
-                    </div>
-                </div><!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="testimonial-item dark:bg-gray-800 bg-white p-3">
-                        <div class="flex items-center mb-2">
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                        </div>
-                        <p class="mb-4">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        </p>
-                        <div class="flex items-start">
-                            <img src="static/img/testimonials/testimonials-2.jpg"
-                                 class="testimonial-img w-12 h-12 rounded-full" alt="">
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold">Saul Goodman</h3>
-                                <h4 class="text-sm text-gray-600">Ceo & Founder</h4>
+
+                <?php
+
+
+                /**
+                 *
+                 * @type  $testimonials
+                 *
+                 *
+                 */
+
+                foreach ($testimonials as $value) {
+
+
+                    ?>
+
+
+                    <div class="swiper-slide  h-[644px] w-[400px] ">
+                        <div class="block rounded-lg bg-white shadow-lg dark:bg-gray-800 h-[644px]">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat mt-5 mx-auto p-4">
+                                <ul class="text-center p-2">
+                                    <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
+                                    <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
+                                    <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
+                                    <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
+                                    <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
+                                </ul>
+                                <p class="mb-2 w-[280px] md:w-[320px] mx-auto text-neutral-600 dark:text-neutral-200 text-center">
+
+
+                                    <?= $value['content'] ?>
+
+                                </p>
+                            </div>
+
+                            <div class="p-2 text-center h-48 w-48 mx-auto">
+                                <img class="rounded-full object-cover w-36 h-36 mx-auto  "
+                                     src=" <?= base_url('static/img/testimonials/' . $value['picture_url']) ?>  "
+                                     alt=""/>
+                                <div>
+                                    <h5 class="testimonies_name  text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                                        <?= $value['name'] ?>
+                                    </h5>
+                                    <h4 class="dark:text-blue-50">
+                                        <?= $value['position'] ?>
+                                    </h4>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <div class="flex items-center mb-2">
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                        </div>
-                        <p class="mb-4">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        </p>
-                        <div class="flex items-start">
-                            <img src="static/img/testimonials/testimonials-3.jpg"
-                                 class="testimonial-img w-12 h-12 rounded-full" alt="">
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold">Saul Goodman</h3>
-                                <h4 class="text-sm text-gray-600">Ceo & Founder</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <div class="flex items-center mb-2">
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                        </div>
-                        <p class="mb-4">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        </p>
-                        <div class="flex items-start">
-                            <img src="static/img/testimonials/testimonials-4.jpg"
-                                 class="testimonial-img w-12 h-12 rounded-full" alt="">
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold">Saul Goodman</h3>
-                                <h4 class="text-sm text-gray-600">Ceo & Founder</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End testimonial item -->
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <div class="flex items-center mb-2">
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                            <i class="bi bi-star-fill text-yellow-500"></i>
-                        </div>
-                        <p class="mb-4">
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                        </p>
-                        <div class="flex items-start">
-                            <img src="static/img/testimonials/testimonials-5.jpg"
-                                 class="testimonial-img w-12 h-12 rounded-full" alt="">
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold">Saul Goodman</h3>
-                                <h4 class="text-sm text-gray-600">Ceo & Founder</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End testimonial item -->
+
+                    <?php
+                }
+                ?>
 
 
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination top-2"></div>
         </div>
-
     </div>
 </section>

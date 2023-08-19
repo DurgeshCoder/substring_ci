@@ -95,7 +95,7 @@
 
     </div>
     <div class="flex justify-center mt-4">
-        <a href="#"
+        <a href="https://learncodewithdurgesh.com/contact-us" target="_blank"
 
            data-aos="fade-up" data-aos-delay="800"
            class="inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-8 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

@@ -1,4 +1,4 @@
-<section id="pricing" class="pricing py-16">
+<section id="pricing" class="pricing mt-16">
     <div class="container mx-auto px-4 " data-aos="fade-up">
         <header class="section-header text-center">
             <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600 ">PRICING</h2>

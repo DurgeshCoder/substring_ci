@@ -1,17 +1,8 @@
-// JavaScript function to toggle mobile menu
-
 document.getElementById("mobileMenuButton").addEventListener("click", function () {
     var mobileMenu = document.getElementById("mobileMenu");
     mobileMenu.classList.toggle("hidden");
 });
 
-/**
- * Template Name: FlexStart
- * Updated: Jul 27 2023 with Bootstrap v5.3.1
- * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 (function () {
     "use strict";
 

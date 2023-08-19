@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?= $this->renderSection('pageTitle') ?></title>
+    <meta name="keywords"
+          content="<?= $this->renderSection('pageKeywords') ?>"/>
+    <meta name="description" content="<?= $this->renderSection('pageDescription') ?>"/>
     <?= link_tag('static/css/custom_style.css') ?>
     <?= link_tag('static/animation/aos/aos.css') ?>
     <?= link_tag('static/animation/bootstrap-icons/bootstrap-icons.css') ?>
@@ -12,9 +15,12 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <?= link_tag('static/css/output.css') ?>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
 
 </head>
 <body data-aos-duration="1000" class="  dark:bg-gray-900 dark:text-blue-50" data-aos-delay="0">
@@ -25,17 +31,86 @@
 
 
 <!-- Vendor JS Files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
 <script src="<?= base_url('static/animation/purecounter/purecounter_vanilla.js') ?>"></script>
 <script src="<?= base_url('static/animation/aos/aos.js') ?>"></script>
 <script src="<?= base_url('static/animation/glightbox/js/glightbox.min.js') ?>"></script>
 <script src="<?= base_url('static/animation/isotope-layout/isotope.pkgd.min.js') ?>"></script>
 <script src="<?= base_url('static/animation/swiper/swiper-bundle.min.js') ?>"></script>
-<script src="<?= base_url('static/animation/php-email-form/validate.js') ?>"></script>
+<!--<script src="--><?php //= base_url('static/animation/php-email-form/validate.js') ?><!--"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
     AOS.init({
         duration: 500
     });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+<script>
+
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Change the icons inside the button based on previous settings
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        themeToggleLightIcon.classList.remove('hidden');
+    } else {
+        themeToggleDarkIcon.classList.remove('hidden');
+    }
+
+    var themeToggleBtn = document.getElementById('theme-toggle');
+
+    themeToggleBtn.addEventListener('click', function () {
+
+        console.log("test")
+
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+
+    });
+
+
 </script>
 
 

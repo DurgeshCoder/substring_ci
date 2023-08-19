@@ -6,9 +6,9 @@
             <!--            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Sure, here are three important points that can provide unique value to a software training and development company:</p>-->
         </header>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 ">
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="200">
-                <div class=" box p-4 rounded-lg  text-center">
-                    <img src="static/img/values-1.png" class="w-50 h-auto mx-auto mb-4" alt="">
+            <div class="col-span-1 md:col-span-1 lg:col-span-1  mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="200">
+                <div class=" box p-4 rounded-lg  text-center ">
+                    <img src="<?= base_url('static/img/value_1.svg') ?>" class="w-40 h-50 mx-auto mb-4" alt="">
                     <h3 class="text-lg font-semibold">Customized Learning Paths for Every Level</h3>
                     <p class="mt-2">A unique value proposition of a software training and development company could be
                         its ability to offer customized learning paths for individuals of all skill levels. From
@@ -22,7 +22,7 @@
 
             <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0 " data-aos="fade-up" data-aos-delay="400">
                 <div class="box p-4  rounded-lg text-center">
-                    <img src="static/img/values-2.png" class="w-50 h-auto mx-auto mb-4" alt="">
+                    <img src="<?= base_url('static/img/value_2.svg') ?>" class="w-40 h-50 mx-auto  mb-4" alt="">
                     <h3 class="text-lg font-semibold">Hands-On Real-World Project Experience</h3>
                     <p class="mt-2">Providing hands-on experience with real-world projects sets a software training and
                         development company apart. Going beyond theoretical learning, practical projects that mimic
@@ -35,7 +35,7 @@
 
             <div class="col-span-1 md:col-span-1 lg:col-span-1 mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="600">
                 <div class="box p-4   rounded-lg text-center">
-                    <img src="static/img/values-3.png" class="w-50 h-auto mx-auto mb-4" alt="">
+                    <img src="<?= base_url('static/img/value_3.svg') ?>" class="w-40 h-50 mx-auto   mb-4" alt="">
                     <h3 class="text-lg font-semibold">Agile Development Methodology Integration</h3>
                     <p class="mt-2">For a software training and development company that also offers development
                         services, integrating an Agile methodology into the training process can be a unique value.

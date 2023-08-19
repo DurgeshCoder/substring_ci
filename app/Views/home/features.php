@@ -7,11 +7,11 @@
             <!--                a software training and development company should have:</p>-->
         </header>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2  gap-6">
 
-            <div class="mb-6 md:mb-0">
-                <img data-aos="fade-up" src="<?= base_url('static/img/features.png') ?>"
-                     class="mx-auto w-full md:w-auto" alt="">
+            <div class="mb-6 flex flex-col justify-center md:mb-0">
+                <img data-aos="fade-up" src="<?= base_url('static/img/features.svg') ?>"
+                     class="mx-auto w-2/3 mt-5">
             </div>
 
             <div class="md:mt-20">
@@ -66,102 +66,102 @@
 
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-32">
-
-            <div class="md:order-1">
-                <h3 class="text-2xl font-bold  dark:text-blue-50 text-blue-900">Neque officiis dolore maiores et
-                    exercitationem quae est
-                    seda lidera pat claero</h3>
-
-                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
-                        data-tabs-toggle="#myTabContent" role="tablist">
-                        <li class="mr-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
-                                    data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
-                                    aria-selected="false">Profile
-                            </button>
-                        </li>
-                        <li class="mr-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                                    id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
-                                    aria-controls="settings" aria-selected="false">Settings
-                            </button>
-                        </li>
-                        <li role="presentation">
-                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                                    id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
-                                    aria-controls="contacts" aria-selected="false">Contacts
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <div id="myTabContent">
-                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 text-green-500" id="profile"
-                         role="tabpanel" aria-labelledby="profile-tab">
-                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente
-                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                        </div>
-                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum
-                            non eveniet magni quaerat nemo et.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                        </div>
-                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.
-                            Quia et perferendis.</p>
-                    </div>
-
-                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 text-red-500" id="settings"
-                         role="tabpanel" aria-labelledby="settings-tab">
-                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente
-                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                        </div>
-                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum
-                            non eveniet magni quaerat nemo et.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                        </div>
-                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.
-                            Quia et perferendis.</p>
-                    </div>
-                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"
-                         aria-labelledby="contacts-tab">
-                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente
-                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                        </div>
-                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum
-                            non eveniet magni quaerat nemo et.</p>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-check2"></i>
-                            <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                        </div>
-                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure
-                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.
-                            Quia et perferendis.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="md:order-2">
-                <img data-aos="fade-up" src="<?= base_url('static/img/features-2.png') ?>"
-                     class="mx-auto w-full md:w-auto" alt="">
-            </div>
-
-        </div>
+        <!--        <div class="grid md:grid-cols-2 gap-6 mt-32">-->
+        <!---->
+        <!--            <div class="md:order-1">-->
+        <!--                <h3 class="text-2xl font-bold  dark:text-blue-50 text-blue-900">Neque officiis dolore maiores et-->
+        <!--                    exercitationem quae est-->
+        <!--                    seda lidera pat claero</h3>-->
+        <!---->
+        <!--                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">-->
+        <!--                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"-->
+        <!--                        data-tabs-toggle="#myTabContent" role="tablist">-->
+        <!--                        <li class="mr-2" role="presentation">-->
+        <!--                            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"-->
+        <!--                                    data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"-->
+        <!--                                    aria-selected="false">Profile-->
+        <!--                            </button>-->
+        <!--                        </li>-->
+        <!--                        <li class="mr-2" role="presentation">-->
+        <!--                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"-->
+        <!--                                    id="settings-tab" data-tabs-target="#settings" type="button" role="tab"-->
+        <!--                                    aria-controls="settings" aria-selected="false">Settings-->
+        <!--                            </button>-->
+        <!--                        </li>-->
+        <!--                        <li role="presentation">-->
+        <!--                            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"-->
+        <!--                                    id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"-->
+        <!--                                    aria-controls="contacts" aria-selected="false">Contacts-->
+        <!--                            </button>-->
+        <!--                        </li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
+        <!--                <div id="myTabContent">-->
+        <!--                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 text-green-500" id="profile"-->
+        <!--                         role="tabpanel" aria-labelledby="profile-tab">-->
+        <!--                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente-->
+        <!--                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum-->
+        <!--                            non eveniet magni quaerat nemo et.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Incidunt non veritatis illum ea ut nisi</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure-->
+        <!--                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.-->
+        <!--                            Quia et perferendis.</p>-->
+        <!--                    </div>-->
+        <!---->
+        <!--                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 text-red-500" id="settings"-->
+        <!--                         role="tabpanel" aria-labelledby="settings-tab">-->
+        <!--                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente-->
+        <!--                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum-->
+        <!--                            non eveniet magni quaerat nemo et.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Incidunt non veritatis illum ea ut nisi</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure-->
+        <!--                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.-->
+        <!--                            Quia et perferendis.</p>-->
+        <!--                    </div>-->
+        <!--                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"-->
+        <!--                         aria-labelledby="contacts-tab">-->
+        <!--                        <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente-->
+        <!--                            atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum-->
+        <!--                            non eveniet magni quaerat nemo et.</p>-->
+        <!--                        <div class="d-flex align-items-center mb-2">-->
+        <!--                            <i class="bi bi-check2"></i>-->
+        <!--                            <h4>Incidunt non veritatis illum ea ut nisi</h4>-->
+        <!--                        </div>-->
+        <!--                        <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure-->
+        <!--                            molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora.-->
+        <!--                            Quia et perferendis.</p>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!---->
+        <!--            </div>-->
+        <!---->
+        <!--            <div class="md:order-2">-->
+        <!--                <img data-aos="fade-up" src="--><?php //= base_url('static/img/features-2.png') ?><!--"-->
+        <!--                     class="mx-auto w-full md:w-auto" alt="">-->
+        <!--            </div>-->
+        <!---->
+        <!--        </div>-->
 
 
         <div class="grid grid-cols-1 md:grid-cols-6 gap-8 feature-icons animate__animated animate__fadeIn mt-12"

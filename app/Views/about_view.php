@@ -9,6 +9,18 @@ About Substring Technologies
 <?= $this->endSection() ?>
 <!--end page title section -->
 
+<!--page pageKeywords-->
+<?= $this->section("pageKeywords") ?>
+about substring technologies
+<?= $this->endSection() ?>
+
+<!--end of the pageKeywords section-->
+<!--page pageDescription-->
+<?= $this->section("pageDescription") ?>
+About substring technology company
+<?= $this->endSection() ?>
+
+
 <?= $this->section('content') ?>
 
 
@@ -83,5 +95,5 @@ About Substring Technologies
     </div>
 </div>
 
-
+<?= $this->include('home/footer'); ?>
 <?= $this->endSection() ?>
