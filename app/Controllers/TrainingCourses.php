@@ -70,4 +70,9 @@ class  TrainingCourses extends ResourceController
         }
     }
 
+//    update training courses
+
+
+
+
 }
