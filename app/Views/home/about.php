@@ -9,7 +9,7 @@
                 <h2 class="text-3xl   dark:text-blue-50 font-bold text-blue-900 mt-2"> We Teach in Ways That Work for You
                     .</h2>
                 <p class="mt-4 text-gray-600   dark:text-blue-50 ">
-                    At InnovateTech Solutions, we know that learning about
+                    At Substring Technologies, we know that learning about
                     technology can be like learning to ride a bike – some of us start from scratch,
                     while others know a bit already. Our classes are made for all skill levels. If you're
                     new to tech or already know a bunch, we've got lessons that fit.
