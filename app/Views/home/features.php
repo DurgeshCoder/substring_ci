@@ -1,10 +1,10 @@
 <section id="features" class=" py-16">
     <div class="container mx-auto px-4 aos-init aos-animate xl:px-32" data-aos="fade-up">
 
-        <header class="text-center mb-8">
+        <header class="text-center ">
             <h2 class="text-2xl font-semibold dark:text-blue-50 text-blue-600">FEATURES</h2>
-            <!--            <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Of course! Here are six important things-->
-            <!--                a software training and development company should have:</p>-->
+                        <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Of course! Here are six important things
+                            a software training and development company should have:</p>
         </header>
 
         <div class="grid md:grid-cols-2  gap-6">
@@ -164,8 +164,9 @@
         <!--        </div>-->
 
 
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-8 feature-icons animate__animated animate__fadeIn mt-12"
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-8 feature-icons animate__animated animate__fadeIn mt-20"
              data-aos="fade-up">
+
             <h3 class="col-span-full text-center dark:text-blue-50 mb-6 text-3xl font-bold text-blue-900">Why Substring
                 Technologies ?</h3>
 

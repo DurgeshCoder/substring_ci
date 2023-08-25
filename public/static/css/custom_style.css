@@ -9,4 +9,10 @@ body {
     background: url(../img/background.svg) fixed ;
     background-size: cover;
 }
+.hero{
+  background: rgba(255, 255, 255, 0.5);
+}
 
+section{
+    margin-top: 20px;
+}
