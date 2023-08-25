@@ -3,8 +3,8 @@
 
         <header class="text-center ">
             <h2 class="text-2xl font-semibold dark:text-blue-50 text-blue-600">FEATURES</h2>
-                        <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Here are six important things
-                            a software training and development company should have:</p>
+<!--                        <p class="text-blue-900 text-4xl dark:text-blue-50 font-bold my-3">Here are six important things-->
+<!--                            a software training and development company should have:</p>-->
         </header>
 
         <div class="grid md:grid-cols-2  gap-6">
