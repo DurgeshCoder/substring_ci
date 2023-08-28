@@ -6,8 +6,8 @@
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 mx-4 xl:px-20">
-<div class=" flex justify-center align-middle">
-    <img src="<?= base_url('static/img/q&a.png') ?>" class="mx-auto p-4 w-96" alt="">
+<div class="">
+    <img src="<?= base_url('static/img/quiz&ans.png') ?>" class="mx-auto p-4 w-96 " alt="">
 </div>
 
             <div class="accordion space-y-2 " id="faqlist2">

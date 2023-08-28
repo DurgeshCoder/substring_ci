@@ -6,7 +6,7 @@
                 us</p>
         </header>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper" virtual="true">
+            <div class="swiper-wrapper "  virtual="true">
 
 
                 <?php
@@ -69,3 +69,5 @@
         </div>
     </div>
 </section>
+
+

@@ -92,7 +92,7 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
             el: '.swiper-pagination', type: 'bullets', clickable: true
         }, breakpoints: {
             320: {
-                slidesPerView: 2, spaceBetween: 40
+                slidesPerView: 1, spaceBetween: 40
             }, 480: {
                 slidesPerView: 3, spaceBetween: 60
             }, 640: {
