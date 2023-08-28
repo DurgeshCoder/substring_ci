@@ -35,10 +35,10 @@
             </div>
             <div class="flex  mt-16 ">
                 <div class="mx-4">
-                    <img src="static/img/app_store.svg" alt="" class="h-12">
+                    <a href="https://play.google.com/store/apps/details?id=com.learncodewithdurgesh.courses&hl=en-IN" target="_blank"> <img src="static/img/app_store.svg" alt="" class="h-12"></a>
                 </div>
                 <div class="mx-4">
-                    <img src="static/img/play_store.png" alt="" class="h-12">
+                    <a href="https://play.google.com/store/apps/details?id=com.learncodewithdurgesh.courses&hl=en-IN" target="_blank"><img src="static/img/play_store.png" alt="" class="h-12"></a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
 </div>
 </section>
 <!--App Section End-->
-<div class="bg-blue-500  h-[300px] md:h-[200px] mt-12 text-center" >
+<div class="bg-blue-700  h-[300px] md:h-[200px] mt-12 text-center" >
 <div class="py-12">
     <h2 class="text-xl font-bold text-blue-50  dark:text-blue-50 ">Why Us ?</h2>
     <p class="text-blue-50 font-bold text-4xl my-3  dark:text-blue-50">Give us your time and you will be filled with confidence of knowledge</p>
@@ -82,7 +82,7 @@
         </div>
     </div>
 </section>
-<div class="bg-blue-500 h-[750px] md:h-[500px] mt-12 text-center py-12" >
+<div class="bg-blue-700 h-[750px] md:h-[500px] mt-12 text-center py-12" >
     <div class="container mx-auto py-12 ">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:min-h-80">
 
@@ -112,4 +112,15 @@
         </div>
     </div>
 </div>
+<div class="flex justify-center mt-4">
+    <a href="https://learncodewithdurgesh.com/" target="_blank"
+
+       data-aos="fade-up" data-aos-delay="800"
+       class="inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-lg px-8 py-2 text-center xl:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Explopre
+        <i class="fa-solid fa-arrow-right fa-beat fa-sm mt-[15px] mx-2" style="color:white"></i>
+
+    </a>
+</div>
+
 <!--Section End-->
