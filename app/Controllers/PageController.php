@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Models\Emp;
 use App\Models\TrainingCourseModel;
+use PhpParser\Node\Scalar\String_;
 
 class PageController extends BaseController
 {
@@ -86,6 +87,31 @@ class PageController extends BaseController
                 "position" => "Client",
                 "picture_url" => "default.png"
             ],
+            [
+                "content" => "I enrolled in Substring Technologies for a software training course, and I must say it was a game-changer for me. The instructors were incredibly knowledgeable and supportive, making complex concepts easy to understand. Not only did I gain valuable skills, but the hands-on experience and practical projects helped me land a great job in the software industry. Substring Technologies truly delivers what they promise!",
+                "name" => "Ankit Tiwari",
+                "start" => 5,
+                "position" => "Spring Boot Batch Student",
+                "picture_url" => "default.png"
+            ], [
+                "content" => "I had the pleasure of learning web and mobile app development at Substring Technologies. The curriculum was well-structured, and the instructors were patient and attentive to every student's needs. The real-world projects allowed me to apply my knowledge effectively. Thanks to Substring Technologies, I am now confidently developing applications for clients and pursuing a successful career in the tech field.",
+                "name" => "Atul Tiwari",
+                "start" => 5,
+                "position" => "FullStack Batch Student",
+                "picture_url" => "default.png"
+            ], [
+                "content" => "Substring Technologies exceeded my expectations in providing top-notch software training. The trainers possessed deep industry insights and were adept at explaining complex coding concepts. Their dedication to student success was evident in the way they provided one-on-one guidance. I not only gained the skills I needed but also made valuable industry connections through their network. I highly recommend Substring Technologies!",
+                "name" => "Karan Singh",
+                "start" => 5,
+                "position" => "Python Batch",
+                "picture_url" => "default.png"
+            ], [
+                "content" => "I am immensely grateful to Substring Technologies for transforming me into a proficient web and mobile app developer. The hands-on training and interactive sessions made learning enjoyable. The trainers at Substring Technologies fostered a collaborative learning environment that encouraged creativity and innovation. Today, I am confidently working on various app development projects, all thanks to the comprehensive training I received from Substring Technologies.",
+                "name" => "Ravi Shukla",
+                "start" => 5,
+                "position" => "Client",
+                "picture_url" => "default.png"
+            ],
 
         ];
 
@@ -137,10 +163,46 @@ class PageController extends BaseController
     public function training(): string
     {
 //        create object of modal : to perform operations with database
-        $trainingModel = new TrainingCourseModel();
-        $courses = $trainingModel->findAll();
-        $data['courses'] = $courses;
+//        $trainingModel = new TrainingCourseModel();
+//        $courses = $trainingModel->findAll();
+//        $data['courses'] = $courses;
+        $data['training_courses'] = [
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+            [
+                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
+                'subject_name' => 'Java',
+                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
+            ],
+        ];
         return view("training_view.php", $data);
     }
-
+    public function courses(): string
+    {
+        return view("courses_view.php");
+    }
 }
+

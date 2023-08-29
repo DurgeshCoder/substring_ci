@@ -8,7 +8,7 @@
         </header>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:min-h-80 mt-12">
-        <div class="col-lg-6 col-md-12 text-start" data-aos="fade-right" data-aos-delay="200">
+        <div class="col-lg-6 col-md-12 text-start" data-aos="fade-up" data-aos-delay="200">
 <!--Mockup Div-->
             <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-xl h-[600px] w-[300px] shadow-xl">
                 <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
@@ -22,7 +22,7 @@
             </div>
 <!--Mockup Div End-->
         </div>
-        <div class="col-lg-6 col-md-12  " data-aos="fade-right" data-aos-delay="200">
+        <div class="col-lg-6 col-md-12  " data-aos="fade-up" data-aos-delay="200">
             <h1 class="mt-32 text-black font-bold text-4xl my-3  dark:text-blue-50">Learn On The Go</h1>
             <p class="mt-2 text-xl font-bold text-black dark:text-blue-50">Watch videos online and practice on it </p>
             <div class="mt-16">
@@ -56,7 +56,7 @@
 <section class="container mx-auto mt-12">
     <div class="container mx-auto px-6 xl:px-32" data-aos="fade-up">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:min-h-80">
-            <div class="col-lg-6 col-md-12  " data-aos="fade-right" data-aos-delay="200">
+            <div class="col-lg-6 col-md-12  " data-aos="fade-up" data-aos-delay="200">
                 <h1 class="mt-16 text-black font-bold text-4xl my-3  dark:text-blue-50 ">Learn</h1>
                 <div >
                     <p class="text-black dark:text-white text-xl">

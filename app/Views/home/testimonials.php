@@ -5,7 +5,7 @@
             <p class="text-blue-900 font-bold text-4xl my-3 dark:text-blue-50">What students and clients are saying about
                 us</p>
         </header>
-        <div class="swiper mySwiper">
+        <div class="swiper testimonialSwiper">
             <div class="swiper-wrapper "  virtual="true">
 
 
