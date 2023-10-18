@@ -92,7 +92,7 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
             el: '.swiper-pagination', type: 'bullets', clickable: true
         }, breakpoints: {
             320: {
-                slidesPerView: 2, spaceBetween: 40
+                slidesPerView: 1, spaceBetween: 40
             }, 480: {
                 slidesPerView: 3, spaceBetween: 60
             }, 640: {
@@ -102,26 +102,53 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
             }
         }
     });
-
-
     /**
      * Testimonials slider
      */
-    new Swiper('.testimonials-slider', {
-        speed: 600, loop: true, autoplay: {
-            delay: 5000, disableOnInteraction: false
-        }, slidesPerView: 'auto', pagination: {
-            el: '.swiper-pagination', type: 'bullets', clickable: true
-        }, breakpoints: {
-            320: {
-                slidesPerView: 1, spaceBetween: 40
-            },
-
-            1200: {
-                slidesPerView: 3,
-            }
-        }
+    var swiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
     });
+    var swiper = new Swiper(".testimonialSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+
+        slidesPerView: "3",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    /**
+     * Testimonials slider
+     */
+    // new Swiper('.testimonials-slider', {
+    //     speed: 600, loop: true, autoplay: {
+    //         delay: 5000, disableOnInteraction: false
+    //     }, slidesPerView: 'auto', pagination: {
+    //         el: '.swiper-pagination', type: 'bullets', clickable: true
+    //     }, breakpoints: {
+    //         320: {
+    //             slidesPerView: 1, spaceBetween: 40
+    //         },
+    //
+    //         1200: {
+    //             slidesPerView: 3,
+    //         }
+    //     }
+    // });
 
     /**
      * Animation on scroll
@@ -143,4 +170,9 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
 
 
 })();
+
+
+
+
+
 

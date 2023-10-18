@@ -9,4 +9,70 @@ body {
     background: url(../img/background.svg) fixed ;
     background-size: cover;
 }
+.hero{
+  background: rgba(255, 255, 255, 0.5);
+}
 
+section{
+    margin-top: 20px;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #4154f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #6776f4;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Training Page
+--------------------------------------------------------------*/
+/*.swiper {*/
+/*    width: 100%;*/
+/*    height: 60vh;*/
+/*    background: #000;*/
+/*}*/
+
+/*.swiper-slide {*/
+
+/*    -webkit-box-sizing: border-box;*/
+/*    box-sizing: border-box;*/
+
+/*}*/
+
+/*.parallax-bg {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 130%;*/
+/*    height: 100%;*/
+/*    -webkit-background-size: cover;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/

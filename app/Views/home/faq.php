@@ -6,9 +6,13 @@
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 mx-4 xl:px-20">
-            <div class="accordion space-y-2" id="faqlist1">
-                <!-- F.A.Q List 1-->
-                <div id="accordionFlushExample">
+<div class="">
+    <img src="<?= base_url('static/img/quiz&ans.png') ?>" class="mx-auto p-4 w-96 " alt="">
+</div>
+
+            <div class="accordion space-y-2 " id="faqlist2">
+                <!-- F.A.Q List 2-->
+                <div id="accordionFlushExample" class="">
                     <div
                             class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-gray-800">
                         <h2 class="mb-0" id="flush-headingOne">
@@ -16,6 +20,7 @@
                                     class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 font-bold text-4xl transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-gray-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] "
                                     type="button"
                                     data-te-collapse-init
+                                    data-te-collapse-show
                                     data-te-target="#flush-collapseOne"
                                     aria-expanded="false"
                                     aria-controls="flush-collapseOne">
@@ -39,9 +44,9 @@
                         </h2>
                         <div
                                 id="flush-collapseOne"
-                                class="!visible border-0"
+                                class="!visible  border-0"
                                 data-te-collapse-item
-                                data-te-collapse-show
+
                                 aria-labelledby="flush-headingOne"
                                 data-te-parent="#accordionFlushExample">
                             <div class="px-5 py-4 dark:text-blue-50">
@@ -93,10 +98,10 @@
                         </div>
                     </div>
                     <div
-                            class="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-gray-800">
+                            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-gray-800">
                         <h2 class="mb-0" id="flush-headingThree">
                             <button
-                                    class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-gray-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                                    class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 font-bold text-4xl transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-gray-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] "
                                     type="button"
                                     data-te-collapse-init
                                     data-te-collapse-collapsed
@@ -123,8 +128,9 @@
                         </h2>
                         <div
                                 id="flush-collapseThree"
-                                class="!visible hidden"
+                                class="!visible hidden border-0"
                                 data-te-collapse-item
+                                data-te-collapse-show
                                 aria-labelledby="flush-headingThree"
                                 data-te-parent="#accordionFlushExample">
                             <div class="px-5 py-4 dark:text-blue-50">
@@ -134,13 +140,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Other FAQ items... -->
-            </div>
 
-            <div class="accordion space-y-2" id="faqlist2">
-                <!-- F.A.Q List 2-->
-                <div id="accordionFlushExample">
                     <div
                             class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-gray-800">
                         <h2 class="mb-0" id="flush-headingFour">
@@ -148,6 +148,7 @@
                                     class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-gray-800  dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
                                     type="button"
                                     data-te-collapse-init
+                                    data-te-collapse-collapsed
                                     data-te-target="#flush-collapseFour"
                                     aria-expanded="false"
                                     aria-controls="flush-collapseFour">
@@ -171,7 +172,7 @@
                         </h2>
                         <div
                                 id="flush-collapseFour"
-                                class="!visible border-0"
+                                class="!visible hidden border-0"
                                 data-te-collapse-item
                                 data-te-collapse-show
                                 aria-labelledby="flush-headingFour"
@@ -268,6 +269,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- Other FAQ items... -->

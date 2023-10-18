@@ -29,7 +29,7 @@
 <!--content data is inserted here-->
 <?= $this->renderSection("content") ?>
 
-
+<?= $this->include("home/footer") ; ?>
 <!-- Vendor JS Files -->
 
 <script src="<?= base_url('static/animation/purecounter/purecounter_vanilla.js') ?>"></script>

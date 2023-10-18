@@ -30,6 +30,7 @@ We offer a variety of coding courses for all levels, from beginner to advanced.O
 <?= $this->include('home/counts'); ?>
 <?= $this->include('home/features'); ?>
 <?= $this->include('home/services'); ?>
+<?= $this->include('home/app'); ?>
 <?php //= $this->include('home/pricing');?>
 <?= $this->include('home/faq'); ?>
 <?php //= $this->include('home/portfolio') ?>
@@ -38,7 +39,7 @@ We offer a variety of coding courses for all levels, from beginner to advanced.O
 <?= $this->include('home/clients'); ?>
 <?= $this->include('home/recent_blog_posts'); ?>
 <?= $this->include('home/contact'); ?>
-<?= $this->include('home/footer'); ?>
+
 
 
 

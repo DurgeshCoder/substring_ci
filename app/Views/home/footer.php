@@ -107,3 +107,5 @@
         </div>
     </div>
 </footer>
+<!--Scroll button-->
+<a href="#" class="back-to-top flex items-center justify-center"><i class="bi bi-arrow-up-short"></i></a>
