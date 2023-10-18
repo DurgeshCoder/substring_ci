@@ -12,7 +12,7 @@ Topics
     course_select_box=document.getElementById("courses")
     for(let c of data){
       option_node=document.createElement("option")
-      option_node.innerHTML=`${c.course_id}  ${c.name}`
+      option_node.innerHTML=` ${c.name}`
       option_node.value=c.course_id
       course_select_box.appendChild(option_node)
 
@@ -131,15 +131,15 @@ Topics
 
 
 
-    <div class="py-4 pl-4 bg-white dark:bg-gray-800 grid justify-start grid-cols-1 lg:grid-cols-2">
+    <div class="py-4 pl-4 bg-white dark:bg-gray-800 grid justify-start grid-cols-1 lg:grid-cols-3 gap-3 ">
         <label for="table-search" class="sr-only">Search</label>
-        <div class="relative mt-1 ">
+        <div class="relative mt-1">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <i class="fa-solid fa-magnifying-glass fa-sm"></i>
             </div>
-            <input type="text" id="table-search" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Topics">
+            <input type="text" id="table-search" class="p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Topics">
         </div>
-        <div class="w-60 md:w-96 mt-1 bg-gray-50">
+        <div class="w-60 md:w-96  mt-1 bg-gray-50 mx-auto">
             <select onChange="courseChange()" data-te-select-init data-te-select-filter="true" name='subject_id' id='courses'>
               <option value="">Select a Course</option>      
             </select>

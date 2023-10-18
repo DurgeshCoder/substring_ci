@@ -12,7 +12,7 @@ Sub Topics
   course_select_box=document.getElementById("courses")
   for(let c of data){
     option_node=document.createElement("option")
-    option_node.innerHTML=`${c.course_id}  ${c.name}`
+    option_node.innerHTML=`${c.name}`
     option_node.value=c.course_id
     course_select_box.appendChild(option_node)
   }
@@ -37,7 +37,7 @@ Sub Topics
         // Add topics based on the selected course
         for (let t of data) {
             const optionNode = document.createElement("option");
-            optionNode.innerHTML =`${t.topic_id}  ${t.topic_name}`;
+            optionNode.innerHTML =`${t.topic_name}`;
             optionNode.value = t.topic_id;
             topicsSelectBox.appendChild(optionNode);
         }
@@ -72,7 +72,7 @@ function topic_change(){
                 // subtopic_id.textContent = t.subtopic_id;
 
                 const subtopic_name = document.createElement("td");
-                subtopic_name.className='px-6 py-4';
+                subtopic_name.className='px-6 py-4 w-80 font-medium text-blue-800 text-lg';
                 subtopic_name.textContent = t.subtopic_name;
 
                 const description = document.createElement("td");
@@ -80,7 +80,7 @@ function topic_change(){
                 description.textContent = t.description;
 
                 const action = document.createElement("td");
-                action.className = 'px-6 py-4 text-center';
+                action.className = 'px-6 py-4 text-center flex justify-center';
 
                 const a_view = document.createElement('a');
                 a_view.className = 'font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2';
@@ -301,7 +301,7 @@ function topic_change(){
                 <!-- <th scope="col" class="px-6 py-3">
                    Sub Topic ID
                 </th> -->
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 ">
                     Name
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -322,16 +322,16 @@ function topic_change(){
                     </div>
                 </td> -->
                 <!-- <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?=$sub_topic['subtopic_id']?>
+              
                 </th> -->
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 w-80 font-medium text-blue-800 text-lg">
                 <?=$sub_topic['subtopic_name']?>
                 </td>
                 <td class="px-6 py-4">
                 <?=$sub_topic['description']?>
                 </td>
                 
-                <td class="px-6 py-4 text-center">
+                <td class="px-6 py-4 text-center flex justify-center">
                 
 
                     <a href="<?php echo base_url('admin/subtopic_view/'.$sub_topic['subtopic_id']) ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"><i class="fa-solid fa-eye fa-lg"></i></button></a>
