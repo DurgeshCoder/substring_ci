@@ -39,6 +39,56 @@ $routes->get("/users", "UserController");
 $routes->get("/training", "PageController::training");
 $routes->get("/courses", "PageController::courses");
 
+
+
+// Admin Routes
+$routes->get("/login", "AdminController::login");
+$routes->post("/login", "AdminController::login");
+$routes->get("/logout", "AdminController::logout");
+
+$routes->group('admin',['filter'=>'isAdmin'], static function($routes){
+    $routes->get('dashboard',"AdminController::dashboard");
+    $routes->get("training_coureses", "AdminController::training_coureses");
+    $routes->post("training_coureses", "AdminController::training_coureses");
+    $routes->get("course_view/(:any)", "AdminActionController::course_view/$1");
+    $routes->get("edit_course/(:any)", "AdminActionController::edit_course/$1");
+    $routes->post("update_course/(:any)", "AdminActionController::update_course/$1");
+    $routes->get("delete_course/(:any)", "AdminActionController::delete_course/$1");
+   
+
+    $routes->get("add_coureses", "AdminController::add_coureses");
+    $routes->post("add_coureses", "AdminController::add_coureses");
+
+    $routes->get("topic", "AdminController::topic");
+    $routes->post("topic", "AdminController::topic");
+    $routes->get("topic_view/(:any)", "AdminActionController::topic_view/$1");
+    $routes->get("edit_topic/(:any)", "AdminActionController::edit_topic/$1");
+    $routes->post("update_topic/(:any)", "AdminActionController::update_topic/$1");
+    $routes->get("delete_topic/(:any)", "AdminActionController::delete_topic/$1");
+
+    $routes->get("add_topic", "AdminController::add_topic");
+    $routes->post("add_topic", "AdminController::add_topic");
+
+    $routes->get("sub_topic", "AdminController::sub_topic");
+    $routes->post("sub_topic", "AdminController::sub_topic");
+    $routes->get("subtopic_view/(:any)", "AdminActionController::subtopic_view/$1");
+    $routes->get("edit_subtopic/(:any)", "AdminActionController::edit_subtopic/$1");
+    $routes->post("update_subtopic/(:any)", "AdminActionController::update_subtopic/$1");
+    $routes->get("delete_subtopic/(:any)", "AdminActionController::delete_subtopic/$1");
+
+    $routes->get("add_subtopic", "AdminController::add_subtopic");
+    $routes->post("add_subtopic", "AdminController::add_subtopic");
+
+});
+
+
+
+
+$routes->get('/api/get-all-courses',"ApiController::get_all_courses");
+$routes->get('/api/get-topics-of-course/(:num)',"ApiController::get_topic_by_course_id/$1");
+$routes->get('/api/get-subtopic-of-topic/(:num)',"ApiController::get_subtopic_by_topic_id/$1");
+
+
 $routes->resource('trainingCourses');
 /*
  * --------------------------------------------------------------------
