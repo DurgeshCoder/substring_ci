@@ -34,6 +34,7 @@ class TrainingCourses extends Model
         "admission_open",
         "start_date",
         "rating",
+        "slug",
         "instructor",
         "course_resourses",
 

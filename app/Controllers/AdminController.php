@@ -100,6 +100,7 @@ class AdminController extends BaseController
                 'admission_open' => 'required|max_length[10]',
                 'start_date' => 'required|max_length[100]|min_length[10]',
                 'rating' => 'required|max_length[255]', 
+                'slug' => 'required|max_length[500]',
                 'instructor' => 'required|max_length[255]', 
                 'coureses_resourses' => 'required|max_length[255]',
             ];
@@ -126,13 +127,19 @@ class AdminController extends BaseController
             $fee = $this->request->getPost("fee");
             $discounted_fee = $this->request->getPost("discounted_fee");
             $mode = $this->request->getPost("mode");
-            //$cover_image = $this->request->getFile("cover_image");
             $duration = $this->request->getPost("duration");
             $admission_open = $this->request->getPost("admission_open");
             $start_date = $this->request->getPost("start_date");
+                $parts = explode("/", $start_date); 
+                if (count($parts) == 3) {
+                    $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+                }
             $rating = $this->request->getPost("rating");
+            $originalSlug = $this->request->getPost("slug");
+            $slug = strtolower(trim(str_replace(' ', '-', $originalSlug)));
             $instructor = $this->request->getPost("instructor");
             $coureses_resourses = $this->request->getPost("coureses_resourses");
+            
     
             // You can insert the data into the database here
             $data=[
@@ -145,8 +152,9 @@ class AdminController extends BaseController
                 "cover_image"=>$image_name,
                 "duration"=>$duration,
                 "admission_open"=>$admission_open,
-                "start_date"=>$start_date,
+                "start_date"=>$sql_date,
                 "rating"=>$rating,
+                "slug"=>$slug,
                 "instructor"=>$instructor,
                 "course_resourses"=>$coureses_resourses,
             ];

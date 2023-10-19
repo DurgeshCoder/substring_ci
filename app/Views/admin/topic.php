@@ -1,6 +1,6 @@
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-Topics
+ALl Topics
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
 
@@ -45,11 +45,11 @@ Topics
                 // topic_id.textContent = t.topic_id;
 
                 const topic_name = document.createElement("td");
-                topic_name.className='px-6 py-4 w-80 font-medium text-blue-800 text-lg';
+                topic_name.className='px-6 py-4 w-80 font-medium text-blue-800 text-lg dark:text-gray-100';
                 topic_name.textContent = t.topic_name;
 
                 const description = document.createElement("td");
-                description.className='px-6 py-4';
+                description.className='px-6 py-4 dark:text-gray-100';
                 description.textContent = t.description;
 
                 const action = document.createElement("td");
@@ -105,8 +105,8 @@ Topics
   </script>
 
 
-<section class='topics mx-8 md:mx-16 sm:ml-64 my-16' id='topics'  >
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg sm:ml-64">
+<section class='topics mx-8 md:mx-16 md:ml-64 my-16' id='topics'  >
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg md:ml-16">
 
     <!-- messaage start -->
  <div id="alert-border-1" class="flex items-center rounded-t-lg p-4  text-blue-800 border-t-4 border-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
@@ -131,15 +131,15 @@ Topics
 
 
 
-    <div class="py-4 pl-4 bg-white dark:bg-gray-800 grid justify-start grid-cols-1 lg:grid-cols-3 gap-3 ">
+    <div class="py-4 pl-4 bg-white dark:bg-gray-800 grid justify-start grid-cols-1 xl:grid-cols-3 gap-3 ">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative mt-1">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <i class="fa-solid fa-magnifying-glass fa-sm"></i>
             </div>
-            <input type="text" id="table-search" class="p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Topics">
+            <input type="text" id="table-search" class="p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-60 md:w-80 mx-auto bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Topics">
         </div>
-        <div class="w-60 md:w-96  mt-1 bg-gray-50 mx-auto">
+        <div class="w-60 md:w-80  mt-[5px] bg-gray-50 dark:bg-gray-900 rounded">
             <select onChange="courseChange()" data-te-select-init data-te-select-filter="true" name='subject_id' id='courses'>
               <option value="">Select a Course</option>      
             </select>
@@ -174,15 +174,15 @@ Topics
         </thead>
         <tbody id="topic_table">
         <?php foreach($topics as $topic): ?>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr class="bg-white border-b  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 
                 <!-- <th id="topic_id" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 
                 </th> -->
-                <td id="topic_name" class="px-6 py-4 w-80 font-medium text-blue-800 text-lg">
+                <td id="topic_name" class="px-6 py-4 w-80 font-medium text-blue-700 text-lg dark:text-gray-100">
                 <?=$topic['topic_name']?>
                 </td>
-                <td id="description" class="px-6 py-4">
+                <td id="description" class="px-6 py-4 dark:text-gray-100">
                 <?=$topic['description']?>
                 </td>
                 

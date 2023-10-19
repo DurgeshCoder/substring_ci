@@ -11,8 +11,8 @@ Add Course
   </script>
 
 
-<section id="add_coureses" class=' mx-8 md:mx-16 sm:ml-64 my-16 '>
- <div class='sm:ml-64 bg-white  rounded-lg shadow-lg dark:bg-gray-800'>
+<section id="add_coureses" class=' mx-8 md:mx-16 md:ml-64 my-16 '>
+ <div class='md:ml-16 bg-white  rounded-lg shadow-lg dark:bg-gray-800'>
     <!-- messaage start -->
  <div id="alert-border-1" class="flex items-center rounded-t-lg p-4 mb-4 text-blue-800 border-t-4 border-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
     <div class="ml-3 text-sm font-medium">
@@ -94,23 +94,25 @@ Add Course
         <label for="admission_open" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-9">Number of Admissions</label>
      </div>
 
+
+
      <div class="relative z-0 w-full  group mt-2">
-        <div
-           class="relative mb-3"
-           data-te-datepicker-init
-           data-te-format="dd, mmm, yyyy"
-           data-te-input-wrapper-init>
-         <input
-             type="text"
-             name="start_date"
-             value="<?= set_value('start_date') ?>"
-             class="peer block min-h-[auto] w-full rounded-lg border-1 bg-transparent px-3 py-2.5 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-             placeholder="Select a date" />
-         <label
-             for="floatingInput"
-             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.57rem] leading-[1.6] text-gray-900 text-lg transition-all duration-200 ease-out peer-focus:-translate-y-[2.1rem] peer-focus:scale-[1] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">Start Date
-         </label>
-       </div>
+
+          <div
+          class="relative mb-3"
+          data-te-datepicker-init
+          data-te-input-wrapper-init>
+          <input
+            type="text"
+            name="start_date"
+            value="<?= set_value('start_date') ?>"
+            class="peer block min-h-[auto] w-full rounded-lg border-1 bg-transparent px-3 py-2.5 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+            placeholder="Select a date" />
+          <label
+            for="floatingInput"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.57rem] leading-[1.6] text-gray-900 text-lg transition-all duration-200 ease-out peer-focus:-translate-y-[2.1rem] peer-focus:scale-[1] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+            >Starting Date</label>
+        </div>
      </div>
      <div class="relative z-0 w-full mb-10 group mt-2">
         <input type="number" name="rating" id="rating" value="<?= set_value('rating') ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " >
@@ -119,6 +121,10 @@ Add Course
 
 
   </div>
+  <div class="relative z-0 w-full group mb-10">
+    <input type="text" name="slug" id="slug" value="<?= set_value('slug') ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" >
+    <label for="slug" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-9">Slug</label>
+</div>
 
   <div class="relative z-0 w-full group mb-10">
     <input type="text" name="instructor" id="instructor" value="<?= set_value('instructor') ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" >

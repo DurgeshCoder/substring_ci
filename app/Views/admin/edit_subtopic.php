@@ -1,14 +1,14 @@
 
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-Edit Sub Topic
+Edit Sub Topic <?= $subtopic['subtopic_name']?>
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
 
 
 
-<section id="add_subtopic" class=' mx-8 md:mx-16 sm:ml-64 my-16 '>
- <div class='sm:ml-64 bg-white p-8 rounded-lg shadow-lg dark:bg-gray-800'>
+<section id="add_subtopic" class=' mx-8 md:mx-16 md:ml-64 my-16 '>
+ <div class='md:ml-16 bg-white p-8 rounded-lg shadow-lg dark:bg-gray-800'>
  <h1 class="text-center  text-4xl font-bold mb-4 text-blue-800 dark:text-gray-100">Edit Sub Topics</h1>
 
   
