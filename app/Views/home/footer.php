@@ -59,6 +59,7 @@
                                 service</a></li>
                         <li class="mb-2"><a href="#!" class="text-gray-900 dark:text-blue-50 hover:text-blue-500">Privacy
                                 policy</a></li>
+                                <a href="<?= base_url('/login') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Admin</a>
                     </ul>
                 </div>
 
