@@ -50,8 +50,8 @@
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
+        loop:true,
+        slidesPerView: "3",
         coverflowEffect: {
             rotate: 50,
             stretch: 0,
@@ -59,6 +59,10 @@
             modifier: 1,
             slideShadows: true,
         },
+        autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
         pagination: {
             el: ".swiper-pagination",
         },
