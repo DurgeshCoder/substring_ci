@@ -160,7 +160,8 @@ View Course
         </div>
         <div class="grid">
             <div class="text-center my-2">
-                <img src="<?= base_url("cover_images/".$course['cover_image']) ?>" class="h-80 w-auto hover:scale-[1.02] transition duration-700 ease-in-out" alt=""  onerror="this.onerror=null;this.src="<?= base_url("cover_images/church.jpg") ?>">
+             
+                <img src="<?= base_url("/cover_images/".$course['cover_image']) ?>" class="h-80 w-auto hover:scale-[1.02] transition duration-700 ease-in-out" alt=""  onerror="this.onerror=null;this.src="<?= base_url("cover_images/church.jpg") ?>">
             </div> 
           
         </div>
