@@ -6,8 +6,8 @@ Add Topic
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 
-<section id="add_topic" class=' mx-8 md:mx-16 sm:ml-64 my-16 '>
- <div class='sm:ml-64 bg-white pb-8 rounded-lg shadow-lg dark:bg-gray-800 '>
+<section id="add_topic" class=' mx-8 md:mx-16 md:ml-64 my-16 '>
+ <div class='md:ml-16 bg-white pb-8 rounded-lg shadow-lg dark:bg-gray-800 '>
 
 
  <div id="alert-border-1" class="flex items-center p-4 mb-4 rounded-t-lg text-blue-800 border-t-4 border-blue-500 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
@@ -34,7 +34,7 @@ Add Topic
  
     <!-- dropdown start -->
   <form action="<?= base_url('admin/add_topic') ?>" method="post"> 
-    <div class="w-60 md:w-96 mx-auto my-8 md:my-12">
+    <div class="w-60 md:w-96 mx-auto my-8 md:my-12 dark:bg-gray-900 rounded">
       <select data-te-select-init data-te-select-filter="true" name="subject_id">
         <option value="">Select a Course</option>
         <?php foreach($coureses as $course): ?>
@@ -58,12 +58,14 @@ Add Topic
           <textarea name="description1" id="description" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required /></textarea>
           <label for="description" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-9">Description</label>
         </div>
+
+        <div class="flex justify-center items-center">
+      <button type="submit" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
+    </div>
     </div>
   
     
-    <div class="flex justify-center items-center">
-      <button type="submit" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add</button>
-    </div>
+   
 
   
 </form>

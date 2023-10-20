@@ -20,7 +20,7 @@
 
         <!-- Desktop Menu (Hidden on smaller screens) -->
         <div class="hidden md:flex space-x-4 xl:space-x-8" id="desktopMenu">
-            <a href="<?= base_url('/login') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Admin</a>
+            
             <a href="<?= base_url('/') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Home</a>
             <a href="<?= base_url('/#services') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Services</a>
             <a target="_blank" href="https://learncodewithdurgesh.com/courses"
