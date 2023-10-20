@@ -3,7 +3,7 @@
 Dashboard
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
-<div class='sm:ml-64 bg-slate-100 dark:bg-gray-900 pt-2'>
+<div class='md:ml-64 bg-slate-100 dark:bg-gray-900 pt-2'>
 <section class="mx-8 md:mx-16 ">
    <div class="grid-cols-1 sm:grid md:grid-cols-2 lg:grid-cols-4 ">
       <div
