@@ -1,11 +1,11 @@
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-Courses
+All Courses
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
-<section class='training_coureses mx-8 md:mx-16 sm:ml-64 my-16' id='training_coureses'  >
+<section class='training_coureses mx-8 md:mx-16 md:ml-64 my-16' id='training_coureses'  >
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg sm:ml-64">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg md:ml-16">
 <div id="alert-border-1" class="flex items-center p-4  text-blue-800 border-t-4 border-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
     <div class="ml-3 text-sm font-medium">
       <?php
@@ -37,7 +37,7 @@ Courses
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                 </svg>
             </div>
-            <input type="text" id="table-search" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-52 md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Course">
+            <input type="text" id="table-search" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-52 md:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Course">
         </div>
     </div>
     <table class="w-full text-base text-left text-gray-500 dark:text-gray-400">
@@ -50,8 +50,14 @@ Courses
                 <th scope="col" class="px-6 py-3">
                     Name
                 </th>
+                <th scope="col" class=" py-3">
+                   Short Description
+                </th>
                 <th scope="col" class="px-6 py-3">
                     Instructor
+                </th>
+                <th scope="col" class=" py-3">
+                    Discounted Fee
                 </th>
                 <th scope="col" class="px-6 py-3 text-center">
                     Action
@@ -63,13 +69,19 @@ Courses
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 
                 <!-- <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <?=$course['course_id']?>
+              
                 </th> -->
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 w-80 font-medium text-blue-800 text-lg dark:text-gray-100">
                     <?=$course['name']?>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4 w-80 dark:text-gray-100">
+                    <?=$course['short_description']?>
+                </td>
+                <td class="px-6 py-4 dark:text-gray-100">
                 <?=$course['instructor']?>
+                </td>
+                <td class=" py-4 dark:text-gray-100">
+                Rs.<?=$course['discounted_fee']?>
                 </td>
                 <td class="px-6 py-4 text-center flex justify-center">
                     

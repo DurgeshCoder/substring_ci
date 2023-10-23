@@ -1,11 +1,11 @@
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-View Topic
+View Topic <?= $topic['topic_name'] ?>
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
-<section id="add_coureses" class=' mx-8 md:mx-16 sm:ml-64 my-16 '>
+<section id="add_coureses" class=' mx-8 md:mx-16 md:ml-64 my-16 '>
  
- <div class='sm:ml-64 bg-white p-2 md:p-6 rounded-lg shadow-lg dark:bg-gray-800'>
+ <div class='md:ml-16 bg-white p-2 md:p-6 rounded-lg shadow-lg dark:bg-gray-800'>
 
     <div class="w-full text-blue-700 ">
         <div class="p-4 flex flex-row items-center justify-between">

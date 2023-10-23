@@ -1,6 +1,6 @@
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-Sub Topics
+All Sub Topics
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
 
@@ -72,11 +72,11 @@ function topic_change(){
                 // subtopic_id.textContent = t.subtopic_id;
 
                 const subtopic_name = document.createElement("td");
-                subtopic_name.className='px-6 py-4 w-80 font-medium text-blue-800 text-lg';
+                subtopic_name.className='px-6 py-4 w-80 font-medium text-blue-800 text-lg dark:text-gray-100';
                 subtopic_name.textContent = t.subtopic_name;
 
                 const description = document.createElement("td");
-                description.className='px-6 py-4';
+                description.className='px-6 py-4 dark:text-gray-100';
                 description.textContent = t.description;
 
                 const action = document.createElement("td");
@@ -86,7 +86,7 @@ function topic_change(){
                 a_view.className = 'font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2';
                 a_view.href = "subtopic_view/"+t.subtopic_id;
                 const button_view = document.createElement('button');
-                button_view.className = 'focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900';
+                button_view.className = 'focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:focus:ring-yellow-900';
                 const icon_view = document.createElement('i');
                 icon_view.className = 'fa-solid fa-eye fa-lg';
                 button_view.appendChild(icon_view);
@@ -97,7 +97,7 @@ function topic_change(){
                 a_edit.className = 'font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2';
                 a_edit.href = "edit_subtopic/"+t.subtopic_id;
                 const button_edit = document.createElement('button');
-                button_edit.className = 'focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800';
+                button_edit.className = 'focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800';
                 const icon_edit = document.createElement('i');
                 icon_edit.className = 'fa-solid fa-pen-to-square fa-lg';
                 button_edit.appendChild(icon_edit);
@@ -108,7 +108,7 @@ function topic_change(){
                 a_delete.className = 'font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2';
                 a_delete.href = "#!";
                 const button_delete = document.createElement('button');
-                button_delete.className = 'confirm_del_btn focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900';
+                button_delete.className = 'confirm_del_btn focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900';
                 button_delete.value=t.subtopic_id
                 const icon_delete = document.createElement('i');
                 icon_delete.className = 'fa-solid fa-trash fa-lg';
@@ -135,6 +135,8 @@ function topic_change(){
 
 
 <!-- <script>
+
+
     // all subjects
    get_all_courses().then((data)=>{
     
@@ -226,15 +228,15 @@ function topic_change(){
             }
         }
     });
-}
+ }
   
   </script> -->
 
 
 
 
-<section class='sub_topics mx-8 md:mx-16 sm:ml-64 my-16' id='sub_topics'  >
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg sm:ml-64 dark:bg-gray-800">
+<section class='sub_topics mx-8 md:mx-16 md:ml-64 my-16' id='sub_topics'  >
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg md:ml-16 dark:bg-gray-800">
 
     <!-- messaage start -->
  <div id="alert-border-1" class="flex items-center rounded-t-lg p-4  text-blue-800 border-t-4 border-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
@@ -260,18 +262,16 @@ function topic_change(){
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative mt-1">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
+            <i class="fa-solid fa-magnifying-glass fa-sm"></i>
             </div>
-            <input type="text" id="table-search" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Sub Topics">
+            <input type="text" id="table-search" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-900 dark:text-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for Sub Topics">
         </div>
     </div>
 
 
 
     <!-- dropdown 1 start -->
-    <div class="w-60 md:w-96 mx-auto my-8 md:my-12">
+    <div class="w-60 md:w-96 mx-auto my-8 md:my-12 bg-gray-100 dark:bg-gray-900">
       <select onChange="courseChange()" data-te-select-init data-te-select-filter="true" name='subject_id' id='courses'>
         <option value="">Select a Course</option>      
       </select>
@@ -279,7 +279,7 @@ function topic_change(){
 
      <!-- dropdown 1 ends -->
      <!-- dropdown 2 start -->
-     <div class="w-60 md:w-96 mx-auto my-8 md:my-12">
+     <div class="w-60 md:w-96 mx-auto my-8 md:my-12  bg-gray-100 dark:bg-gray-900">
       <select onChange="topic_change()" data-te-select-init data-te-select-filter="true" name='topic_id' id='topics'>
         <option value="">Select a Topic</option>
       </select>
@@ -324,21 +324,21 @@ function topic_change(){
                 <!-- <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
               
                 </th> -->
-                <td class="px-6 py-4 w-80 font-medium text-blue-800 text-lg">
+                <td class="px-6 py-4 w-80 font-medium text-blue-800 text-lg dark:text-gray-100">
                 <?=$sub_topic['subtopic_name']?>
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 dark:text-gray-100">
                 <?=$sub_topic['description']?>
                 </td>
                 
                 <td class="px-6 py-4 text-center flex justify-center">
                 
 
-                    <a href="<?php echo base_url('admin/subtopic_view/'.$sub_topic['subtopic_id']) ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"><i class="fa-solid fa-eye fa-lg"></i></button></a>
+                    <a href="<?php echo base_url('admin/subtopic_view/'.$sub_topic['subtopic_id']) ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:focus:ring-yellow-900"><i class="fa-solid fa-eye fa-lg"></i></button></a>
 
-                    <a href="<?php echo base_url('admin/edit_subtopic/'.$sub_topic['subtopic_id']) ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"><i class="fa-solid fa-pen-to-square fa-lg"></i></button></a>
+                    <a href="<?php echo base_url('admin/edit_subtopic/'.$sub_topic['subtopic_id']) ?>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"><i class="fa-solid fa-pen-to-square fa-lg"></i></button></a>
 
-                    <a href="#"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" value="<?= $sub_topic['subtopic_id']?>" class="confirm_del_btn focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><i class="fa-solid fa-trash fa-lg"></i></button></a>
+                    <a href="#"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-2"><button type="button" value="<?= $sub_topic['subtopic_id']?>" class="confirm_del_btn focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><i class="fa-solid fa-trash fa-lg"></i></button></a>
                 </td>
                 
             </tr>

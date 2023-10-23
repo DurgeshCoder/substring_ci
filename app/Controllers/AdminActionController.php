@@ -25,6 +25,10 @@ class AdminActionController extends BaseController{
 
     public function update_course($course_id=null){
         $course = new TrainingCourses();
+
+
+       
+
            $file = $this->request->getFile('cover_image');
            $image_name = null; 
             if ($file) {
@@ -33,24 +37,43 @@ class AdminActionController extends BaseController{
                     $file->move('cover_images/', $image_name);
                 }
             }
-        $data=[
-            "name"=>$this->request->getPost("course_name"),
-            "short_description"=>$this->request->getPost("short_description"),
-            "long_description"=>$this->request->getPost("long_description"),
-            "fee"=>$this->request->getPost("fee"),
-            "discounted_fee"=>$this->request->getPost("discounted_fee"),
-            "mode"=>$this->request->getPost("mode"),
-            "cover_image"=>$image_name,
-            "duration"=>$this->request->getPost("duration"),
-            "admission_open"=>$this->request->getPost("admission_open"),
-            "start_date"=>$this->request->getPost("start_date"),
-            "rating"=>$this->request->getPost("rating"),
-            "instructor"=>$this->request->getPost("instructor"),
-            "course_resourses"=>$this->request->getPost("coureses_resourses")
-            
-            
-				
-];
+         $course_name = $this->request->getPost("course_name");
+         $short_description = $this->request->getPost("short_description");
+         $long_description = $this->request->getPost("long_description");
+         $fee = $this->request->getPost("fee");
+         $discounted_fee = $this->request->getPost("discounted_fee");
+         $mode = $this->request->getPost("mode");
+         $duration = $this->request->getPost("duration");
+         $admission_open = $this->request->getPost("admission_open");
+         $start_date = $this->request->getPost("start_date");
+             $parts = explode("/", $start_date); 
+             if (count($parts) == 3) {
+                 $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+             }
+         $rating = $this->request->getPost("rating");
+         $originalSlug = $this->request->getPost("slug");
+         $slug = strtolower(trim(str_replace(' ', '-', $originalSlug)));
+         $instructor = $this->request->getPost("instructor");
+         $coureses_resourses = $this->request->getPost("coureses_resourses");
+         
+ 
+
+         $data=[
+             "name"=>$course_name,
+             "short_description"=>$short_description,
+             "long_description"=>$long_description,
+             "fee"=>$fee,
+             "discounted_fee"=>$discounted_fee,
+             "mode"=>$mode,
+             "cover_image"=>$image_name,
+             "duration"=>$duration,
+             "admission_open"=>$admission_open,
+             "start_date"=>$sql_date,
+             "rating"=>$rating,
+             "slug"=>$slug,
+             "instructor"=>$instructor,
+             "course_resourses"=>$coureses_resourses,
+         ];
 
 
      $course->update($course_id,$data);
