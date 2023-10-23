@@ -6,7 +6,7 @@
                 us</p>
         </header>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper py-8" virtual="true">
+            <div class="swiper-wrapper py-8 " virtual="true">
 
 
                 <?php
@@ -25,9 +25,9 @@
                     ?>
 
 
-                    <div class="swiper-slide  h-[644px] w-[400px] ">
+                    <div class="swiper-slide  h-[644px] w-[400px]">
                         <div class="block rounded-lg bg-white shadow-lg dark:bg-gray-800 h-[644px]">
-                            <div class="relative overflow-hidden bg-cover bg-no-repeat mt-5 mx-auto p-4">
+                            <div class="relative overflow-hidden bg-cover bg-no-repeat mx-auto pt-4">
                                 <ul class="text-center p-2">
                                     <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>
                                     <i class="fa-solid fa-star fa-lg" style="color: #cec01c;"></i>

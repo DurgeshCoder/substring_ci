@@ -51,7 +51,7 @@
         effect: "coverflow",
         grabCursor: true,
         loop:true,
-        slidesPerView: "3",
+        slidesPerView: "1",
         coverflowEffect: {
             rotate: 50,
             stretch: 0,
@@ -59,10 +59,10 @@
             modifier: 1,
             slideShadows: true,
         },
-        autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
+    //     autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    //   },
         pagination: {
             el: ".swiper-pagination",
         },
