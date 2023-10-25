@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 
 use App\Models\Emp;
-use App\Models\TrainingCourseModel;
+use App\Models\TrainingCourses;
 
 class PageController extends BaseController
 {
@@ -137,10 +137,19 @@ class PageController extends BaseController
     public function training(): string
     {
 //        create object of modal : to perform operations with database
-        $trainingModel = new TrainingCourseModel();
+        $trainingModel = new TrainingCourses();
         $courses = $trainingModel->findAll();
         $data['courses'] = $courses;
         return view("training_view.php", $data);
+    }
+
+    public function course_view(): string
+    {
+//        create object of modal : to perform operations with database
+        $trainingModel = new TrainingCourses();
+        $courses = $trainingModel->findAll();
+        $data['courses'] = $courses;
+        return view("course_view", $data);
     }
 
 }

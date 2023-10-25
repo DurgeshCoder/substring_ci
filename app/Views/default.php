@@ -77,6 +77,25 @@
       },
     });
 </script>
+<script>
+        var swiper = new Swiper(".mySwiper1 ", {
+          speed: 600,
+          parallax: true,
+          loop:true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 
 <script>
 
@@ -125,7 +144,20 @@
 
 
 </script>
-
+<script src="https://cdn.tailwindcss.com/3.3.0"></script> 
+       <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>   
+        
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      
+      <script>
+        import {
+      Tab,
+      initTE,
+    } from "tw-elements";
+    
+    initTE({ Tab });
+    </script>
 
 <script src="<?= base_url('static/js/main.js') ?>">
 </script>

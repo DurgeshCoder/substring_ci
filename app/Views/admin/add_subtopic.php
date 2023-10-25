@@ -89,7 +89,7 @@ Add Sub Topic
       </select>
      </div>
      <!-- dropdown 2 ends -->
-    <div class="container p-8" id='input_fields'>
+    <div class="container p-8 mx-auto" id='input_fields'>
   <div class="relative z-0 w-full group mb-10 ">
       <input type="text" name="subtopic_name1" id="subtopic_name" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required />
       <label for="subtopic_name" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-9">Subtopic Name</label>
