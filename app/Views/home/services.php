@@ -1,6 +1,6 @@
 <!-- services start -->
 
-<section id="services" class="services py-16">
+<section id="services" class="services ">
 
     <div class="container mx-auto px-4 xl:px-32" data-aos="fade-up">
 
@@ -10,22 +10,22 @@
             </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center lg:min-h-80">
 
             <div class="col-lg-4 col-md-6  group" data-aos="fade-right" data-aos-delay="200">
-                <div class="service-box p-6 dark:bg-gray-800 rounded-lg hover:bg-blue-500 shadow-md border-b-4 border-blue-500 ">
+                <div class="service-box min-h-[35vh] p-6 dark:bg-gray-800 rounded-lg hover:bg-blue-500 shadow-md border-b-4 border-blue-500  ">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-blue-500"></i>
                     <h3 class="text-xl font-semibold dark:text-blue-50 mt-4 text-blue-500">Software Training</h3>
                     <p class="text-gray-700 dark:text-blue-50 mt-2"> We're here to help you learn all about creating
                         software and apps in a simple and friendly way. </p>
-                    <!--                    <a href="http://localhost:8080/about#"-->
-                    <!--                       class="read-more inline-block mt-4 text-blue-500 hover:underline"><span>Read More</span> <i-->
-                    <!--                                class="bi bi-arrow-right"></i></a>-->
+<!--                                        <a href="http://localhost:8080/about#"-->
+<!--                                           class="read-more inline-block mt-4 text-blue-500 hover:underline"><span>Read More</span> <i-->
+<!--                                                    class="bi bi-arrow-right"></i></a>-->
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-box p-6 dark:bg-gray-800 rounded-lg hover:bg-orange-500  shadow-md  border-b-4 border-orange-500">
+                <div class="service-box min-h-[35vh] p-6 dark:bg-gray-800 rounded-lg hover:bg-orange-500  shadow-md  border-b-4 border-orange-500">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-orange-500 "></i>
                     <h3 class="text-xl font-semibold mt-4  dark:text-blue-50 text-orange-500">Corporate Training</h3>
                     <p class="text-gray-700 mt-2  dark:text-blue-50">We are one of the top leading corporate training
@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 " data-aos="fade-left" data-aos-delay="400">
-                <div class="service-box p-6 dark:bg-gray-800 rounded-lg hover:bg-green-500 shadow-md  border-b-4 border-green-500">
+                <div class="service-box min-h-[35vh] p-6 dark:bg-gray-800 rounded-lg hover:bg-green-500 shadow-md  border-b-4 border-green-500">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-green-500"></i>
                     <h3 class="text-xl font-semibold  dark:text-blue-50 mt-4 text-green-500">College Seminar</h3>
                     <p class="text-gray-700 mt-2  dark:text-blue-50">We provide technical seminar on trending topics to
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="500">
-                <div class="service-box p-6  dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-red-500">
+                <div class="service-box min-h-[35vh] p-6  dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-red-500">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-red-500"></i>
                     <h3 class="text-xl font-semibold  dark:text-blue-50 mt-4 text-red-500">Website Development</h3>
                     <p class="text-gray-700 mt-2  dark:text-blue-50">We at Substring Technologies provide custom website
@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="600">
-                <div class="service-box p-6 dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-purple-500 ">
+                <div class="service-box min-h-[35vh] p-6 dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-purple-500 ">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-purple-500"></i>
                     <h3 class="text-xl font-semibold  dark:text-blue-50 mt-4 text-purple-500">Mobile App
                         Development</h3>
@@ -77,7 +77,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 " data-aos="fade-left" data-aos-delay="700">
-                <div class="service-box p-6 dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-pink-500">
+                <div class="service-box min-h-[35vh] p-6 dark:bg-gray-800 rounded-lg shadow-md  border-b-4 border-pink-500">
                     <i class="fa-solid fa-stroopwafel fa-fade fa-2xl text-6xl text-pink-500"></i>
                     <h3 class="text-xl font-semibold  dark:text-blue-50 mt-4 text-pink-500">Career guidance and
                         support</h3>

@@ -1,12 +1,12 @@
 <section id="testimonies" class="testimonies mt-16 mb-32">
     <div class="container  mx-auto px-4 xl:px-28  aos-init aos-animate" data-aos="fade-up">
         <header class="section-header text-center mb-8">
-            <h2 class="text-xl font-bold text-blue-600 dark:text-blue-50 ">TESTIMONIES</h2>
+            <h2 class="text-xl font-bold text-blue-600 dark:text-blue-50 ">TESTIMONIALES</h2>
             <p class="text-blue-900 font-bold text-4xl my-3 dark:text-blue-50">What students and clients are saying about
                 us</p>
         </header>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper py-8 " virtual="true">
+            <div class="swiper-wrapper" virtual="true">
 
 
                 <?php
@@ -69,3 +69,5 @@
         </div>
     </div>
 </section>
+
+

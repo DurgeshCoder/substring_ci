@@ -27,8 +27,8 @@
                class="text-blue-900   dark:text-blue-50   font-bold">Courses</a>
             <a href="<?= base_url('/#recent-blog-posts') ?>"
                class="text-blue-900   dark:text-blue-50   font-bold">Blogs</a>
-            <!--            <a href="-->
-            <?php //= base_url('/training') ?><!--" class="text-blue-900    dark:text-blue-50  font-bold">Training</a>-->
+<!--                        <a href="-->
+<!--            --><?php //= base_url('/training') ?><!--" class="text-blue-900    dark:text-blue-50  font-bold">Training</a>-->
             <!--            <a href="-->
             <?php //= base_url('/') ?><!--" class="text-blue-900    dark:text-blue-50 font-bold">Gallery</a>-->
             <a href="<?= base_url('/about') ?>" class="text-blue-900    dark:text-blue-50  font-bold">AboutUs</a>
