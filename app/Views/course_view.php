@@ -23,16 +23,19 @@ Courses offered by Substring Technologies
             <div class="relative px-4  mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 justify-between">
                 <div class="md:col-start-1 md:col-end-6 mt-12">
-                <h2 class="course_heading max-w-lg mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none text-left -ml-4">
-                    The quick, brown fox <br class="hidden md:block" />
-                    jumps over a lazy dog
+                <h2 class="course_heading max-w-xl mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none text-left -ml-4">
+                    Let's Get Start <br class="hidden md:block" />
+
+                    
+                    <?=$course['name'] ?>
                 </h2>
                 <p class="course_discription max-w-xl mb-4 text-base text-gray-200 md:text-xl">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, consequatur saepe consectetur explicabo eveniet voluptatum sapiente expedita, esse quod adipisci consequuntur. Repellendus ab magnam laboriosam? Deserunt unde ut illo harum eveniet odit impedit mollitia totam, dignissimos distinctio, repudiandae qui! Facere doloribus consequuntur illo nulla ipsa! Quo officiis dolorem commodi fugit.
+                    
+                   <?=$course['short_description']?>
                 </p>
                 <div>
-                    <p class="text-blue-900 text-2xl font-bold mb-1">Language :- Hindi</p>
-                    <h1 class="text-blue-900 font-bold text-2xl">Rating :-
+                    <p class="text-blue-900 text-2xl font-bold mb-1  dark:text-white" >Language :- Hindi</p>
+                    <h1 class="text-blue-900 font-bold text-2xl dark:text-white">Rating :-
                     <i class="fa-solid fa-star fa-sm  align-baseline " style="color: #e6df19;"></i>
                     <i class="fa-solid fa-star fa-sm  align-baseline " style="color: #e6df19;"></i>
                     <i class="fa-solid fa-star fa-sm  align-baseline " style="color: #e6df19;"></i>
@@ -47,10 +50,8 @@ Courses offered by Substring Technologies
                 <div
                 class="block w-[21.5rem] md:w-[30rem] rounded-lg bg-white  dark:bg-white shadow-xl">
                 <div class="relative overflow-hidden bg-cover bg-no-repeat mt-12">
-                    <img
-                    class="rounded-t-lg"
-                    src="https://tecdn.b-cdn.net/img/new/standard/city/062.jpg"
-                    alt="" />
+                <img class="rounded-t-lg h-80 w-full hover:scale-[1.02] transition duration-700 ease-in-out" src="<?= file_exists(FCPATH . "cover_images/".$course['cover_image']) ? base_url("cover_images/".$course['cover_image']) : base_url("cover_images/default.png") ?>" alt="Course Image" />
+                    
                 </div>
                 <div class="p-6 grid place-items-center">
                     <button class="bg-blue-700 hover:bg-blue-900 text-2xl text-white font-semibold py-2 px-8 w-72 border-b-4 border-blue-700 hover:border-blue-500 rounded-2xl mb-2 ">
@@ -101,56 +102,56 @@ Courses offered by Substring Technologies
 
         <!-- start course section  -->
         <!--Tabs navigation-->
-        <section class="start_course py-32 " id="start_course">
+        <section class="start_course py-32 mx-4" id="start_course">
             <div class="container  mx-auto xl:px-32">
                 <!--Tabs navigation-->
-        <ul
-        class="mb-4 flex list-none flex-row flex-wrap gap-4 pl-0 justify-center bg-blue-200 border-2 border-blue-900 rounded-full mt-[650px] sm:mt-[430px] lg:mt-40"
-        id="tabs-tab3"
-        role="tablist"
-        data-te-nav-ref>
-        <li role="presentation">
-        <a
-            href="#tabs-home3"
-            class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
-            id="tabs-home-tab3"
-            data-te-toggle="pill"
-            data-te-target="#tabs-home3"
-            
-            role="tab"
-            aria-controls="tabs-home3"
-            aria-selected="true"
-            >Overviews</a
-        >
-        </li>
-        <li role="presentation">
-        <a
-            href="#tabs-profile3"
-            class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
-            id="tabs-profile-tab3"
-            data-te-toggle="pill"
-            data-te-target="#tabs-profile3"
-            data-te-nav-active
-            role="tab"
-            aria-controls="tabs-profile3"
-            aria-selected="false"
-            >Course Content</a
-        >
-        </li>
-        <li role="presentation">
-        <a
-            href="#tabs-messages3"
-            class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
-            id="tabs-messages-tab3"
-            data-te-toggle="pill"
-            data-te-target="#tabs-messages3"
-            role="tab"
-            aria-controls="tabs-messages3"
-            aria-selected="false"
-            >Resourses</a
-        >
-        </li>
-        </ul>
+                <ul
+class="mb-4 flex list-none flex-row flex-wrap gap-4 pl-0 justify-center bg-blue-200 border-2 border-blue-900 rounded-full mt-[650px] sm:mt-[430px] lg:mt-40"
+id="tabs-tab3"
+role="tablist"
+data-te-nav-ref>
+<li role="presentation">
+  <a
+    href="#tabs-home3"
+    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+    id="tabs-home-tab3"
+    data-te-toggle="pill"
+    data-te-target="#tabs-home3"
+    
+    role="tab"
+    aria-controls="tabs-home3"
+    aria-selected="true"
+    >Overviews</a
+  >
+</li>
+<li role="presentation">
+  <a
+    href="#tabs-profile3"
+    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+    id="tabs-profile-tab3"
+    data-te-toggle="pill"
+    data-te-target="#tabs-profile3"
+    data-te-nav-active
+    role="tab"
+    aria-controls="tabs-profile3"
+    aria-selected="false"
+    >Course Content</a
+  >
+</li>
+<li role="presentation">
+  <a
+    href="#tabs-messages3"
+    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 md:px-32 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+    id="tabs-messages-tab3"
+    data-te-toggle="pill"
+    data-te-target="#tabs-messages3"
+    role="tab"
+    aria-controls="tabs-messages3"
+    aria-selected="false"
+    >Resourses</a
+  >
+</li>
+</ul>
 
         <!--Tabs content-->
         <div>
@@ -163,7 +164,7 @@ Courses offered by Substring Technologies
         <div>
             <h1 class="text-center text-3xl font-bold text-blue-900 underline decoration-2  
             my-4 mt-8">Description Of The Course</h1>
-            <p class="text-xl text-justify dark:text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit tempora vel rem. Consequuntur magnam perspiciatis laudantium voluptates cumque pariatur! Voluptates consequuntur dolorum dolores exercitationem obcaecati earum ratione quam quae facere enim, quia illum iste, libero corrupti ut provident, et incidunt repellat sit? Placeat ut amet magnam repudiandae? Voluptatum aut at aperiam debitis beatae non laboriosam quas expedita iste ratione. Fugit ex perspiciatis recusandae ipsum quae porro ducimus ullam dicta? Reiciendis!</p>
+            <p class="text-xl text-justify dark:text-white "><?=$course['long_description']?></p>
         </div>
         <div>
             <h1 class="text-center text-3xl font-bold text-blue-900 underline decoration-2  
@@ -373,7 +374,7 @@ Courses offered by Substring Technologies
             <div>
             <h1 class="text-2xl text-blue-900 font-semibold ml-4 my-2 underline decoration-2">Additional Resources:</h1>
             <ul class="list-disc text-lg text-black ml-8">
-                <li>API documentation (if applicable) for developers.</li>
+                <li><?=$course['course_resourses']?></li>
                 <li>Case studies showcasing real-world examples of the software's benefits.</li>
                 <li>Links to relevant blog posts, articles, and whitepapers.</li>
             </ul>

@@ -38,9 +38,7 @@
 <script src="<?= base_url('static/animation/isotope-layout/isotope.pkgd.min.js') ?>"></script>
 <script src="<?= base_url('static/animation/swiper/swiper-bundle.min.js') ?>"></script>
 <!--<script src="--><?php //= base_url('static/animation/php-email-form/validate.js') ?><!--"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script>
     AOS.init({
         duration: 500
@@ -77,8 +75,18 @@
       },
     });
 </script>
+
+
+
 <script>
-        var swiper = new Swiper(".mySwiper1 ", {
+        AOS.init();
+      </script>
+       <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>   
+      <script src="https://cdn.tailwindcss.com/3.3.0"></script>   
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper1", {
           speed: 600,
           parallax: true,
           loop:true,
@@ -96,6 +104,14 @@
           },
         });
       </script>
+      <script>
+        import {
+      Tab,
+      initTE,
+    } from "tw-elements";
+    
+    initTE({ Tab });
+    </script>
 
 <script>
 
