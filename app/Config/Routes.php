@@ -37,7 +37,6 @@ $routes->get("/services", "PageController::services");
 $routes->get("/contact-us", "PageController::contact");
 $routes->get("/users", "UserController");
 $routes->get("/training", "PageController::training");
-$routes->get("/course_view(:any)", "PageController::course_view/$1");
 
 
 
