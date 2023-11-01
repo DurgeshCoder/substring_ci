@@ -100,7 +100,6 @@ class AdminController extends BaseController
                 'admission_open' => 'required|max_length[10]',
                 'start_date' => 'required|max_length[100]|min_length[10]',
                 'rating' => 'required|max_length[255]', 
-                'slug' => 'required|max_length[500]',
                 'instructor' => 'required|max_length[255]', 
                 'coureses_resourses' => 'required|max_length[255]',
             ];
@@ -135,8 +134,7 @@ class AdminController extends BaseController
                     $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
                 }
             $rating = $this->request->getPost("rating");
-            $originalSlug = $this->request->getPost("slug");
-            $slug = strtolower(trim(str_replace(' ', '-', $originalSlug)));
+            $slug = strtolower(trim(str_replace(' ', '-', $course_name)));
             $instructor = $this->request->getPost("instructor");
             $coureses_resourses = $this->request->getPost("coureses_resourses");
             
@@ -235,7 +233,7 @@ class AdminController extends BaseController
             $data['courses']=[];
             $data['load_admin_js']=true;
             return view('admin/add_subtopic',$data);
-           }
+           }  
         else if ($this->request->is('post')){
             
 

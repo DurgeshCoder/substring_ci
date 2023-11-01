@@ -12,6 +12,8 @@ class AdminActionController extends BaseController{
     public function course_view($course_id = null) {
         $courses = new TrainingCourses();
         $course = $courses->where('course_id', $course_id)->first(); 
+
+        // var_dump($course);
     
         return view('admin/course_view', ['course' => $course]);
          
@@ -51,8 +53,7 @@ class AdminActionController extends BaseController{
                  $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
              }
          $rating = $this->request->getPost("rating");
-         $originalSlug = $this->request->getPost("slug");
-         $slug = strtolower(trim(str_replace(' ', '-', $originalSlug)));
+         $slug = strtolower(trim(str_replace(' ', '-', $course_name)));
          $instructor = $this->request->getPost("instructor");
          $coureses_resourses = $this->request->getPost("coureses_resourses");
          

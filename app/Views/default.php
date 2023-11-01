@@ -38,9 +38,7 @@
 <script src="<?= base_url('static/animation/isotope-layout/isotope.pkgd.min.js') ?>"></script>
 <script src="<?= base_url('static/animation/swiper/swiper-bundle.min.js') ?>"></script>
 <!--<script src="--><?php //= base_url('static/animation/php-email-form/validate.js') ?><!--"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 <script>
     AOS.init({
         duration: 500
@@ -50,8 +48,8 @@
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
+        loop:true,
+        slidesPerView: "1",
         coverflowEffect: {
             rotate: 50,
             stretch: 0,
@@ -59,11 +57,72 @@
             modifier: 1,
             slideShadows: true,
         },
+        autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
         pagination: {
             el: ".swiper-pagination",
         },
+
+        breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+       
+        
+      },
     });
 </script>
+
+
+
+<script>
+        AOS.init();
+      </script>
+       <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>   
+      <script src="https://cdn.tailwindcss.com/3.3.0"></script>   
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper1", {
+          speed: 600,
+          parallax: true,
+          loop:true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          on: {
+            slideChangeTransitionStart: function () {
+              $('.animation').hide(0);
+              $('.animation').removeClass('aos-init').removeClass('aos-animate');
+            },
+            slideChangeTransitionEnd: function () {
+              $('.animation').show(0);
+              AOS.init();
+            },
+         } 
+        });
+        AOS.init();
+      </script>
+      <script>
+        import {
+      Tab,
+      initTE,
+    } from "tw-elements";
+    
+    initTE({ Tab });
+    </script>
 
 <script>
 
@@ -112,7 +171,20 @@
 
 
 </script>
-
+<script src="https://cdn.tailwindcss.com/3.3.0"></script> 
+       <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>   
+        
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      
+      <script>
+        import {
+      Tab,
+      initTE,
+    } from "tw-elements";
+    
+    initTE({ Tab });
+    </script>
 
 <script src="<?= base_url('static/js/main.js') ?>">
 </script>

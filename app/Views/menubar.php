@@ -20,9 +20,10 @@
 
         <!-- Desktop Menu (Hidden on smaller screens) -->
         <div class="hidden md:flex space-x-4 xl:space-x-8" id="desktopMenu">
-            
+        
             <a href="<?= base_url('/') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Home</a>
             <a href="<?= base_url('/#services') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Services</a>
+            <a href="<?= base_url('/training') ?>" class="text-blue-900   dark:text-blue-50   font-bold">Training</a>
             <a target="_blank" href="https://learncodewithdurgesh.com/courses"
                class="text-blue-900   dark:text-blue-50   font-bold">Courses</a>
             <a href="<?= base_url('/#recent-blog-posts') ?>"
@@ -73,6 +74,9 @@
 
     <!-- Mobile Menu (Hidden on larger screens) -->
     <div class="md:hidden bg-white shadow-lg rounded-4 mt-6 hidden text-center p-2 min-vh-75 " id="mobileMenu">
+        <div class="w-50 bg-white shadow-lg rounded-2 mt-6 text-center mx-auto">
+            <a href="<?= base_url('/training')?>" class="block text-blue-900 py-2">Training</a>
+        </div>
         <div class="w-50 bg-white shadow-lg rounded-2 mt-6 text-center mx-auto">
             <a href="#" class="block text-blue-900 py-2">Home</a>
         </div>

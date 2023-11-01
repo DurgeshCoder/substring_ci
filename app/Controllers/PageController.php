@@ -4,8 +4,11 @@ namespace App\Controllers;
 
 
 use App\Models\Emp;
-use App\Models\TrainingCourseModel;
-use PhpParser\Node\Scalar\String_;
+use App\Models\TrainingCourses;
+use App\Models\CoursesTopics;
+use App\Models\SubTopics;
+$db      = \Config\Database::connect();
+
 
 class PageController extends BaseController
 {
@@ -163,46 +166,181 @@ class PageController extends BaseController
     public function training(): string
     {
 //        create object of modal : to perform operations with database
-//        $trainingModel = new TrainingCourseModel();
-//        $courses = $trainingModel->findAll();
-//        $data['courses'] = $courses;
-        $data['training_courses'] = [
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-            [
-                'subject_picture_url' => 'static/img/clients/tcs_client_1.png',
-                'subject_name' => 'Java',
-                'subject_description' => 'Learn Java. Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.'
-            ],
-        ];
+        $trainingModel = new TrainingCourses();
+        $courses = $trainingModel->findAll();
+        $data['courses'] = $courses;
         return view("training_view.php", $data);
     }
-    public function courses(): string
-    {
-        return view("courses_view.php");
-    }
-}
+    
+    public function course_view($slug) {
+        $coursesModel = new \App\Models\TrainingCourses();
+        $course = $coursesModel->where('slug', $slug)->first();
+        $db = \Config\Database::connect();
 
+
+        $builder = $db->table('training_courses');
+        $builder->select('*');
+        $builder->join('course_topics', 'course_topics.subject_id = training_courses.course_id');
+        $builder->join('sub_topics', 'sub_topics.topic_id = course_topics.topic_id');
+        $builder->where('course_id', $course['course_id']);
+        $oldSubject = $builder->get()->getResult();
+
+        $newData = array();
+        $oldSubtopic = null;
+        $oldSubjectIndex = -1;
+        $ob = null;
+        foreach ($oldSubject as $oldData) {
+            if ($oldSubtopic == null) {
+              // first subject topic
+              $ob = [
+                "subject" => $oldData->name, 
+                "shortDescription" => $oldData->short_description,
+                "longDescription" => $oldData->long_description,
+                "topics" => array(
+                  array(
+                    "topic_id" => $oldData->topic_id,  
+                    "topic" => $oldData->topic_name,
+                    "topic_description" => $oldData->description,
+                    "subtopicsArray" => array(
+                      array(
+                        "subtopic_id" => $oldData->subtopic_id, 
+                        "subtopic_name" => $oldData->subtopic_name,
+                        "subtopic_description" => $oldData->description,
+                      ),
+                    ),
+                  ),
+                ),
+              ];
+              $newData[] = $ob;
+              $oldSubjectIndex += 1;
+            } else {
+              // second, third, fourth
+              if ($oldSubtopic->name === $oldData->name) {
+                $ind = -1;
+                foreach ($newData[$oldSubjectIndex]["topics"] as $key => $t) {
+                  if ($t["topic"] === $oldData->topic_name) {
+                    $ind = $key;
+                    break;
+                  }
+                }
+        
+                if ($ind >= 0) {
+                  $newData[$oldSubjectIndex]["topics"][$ind]["subtopicsArray"][] = array(
+                    "subtopic_id" => $oldData->subtopic_id, 
+                    "subtopic_name" => $oldData->subtopic_name,
+                    "subtopic_description" => $oldData->description,
+                  );
+                } else {
+                  $newData[$oldSubjectIndex]["topics"][] = array(
+                    "topic_id" => $oldData->topic_id,  
+                    "topic" => $oldData->topic_name,
+                    "topic_description" => $oldData->description,
+                    "subtopicsArray" => array(
+                      array(
+                        "subtopic_id" => $oldData->subtopic_id, 
+                        "subtopic_name" => $oldData->subtopic_name,
+                        "subtopic_description" => $oldData->description,
+                      ),
+                    ),
+                  );
+                }
+              } else {
+                // different subject
+                $ob = array(
+                  "subject" => $oldData["name"],
+                  "topics" => array(
+                    array(
+                      "topic_id" => $oldData->topic_id,  
+                    "topic" => $oldData->topic_name,
+                    "topic_description" => $oldData->description,
+                    "subtopicsArray" => array(
+                      array(
+                        "subtopic_id" => $oldData->subtopic_id, 
+                        "subtopic_name" => $oldData->subtopic_name,
+                        "subtopic_description" => $oldData->description,
+                      ),
+                    ),
+                    ),
+                  ),
+                );
+                $newData[] = $ob;
+                $oldSubjectIndex += 1;
+              }
+            }
+        
+            $oldSubtopic = $oldData;
+          
+
+        // $data = array();
+        // $topics = array(); // Store unique topic names
+        // $subtopicsData = array(); // Store subtopics data
+        
+        // foreach ($query as $row) {
+        //     $topic_id = $row->topic_id;
+        //     $topicName = $row->topic_name;
+        //     $subtopicName = $row->subtopic_name;
+        //     $topic_description = $row->description;
+        //     $subtopic_description = $row->description;
+        
+        //     if (!isset($topics[$topicName])) {
+        //         $topics[$topicName] = array(
+        //             'topic_id' => $topic_id,
+        //             'description' => $topic_description,
+        //             'subtopics' => array(),
+        //         );
+        //     }
+        
+        //     $subtopicData = array(
+        //         'subtopic_name' => $subtopicName,
+        //         'description' => $subtopic_description,
+        //     );
+        
+        //     $topics[$topicName]['subtopics'][] = $subtopicData;
+        //     //var_dump($topics[$topicName]['subtopics']);
+         
+        }
+        // return $newData;
+           
+        
+        
+
+        return view('course_view', ['course' => $course,'newData'=> $newData]);
+        
+        
+    
+}
+    
+
+
+//     public function course_view($slug) 
+//     {       global $db;
+// //        create object of modal : to perform operations with database
+//             $courses = new TrainingCourses();
+//             $course = $courses->where('slug', $slug)->first(); 
+//             var_dump($course);
+//             $builder = $db->table('training_courses');
+//             $builder->select('*');
+//             $builder->join('course_topics', 'course_topics.subject_id = training_courses.course_id');
+//             $builder->join('sub_topics', 'sub_topics.topic_id = course_topics.topic_id');
+//             $query = $builder->get();
+//             // $this->db->select('*');
+//             // $this->db->from('training_courses');
+//             // $this->db->join('course_topics', 'training_courses.course_id = course_topics.subjec_id', 'inner');
+//             // $this->db->join('sub_topics', 'course_topics.topic_id = sub_topics.=topic_id', 'inner');
+
+//             // $query = $this->db->get();
+
+//             if ($query->num_rows() > 0) {
+//                 $data['results'] = $query->result();
+//                 var_dump($data);
+//             } else {
+//                 $data['results'] = array(); // Empty array if no records found
+//             }
+
+//             // Load a view and pass the data to it
+//             $this->load->view('course_view', $data);
+
+//                     // return view('course_view', ['course' => $course]);
+//             } 
+
+}
