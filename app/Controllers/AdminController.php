@@ -233,7 +233,7 @@ class AdminController extends BaseController
             $data['courses']=[];
             $data['load_admin_js']=true;
             return view('admin/add_subtopic',$data);
-           }
+           }  
         else if ($this->request->is('post')){
             
 

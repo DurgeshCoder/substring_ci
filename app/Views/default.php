@@ -102,7 +102,18 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+          on: {
+            slideChangeTransitionStart: function () {
+              $('.animation').hide(0);
+              $('.animation').removeClass('aos-init').removeClass('aos-animate');
+            },
+            slideChangeTransitionEnd: function () {
+              $('.animation').show(0);
+              AOS.init();
+            },
+         } 
         });
+        AOS.init();
       </script>
       <script>
         import {
