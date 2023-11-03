@@ -142,10 +142,10 @@ class PageController extends BaseController
     {
         $data = ["friends" => [
 
-            new Emp(12, "Gautam", "215235", "Lucknow"),
-            new Emp(13, "Ankit", "215235", "Lucknow"),
-            new Emp(14, "Uttam", "215235", "Lucknow"),
-            new Emp(15, "Durgesh", "215235", "Lucknow"),
+            // new Emp(12, "Gautam", "215235", "Lucknow"),
+            // new Emp(13, "Ankit", "215235", "Lucknow"),
+            // new Emp(14, "Uttam", "215235", "Lucknow"),
+            // new Emp(15, "Durgesh", "215235", "Lucknow"),
 
         ]];
         return view("about_view", $data);
