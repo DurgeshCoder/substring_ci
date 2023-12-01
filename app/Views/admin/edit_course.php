@@ -40,7 +40,7 @@ Edit Course <?= $course['name']; ?>
         <label for="discounted_fee" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-7">Discounted Fee</label>
     </div>
   </div>
-  <div class="grid md:grid-cols-2 md:gap-6">
+  <div class="grid md:grid-cols-2 gap-6">
     <div class="relative z-0 w-full  group mt-2">
         <select name="mode" id="mode" value="<?= $course['mode']; ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Mode">
             
@@ -54,11 +54,12 @@ Edit Course <?= $course['name']; ?>
 
     
      <div class="relative z-0 w-full mt-2 group">
-        <input type="file" name="cover_image" id="cover_image" value="<?= $course['cover_image']; ?>" class="block  px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-[1px] border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" "  required>
+        <input type="file" name="cover_image" id="cover_image" value="<?= $course['cover_image']; ?>" class="block  px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-[1px] border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" ">
+        <input type="hidden" name="old_cover_image" value="<?= $course['cover_image']; ?>">
         <label for="cover_image" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-7">Cover Image</label>
     </div> 
     <div class="relative z-0 w-full  group">
-        <input type="text" name="duration" id="duration"value="<?= $course['duration']; ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" >
+        <input type="text" name="duration" id="duration" value="<?= $course['duration']; ?>" class="block py-2.5 px-2.5 w-full text-base text-gray-900 bg-transparent rounded-lg border-1 border-gray-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" >
         <label for="duration" class="peer-focus:font-medium absolute ml-2 text-lg text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-0 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-85 peer-focus:-translate-y-7">Duration</label>
      </div>
      <div class="relative z-0 w-full  group">
@@ -74,9 +75,10 @@ Edit Course <?= $course['name']; ?>
           <input
             type="text"
             name="start_date"
-            value="<?= set_value('start_date') ?>"
+            value=""
             class="peer block min-h-[auto] w-full rounded-lg border-1 bg-transparent px-3 py-2.5 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-            placeholder="Select a date" required />
+            placeholder="Select a date"/>
+            <input  type="hidden" name='old_start_date' value='<?= $course['start_date']; ?>'>
           <label
             for="floatingInput"
             class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.57rem] leading-[1.6] text-gray-900 text-lg transition-all duration-200 ease-out peer-focus:-translate-y-[2.1rem] peer-focus:scale-[1] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"

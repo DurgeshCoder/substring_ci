@@ -29,16 +29,14 @@ class AdminActionController extends BaseController{
         $course = new TrainingCourses();
 
 
-       
-
-           $file = $this->request->getFile('cover_image');
-           $image_name = null; 
-            if ($file) {
-                if ($file->isValid() && !$file->hasMoved()) {
-                    $image_name = $file->getRandomName();
-                    $file->move('cover_images/', $image_name);
-                }
-            }
+         $new_image = $this->request->getFile('cover_image');  
+         $old_image=$_POST['old_cover_image'];
+         if (!empty($new_image->getName())) {
+            $update_filename = $new_image->getRandomName();
+            $new_image->move('cover_images/', $update_filename);
+        } else {
+            $update_filename = $old_image;
+        }
          $course_name = $this->request->getPost("course_name");
          $short_description = $this->request->getPost("short_description");
          $long_description = $this->request->getPost("long_description");
@@ -48,10 +46,18 @@ class AdminActionController extends BaseController{
          $duration = $this->request->getPost("duration");
          $admission_open = $this->request->getPost("admission_open");
          $start_date = $this->request->getPost("start_date");
-             $parts = explode("/", $start_date); 
-             if (count($parts) == 3) {
-                 $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
-             }
+         $old_start_date = $this->request->getPost("old_start_date");
+         if(!empty($start_date)){
+            $parts = explode("/", $start_date); 
+            if (count($parts) == 3) {
+                $sql_date = $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+            }
+         }
+         else
+         {
+            $sql_date=$old_start_date;
+         }
+            
          $rating = $this->request->getPost("rating");
          $slug = strtolower(trim(str_replace(' ', '-', $course_name)));
          $instructor = $this->request->getPost("instructor");
@@ -66,7 +72,7 @@ class AdminActionController extends BaseController{
              "fee"=>$fee,
              "discounted_fee"=>$discounted_fee,
              "mode"=>$mode,
-             "cover_image"=>$image_name,
+             "cover_image"=>$update_filename,
              "duration"=>$duration,
              "admission_open"=>$admission_open,
              "start_date"=>$sql_date,
@@ -78,6 +84,14 @@ class AdminActionController extends BaseController{
 
 
      $course->update($course_id,$data);
+     if($course)
+     {
+        if($_FILES['cover_image']['name'] !=''){
+            //$file->move('cover_images/', $update_filename);
+            move_uploaded_file($_FILES['cover_image']['tmp_name'], "cover_images/".$_FILES['cover_image']['name']);
+            
+        }
+     }
      return redirect()->to(base_url('admin/training_coureses'))->with('status','Course Updated Successfully');
 }
 

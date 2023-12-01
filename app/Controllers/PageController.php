@@ -53,9 +53,9 @@ class PageController extends BaseController
                 "name" => "Ashutosh Sharma",
                 "position" => "Web Developer",
                 "about" => "Develops and maintains websites using a variety of programming languages and technologies.",
-                "linkedin_url" => "",
-                "instagram_url" => "",
-                "facebook_url" => "",
+                "linkedin_url" => "https://www.linkedin.com/in/ashutosh-sharma-727873233/",
+                "instagram_url" => "https://www.instagram.com/ashu.v.09/",
+                "facebook_url" => "https://www.facebook.com/profile.php?id=100023824057259",
                 "picture_url" => "static/img/team/Ashutosh.jpg"
 
 
@@ -269,41 +269,10 @@ class PageController extends BaseController
             }
         
             $oldSubtopic = $oldData;
-          
-
-        // $data = array();
-        // $topics = array(); // Store unique topic names
-        // $subtopicsData = array(); // Store subtopics data
         
-        // foreach ($query as $row) {
-        //     $topic_id = $row->topic_id;
-        //     $topicName = $row->topic_name;
-        //     $subtopicName = $row->subtopic_name;
-        //     $topic_description = $row->description;
-        //     $subtopic_description = $row->description;
-        
-        //     if (!isset($topics[$topicName])) {
-        //         $topics[$topicName] = array(
-        //             'topic_id' => $topic_id,
-        //             'description' => $topic_description,
-        //             'subtopics' => array(),
-        //         );
-        //     }
-        
-        //     $subtopicData = array(
-        //         'subtopic_name' => $subtopicName,
-        //         'description' => $subtopic_description,
-        //     );
-        
-        //     $topics[$topicName]['subtopics'][] = $subtopicData;
-        //     //var_dump($topics[$topicName]['subtopics']);
          
         }
-        // return $newData;
-           
-        
-        
-
+      
         return view('course_view', ['course' => $course,'newData'=> $newData]);
         
         
@@ -311,36 +280,5 @@ class PageController extends BaseController
 }
     
 
-
-//     public function course_view($slug) 
-//     {       global $db;
-// //        create object of modal : to perform operations with database
-//             $courses = new TrainingCourses();
-//             $course = $courses->where('slug', $slug)->first(); 
-//             var_dump($course);
-//             $builder = $db->table('training_courses');
-//             $builder->select('*');
-//             $builder->join('course_topics', 'course_topics.subject_id = training_courses.course_id');
-//             $builder->join('sub_topics', 'sub_topics.topic_id = course_topics.topic_id');
-//             $query = $builder->get();
-//             // $this->db->select('*');
-//             // $this->db->from('training_courses');
-//             // $this->db->join('course_topics', 'training_courses.course_id = course_topics.subjec_id', 'inner');
-//             // $this->db->join('sub_topics', 'course_topics.topic_id = sub_topics.=topic_id', 'inner');
-
-//             // $query = $this->db->get();
-
-//             if ($query->num_rows() > 0) {
-//                 $data['results'] = $query->result();
-//                 var_dump($data);
-//             } else {
-//                 $data['results'] = array(); // Empty array if no records found
-//             }
-
-//             // Load a view and pass the data to it
-//             $this->load->view('course_view', $data);
-
-//                     // return view('course_view', ['course' => $course]);
-//             } 
 
 }

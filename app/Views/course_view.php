@@ -86,6 +86,8 @@ Courses offered by Substring Technologies
         </div>
         </section>
 
+        
+
 
 
         <!-- start course section  -->
@@ -94,14 +96,14 @@ Courses offered by Substring Technologies
             <div class="container  mx-auto px-4 xl:px-32">
                 <!--Tabs navigation-->
                 <ul
-                  class="mb-4 grid grid-cols-1 md:grid-cols-3 text-center list-none gap-4 px-8 justify-center bg-blue-200 border-2 border-blue-900 rounded-full mt-72 sm:mt-36 md:mt-96 lg:mt-16 xl:mt-0"
+                  class="mb-4 grid grid-cols-1 md:grid-cols-3 text-center list-none md:gap-4 px-8 justify-center bg-blue-200 border-2 border-blue-900 rounded-full mt-72 sm:mt-36 md:mt-96 lg:mt-16 xl:mt-0"
                   id="tabs-tab3"
                   role="tablist"
                   data-te-nav-ref>
                   <li role="presentation">
                     <a
                       href="#tabs-home3"
-                      class="mt-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+                      class="mt-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
                       id="tabs-home-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-home3"
@@ -115,7 +117,7 @@ Courses offered by Substring Technologies
                   <li role="presentation">
                     <a
                       href="#tabs-profile3"
-                      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+                      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
                       id="tabs-profile-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-profile3"
@@ -129,7 +131,7 @@ Courses offered by Substring Technologies
                   <li role="presentation">
                     <a
                       href="#tabs-messages3"
-                      class="mb-6 md:my-2 block border-x-0 border-b-2  border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 rounded-full dark:hover:bg-white"
+                      class="mb-6 md:my-2 block border-x-0 border-b-2  border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
                       id="tabs-messages-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-messages3"
