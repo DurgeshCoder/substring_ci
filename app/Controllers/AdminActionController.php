@@ -87,7 +87,6 @@ class AdminActionController extends BaseController{
      if($course)
      {
         if($_FILES['cover_image']['name'] !=''){
-            //$file->move('cover_images/', $update_filename);
             move_uploaded_file($_FILES['cover_image']['tmp_name'], "cover_images/".$_FILES['cover_image']['name']);
             
         }

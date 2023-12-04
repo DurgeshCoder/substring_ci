@@ -247,7 +247,7 @@ class PageController extends BaseController
               } else {
                 // different subject
                 $ob = array(
-                  "subject" => $oldData["name"],
+                  "subject" => $oldData->name,
                   "topics" => array(
                     array(
                       "topic_id" => $oldData->topic_id,  

@@ -45,9 +45,7 @@ Courses offered by Substring Technologies
                                 for ($i = 1; $i <= 5; $i++) {
                                     if ($i <= $rating) {
                                         echo '<i class="fa-solid fa-star fa-sm  align-baseline " data-aos="flip-right" style="color: #e6df19;"></i>';
-                                    } else {
-                                        echo '<i class="fa-solid fa-star fa-sm  align-baseline " data-aos="flip-right" style="color: #e6df19;"></i>';
-                                    }
+                                    } 
                                 }
                                 ?>
                     </h1>
@@ -193,7 +191,8 @@ Courses offered by Substring Technologies
         </div>
 
 
-
+    
+   
 
         <div
             class="conatiner hidden opacity-0 mt-16 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
@@ -201,46 +200,55 @@ Courses offered by Substring Technologies
             role="tabpanel"
                 
             aria-labelledby="tabs-profile-tab3 ">
+        <?php if (isset($newData) && is_array($newData)): ?>
+        <?php foreach ($newData as $subject): ?>
+
              <!-- Loop through topics and their associated subtopics -->
-  
-          <?php foreach ($newData[0]['topics'] as $topic): ?>
-          <div id="start-course" data-accordion="collapse">
-            <h2 id="accordion-collapse-heading-<?php echo $topic['topic_id']; ?>">
-                <button type="button" class="flex items-center bg-blue-400 justify-between w-full p-4 mt-3 text-lg font-semibold text-left text-blue-900 border border-b-1 border-gray-800 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-900 hover:bg-blue-300 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-<?php echo $topic['topic_id']; ?>" aria-expanded="true" aria-controls="accordion-collapse-body-<?php echo $topic['topic_id']; ?>">
-                
-                <span class="topic_name" id="topic_name" ><?php echo $topic['topic']; ?></span>
-                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                </svg>
-                </button>
-            </h2>
-        
-            <div id="accordion-collapse-body-<?php echo $topic['topic_id']; ?>" class="hidden" aria-labelledby="accordion-collapse-heading-<?php echo $topic['topic_id']; ?>">
-                <div class="p-5 border border-b-1 rounded-xl mt-2 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Sub  Topics</p>
-            
-            
-                        <!-- Nested accordion -->
-            
+             
+                <?php if (isset($subject['topics']) && is_array($subject['topics'])): ?>
+                <?php foreach ($subject['topics'] as $topic): ?>
+                <div id="start-course" data-accordion="collapse">
+                    <h2 id="accordion-collapse-heading-<?php echo $topic['topic_id']; ?>">
+                        <button type="button" class="flex items-center bg-blue-400 justify-between w-full p-4 mt-3 text-lg font-semibold text-left text-blue-900 border border-b-1 border-gray-800 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-900 hover:bg-blue-300 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-<?php echo $topic['topic_id']; ?>" aria-expanded="true" aria-controls="accordion-collapse-body-<?php echo $topic['topic_id']; ?>">
                         
-                        <?php foreach ($topic['subtopicsArray'] as $subtopic): ?>
-                            <div id="accordion-nested-collapse" data-accordion="collapse">
-                                <h2 id="accordion-nested-collapse-heading-<?php echo $subtopic['subtopic_id']; ?>">
-                                <button type="button" class="flex items-center justify-between w-full p-2 mb-1  rounded-xl font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-nested-collapse-body-<?php echo $subtopic['subtopic_id']; ?>" aria-expanded="false" aria-controls="accordion-nested-collapse-body-<?php echo $subtopic['subtopic_id']; ?>">
-                                    <span><?php echo $subtopic['subtopic_name']; ?></span>
-                                </button>
-                                </h2>
-                                
-                            </div>
-                        <?php endforeach; ?>  
-            
+                        <span class="topic_name" id="topic_name" ><?= isset($topic['topic']) ? $topic['topic'] : '' ?></span>
+                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                        </button>
+                    </h2>
                 
-            
-                        <!-- End: Nested accordion -->
+                    <div id="accordion-collapse-body-<?php echo $topic['topic_id']; ?>" class="hidden" aria-labelledby="accordion-collapse-heading-<?php echo $topic['topic_id']; ?>">
+                        <div class="p-5 border border-b-1 rounded-xl mt-2 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Sub  Topics</p>
+                    
+                    
+                                <!-- Nested accordion -->
+                    
+                                <?php if (isset($topic['subtopicsArray']) && is_array($topic['subtopicsArray'])): ?>
+                                <?php foreach ($topic['subtopicsArray'] as $subtopic): ?>
+                                    <div id="accordion-nested-collapse" data-accordion="collapse">
+                                        <h2 id="accordion-nested-collapse-heading-<?php echo $subtopic['subtopic_id']; ?>">
+                                        <button type="button" class="flex items-center justify-between w-full p-2 mb-1  rounded-xl font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-nested-collapse-body-<?php echo $subtopic['subtopic_id']; ?>" aria-expanded="false" aria-controls="accordion-nested-collapse-body-<?php echo $subtopic['subtopic_id']; ?>">
+                                            <span><?= isset($subtopic['subtopic_name']) ? $subtopic['subtopic_name'] : '' ?></span>
+                                        </button>
+                                        </h2>
+                                        
+                                    </div>
+                                <?php endforeach; ?> 
+                                <?php endif; ?> 
+                    
+                        
+                    
+                                <!-- End: Nested accordion -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-          </div>
-          <?php endforeach; ?>
+                <?php endforeach; ?>
+                <?php endif; ?>
+              
+        <?php endforeach; ?>
+        <?php endif; ?>
         </div>
 
 
