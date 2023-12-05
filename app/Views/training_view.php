@@ -3,7 +3,7 @@
 
 <!--page title-->
 <?= $this->section("pageTitle") ?>
-Live Batches on Substring Technologies
+Live Training Batches on Substring Technologies
 <?= $this->endSection() ?>
 
 <!--end of the title section-->
