@@ -102,7 +102,7 @@ Live Batch - <?=$course['name'] ?>
                   <li role="presentation">
                     <a
                       href="#tabs-home3"
-                      class="mt-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-blue-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
+                      class="mt-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-purple-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-purple-900 rounded-full dark:hover:bg-white"
                       id="tabs-home-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-home3"
@@ -116,7 +116,7 @@ Live Batch - <?=$course['name'] ?>
                   <li role="presentation">
                     <a
                       href="#tabs-profile3"
-                      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-blue-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
+                      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2 pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 hover:isolate transform tranisition duration-500 hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-purple-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-purple-900 rounded-full dark:hover:bg-white"
                       id="tabs-profile-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-profile3"
@@ -130,7 +130,7 @@ Live Batch - <?=$course['name'] ?>
                   <li role="presentation">
                     <a
                       href="#tabs-messages3"
-                      class="mb-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-blue-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-orange-400 rounded-full dark:hover:bg-white"
+                      class="mb-6 md:my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-2  pb-1 md:pb-3.5 pt-1 md:pt-4 text-lg font-bold uppercase leading-tight text-blue-900 transform tranisition duration-500 hover:isolate  hover:bg-neutral-100 data-[te-nav-active]:border-blue-900 data-[te-nav-active]:text-purple-900 dark:text-gray-900 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-purple-900 rounded-full dark:hover:bg-white"
                       id="tabs-messages-tab3"
                         data-te-toggle="pill"
                         data-te-target="#tabs-messages3"
@@ -221,8 +221,7 @@ Live Batch - <?=$course['name'] ?>
                 
                     <div id="accordion-collapse-body-<?php echo $topic['topic_id']; ?>" class="hidden" aria-labelledby="accordion-collapse-heading-<?php echo $topic['topic_id']; ?>">
                         <div class="p-5 border border-b-1 rounded-xl mt-2 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Sub  Topics</p>
-                    
+        
                     
                                 <!-- Nested accordion -->
                     

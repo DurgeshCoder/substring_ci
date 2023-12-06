@@ -1,6 +1,6 @@
 <section id="recent-blog-posts" class="recent-blog-posts py-16 ">
     <header class="section-header text-center aos-animate" data-aos="fade-up">
-        <h2 class="text-xl font-bold mb-2 dark:text-blue-50">BLOGS</h2>
+        <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600">BLOGS</h2>
         <p class="text-blue-900 text-4xl font-bold mb-8 dark:text-blue-50">Recent updates on technology by us</p>
     </header>
 

@@ -3,7 +3,7 @@
 <div class="container mx-auto px-6 xl:px-32" data-aos="fade-up">
     <div class="text-center mb-10">
         <header>
-            <h2 class="text-xl font-bold text-blue-600  dark:text-blue-50 ">App</h2>
+            <h2 class="text-xl font-bold text-blue-600  dark:text-blue-50 ">APP</h2>
             <p class="text-blue-900 font-bold text-4xl my-3  dark:text-blue-50">Visit on app to explore software knowledge</p>
         </header>
     </div>

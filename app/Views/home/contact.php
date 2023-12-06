@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 xl:px-32">
 
         <header class="section-header text-center mb-8 aos-init aos-animate" data-aos="fade-up">
-            <h2 class="text-xl font-bold mb-2 dark:text-blue-50" data-aos="fade-in">CONTACT</h2>
+            <h2 class="text-xl font-bold mb-2 dark:text-blue-50 text-blue-600" data-aos="fade-in">CONTACT</h2>
             <p class="text-blue-900 text-4xl font-bold mb-8  dark:text-blue-50" data-aos="fade-in" data-aos-delay="200" >Contact Us</p>
         </header>
 
@@ -11,7 +11,7 @@
 
             <div class="md:w-full ">
 
-                <div class="flex flex-col md:flex-row gap-6 grid md:grid-cols-2 ">
+                <div class=" flex-col md:flex-row gap-6 grid md:grid-cols-2 ">
                     <div data-aos-delay="300" class="info-box items-center aos-init  bg-blue-50/90    dark:bg-gray-800 p-8"
                          data-aos="fade-up">
                         <i class="fa-solid fa-location-dot fa-beat fa-2xl mr-2 text-blue-900"></i>

@@ -6,8 +6,8 @@
             <p class="text-blue-900 text-4xl  dark:text-blue-50  font-bold mb-8">Top Brands our students working
                 with.</p>
         </header>
-        <div class="clients-slider swiper">
-            <div class="swiper-wrapper align-items-center">
+        <div class="clients-slider clientSwiper">
+            <div class="swiper-wrapper ">
 
                 <?php
                 /**
@@ -16,7 +16,7 @@
                  */
 
                 foreach ($client_photos as $photo) { ?>
-                    <div class="swiper-slide ">
+                    <div class="swiper-slide flex justify-center items-center">
                         <img src="<?= strpos($photo['picture_url'], 'https://') === 0 ? $photo['picture_url'] : base_url($photo['picture_url']) ?>"
                              class="img-fluid w-32 h-32 object-contain border rounded-full" alt=""/>
                     </div>

@@ -189,7 +189,7 @@
                     <div class="icon-box animate__animated animate__fadeIns" data-aos="fade-up" data-aos-delay="100">
 
                         <div class="mt-4">
-                            <i class="fa-solid fa-brush fa-2xl text-blue-900"></i>
+                           <i class="fa-solid fa-handshake fa-2xl text-blue-900"></i>
                             <h4 class="text-lg font-semibold">Our Promise</h4>
                             <p>At Substring Technologies we promise that no matter what you need, you can rest assured
                                 that we will deliver a premium software solution with the best price/performance ratio
@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="icon-box animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fa-solid fa-brush fa-2xl text-blue-900"></i>
+                        <i class="fa-solid fa-warehouse fa-2xl text-blue-900"></i>
                         <div class="mt-4">
                             <h4 class="text-lg font-semibold">Best IT Training</h4>
                             <p>Substring Technologies provides best training on different technologies such as c, c++,

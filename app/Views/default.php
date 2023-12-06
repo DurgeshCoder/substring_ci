@@ -28,6 +28,7 @@
     // ...
     }
  </script>
+
  <script>
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -79,6 +80,7 @@
       },
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
 
         breakpoints: {
@@ -142,7 +144,7 @@
 
 
 
-<!-- light and dark mood  -->
+<!-- <-- light and dark mood  -->
 <script>
       var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
       var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -184,11 +186,11 @@
         }
         
     });
-</script>
+</script> 
 
 
 <!-- light and dark mood for the larger screen   -->
-<script>
+ <script>
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon-1');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon-1');
 

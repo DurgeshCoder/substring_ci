@@ -172,7 +172,7 @@ class PageController extends BaseController
         return view("training_view.php", $data);
     }
     
-    public function training($slug) {
+    public function course_view($slug) {
         $coursesModel = new \App\Models\TrainingCourses();
         $course = $coursesModel->where('slug', $slug)->first();
         $db = \Config\Database::connect();
