@@ -1,6 +1,6 @@
 <?= $this-> extend("admin/admin_default") ?>
 <?= $this->section("page_title") ?>
-ALl Topics
+All Topics
 <?= $this-> endSection()?>
 <?= $this-> section("content" )?>
 

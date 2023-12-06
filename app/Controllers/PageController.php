@@ -163,7 +163,7 @@ class PageController extends BaseController
         return view("contact_view");
     }
 
-    public function training(): string
+    public function trainings(): string
     {
 //        create object of modal : to perform operations with database
         $trainingModel = new TrainingCourses();
@@ -172,7 +172,7 @@ class PageController extends BaseController
         return view("training_view.php", $data);
     }
     
-    public function course_view($slug) {
+    public function training($slug) {
         $coursesModel = new \App\Models\TrainingCourses();
         $course = $coursesModel->where('slug', $slug)->first();
         $db = \Config\Database::connect();

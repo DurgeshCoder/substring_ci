@@ -152,10 +152,10 @@ Live Batch - <?=$course['name'] ?>
                 data-te-tab-active
                 role="tabpanel"
                 aria-labelledby="tabs-home-tab3">
-                <div class=" p-6 bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class=" p-6 bg-gray-100 border border-gray-200 rounded-lg shadow  dark:border-gray-700">
                     <h1 class="text-center text-3xl font-bold text-blue-900 underline decoration-2  
-                    mb-4  dark:text-white">Description Of The Course</h1>
-                    <p class="text-xl text-justify dark:text-white "><?=$course['long_description']?></p>
+                    mb-4">Description Of The Course</h1>
+                    <p class="text-xl text-justify text-gray-700 "><?=$course['long_description']?></p>
                 </div>
                 <div>
                     <h1 class="text-center text-3xl font-bold text-blue-900 underline decoration-2  
