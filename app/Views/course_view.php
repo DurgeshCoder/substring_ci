@@ -52,10 +52,154 @@ Live Batch - <?=$course['name'] ?>
                     </h1>
                     
                 </div>
-                <a href="#start-course">
-                    <button class="bg-purple-500 hover:bg-purple-700 text-2xl text-white font-semibold py-1 my-4 w-56 border-b-4 border-purple-700 hover:border-purple-900 rounded " data-aos="fade-up">
-                      Join Training<i class="fa-solid fa-arrow-right fa-beat-fade fa-sm ml-3"></i>
-                      </button>
+                <!-- Modal toggle -->
+                <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="bg-purple-500 hover:bg-purple-700 text-2xl text-white font-semibold py-1 my-4 w-56 border-b-4 border-purple-700 hover:border-purple-900 rounded" type="button">
+                Join Training<i class="fa-solid fa-arrow-right fa-beat-fade fa-sm ml-3"></i>
+                </button>
+                <!-- Main modal -->
+                        <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" >
+                           
+                            <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
+                                <div class="flex justify-between items-center bg-gradient-to-tr from-indigo-600/90 to-cyan-500/50 p-4 border-t-8  border-purple-900 rounded-t-lg">
+                                    <div class="mx-auto md:mx-0 ">
+                                        <div class="inline-flex items-center space-x-4">
+                                            <img
+                                            class="w-10 h-10 object-cover rounded-full"
+                                            alt="Course Image"
+                                            src="<?= file_exists(FCPATH . "cover_images/".$course['cover_image']) ? base_url("cover_images/".$course['cover_image']) : base_url("cover_images/default.png") ?>"
+                                            />
+
+                                            <h1 class="text-gray-100 text-xl w-full font-bold">Joining Batch : <?=$course['name']?></h1>
+                                        </div>
+                                    </div>
+                                   <div class="">
+                                   <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                                    <i class="fa-solid fa-xmark fa-2xl"></i>
+                                    <span class="sr-only">Close modal</span>
+                                    </button>
+                                   </div>
+                                </div>
+                                 <!-- account details starts -->
+                                <div class="bg-white md:space-y-4">
+                                    <div class="md:inline-flex space-y-4 md:space-y-0 w-full p-4 text-gray-500 items-center">
+                                    <h2 class="md:w-1/3 max-w-sm mx-auto text-xl text-black">Account</h2>
+                                    <div class="md:w-2/3 max-w-sm mx-auto">
+                                        <label class="text-sm text-gray-400">Email</label>
+                                        <div class="w-full inline-flex border">
+                                        <div class="p-2 w-1.5/12 bg-gray-100 bg-opacity-50">
+                                        <i class="fa-solid fa-envelope fa-xl"></i>
+                                        </div>
+                                        <input
+                                            type="email"
+                                            class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                            placeholder="email@example.com"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- account details ends -->
+
+                                    <hr />
+                                    <!-- personal info starts -->
+                                    <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-gray-500 items-center">
+                                    <h2 class="md:w-1/3 mx-auto max-w-sm text-xl text-black">Personal info</h2>
+                                    <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
+                                        <div>
+                                            <label class="text-sm text-gray-400">Full name</label>
+                                                <div class="w-full inline-flex border">
+                                                    <div class="w-1.5/12 p-2 bg-gray-100">
+                                                    <i class="fa-solid fa-user fa-xl"></i>
+                                                    </div>
+                                                    <input
+                                                    type="text"
+                                                    class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                                    />
+                                                </div>
+                                        </div>
+                                        <div>
+                                        <label class="text-sm text-gray-400">Phone number</label>
+                                        <div class="w-full inline-flex border">
+                                            <div class="p-2 w-1.5/12 bg-gray-100">
+                                            <i class="fa-solid fa-mobile fa-xl"></i>
+                                            </div>
+                                            <input
+                                            type="text"
+                                            class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                            />
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- personal info end -->
+                                    <!-- batch details  starts-->
+                                    <hr>
+                                    <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-gray-500 items-center">
+                                    <h2 class="md:w-1/3 mx-auto max-w-sm text-xl text-black">Batch Details</h2>
+                                    <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
+                                        <!-- <div>
+                                            <label class="text-sm text-gray-400">Batch Name</label>
+                                                <div class="w-full inline-flex border">
+                                                    <div class="w-1.5/12 p-2 bg-gray-100">
+                                                    <i class="fa-solid fa-book-open fa-lg"></i>
+                                                    </div>
+                                                    <input
+                                                    type="text"
+                                                    class="w-10.5/12 focus:outline-none focus:text-gray-600 p-2"
+                                                    placeholder="Charly Olivas"
+                                                    />
+                                                </div>
+                                        </div> -->
+                                        <div>
+                                            <label class="text-sm text-gray-400">Fee</label>
+                                            <div class="w-full inline-flex border">
+                                                <div class="p-2 w-1.5/12 bg-gray-100">
+                                                <i class="fa-solid fa-money-check-dollar fa-lg"></i>
+                                                </div>
+                                                <input
+                                                type="text"
+                                                class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                                placeholder="<?=$course["discounted_fee"]?>"
+                                                disabled
+                                                />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm text-gray-400">Starting Date</label>
+                                            <div class="w-full inline-flex border">
+                                                <div class="p-2 w-1.5/12 bg-gray-100">
+                                                <i class="fa-regular fa-calendar-days fa-lg"></i>
+                                                </div>
+                                                <input
+                                                type="text"
+                                                class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                                placeholder="<?=$course["start_date"]?>"
+                                                disabled
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- batch details end -->
+                                    
+                                    <hr />
+                                    <!-- join buttons -->
+                                    <div class="w-full p-4 item-center text-gray-500 flex justify-center">
+                                      <a href="#">
+                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
+                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group- hover:bg-opacity-0">
+                                                    Pay & Join
+                                                </span>
+                                        </button></a>
+                                        <a href="#">
+                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
+                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group- hover:bg-opacity-0">
+                                                    Join
+                                                </span>
+                                        </button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <!-- main model end  -->
                   </a>
                 
                 </div>
