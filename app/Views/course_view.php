@@ -157,7 +157,7 @@ Live Batch - <?=$course['name'] ?>
                                                 <input
                                                 type="text"
                                                 class="w-full focus:outline-none focus:text-gray-600 p-2"
-                                                placeholder="<?=$course["discounted_fee"]?>"
+                                                placeholder="Rs. <?=$course["discounted_fee"]?>"
                                                 disabled
                                                 />
                                             </div>
