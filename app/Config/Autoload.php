@@ -98,7 +98,7 @@ class Autoload extends AutoloadConfig
      */
     public $helpers = ['url','html'];
 
-    public $libraries = ['session'];
+    public $libraries = ['session','form_validation'];
 
    
 }

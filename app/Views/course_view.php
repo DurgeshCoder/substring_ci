@@ -37,6 +37,8 @@ Live Batch - <?=$course['name'] ?>
                     
                    <?=$course['short_description']?>
                 </p>
+                
+               
                 <div>
                     <p class="text-blue-900 text-2xl font-bold mb-1  dark:text-white "data-aos="fade-right" >Language :- Hindi</p>
                     <h1 class="text-blue-900 font-bold text-2xl dark:text-white "data-aos="fade-right">Rating :-
@@ -52,11 +54,35 @@ Live Batch - <?=$course['name'] ?>
                     </h1>
                     
                 </div>
-                <!-- Modal toggle -->
+               <!-- errors showsing starts -->
                 <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="bg-purple-500 hover:bg-purple-700 text-2xl text-white font-semibold py-1 my-4 w-56 border-b-4 border-purple-700 hover:border-purple-900 rounded" type="button">
                 Join Training<i class="fa-solid fa-arrow-right fa-beat-fade fa-sm ml-3"></i>
                 </button>
                 <!-- Main modal -->
+                <?php if(session()->has('errors')): ?>
+                <div id="alert-border-2" class="flex lg:w-6/12 items-center p-4 mb-4 text-purple-800 border-t-4 rounded border-purple-900 bg-purple-50 dark:text-purple-400 dark:bg-gray-300 dark:border-purple-800" role="alert">
+                    <div>
+                        <span class="font-medium">Ensure that these requirements are met:</span>
+                        
+                            <?php foreach(session('errors') as $error): ?>
+                            <ul class="mt-1.5 list-disc list-inside">
+                                <li><?= esc($error) ?></li>
+                            </ul>
+                             <?php endforeach; ?>
+                    </div>
+                  <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-purple-100 text-purple-500 rounded-lg focus:ring-2 focus:ring-purple-400 p-1.5 hover:bg-purple-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-500 dark:text-purple-400 dark:hover:bg-purple-500"  data-dismiss-target="#alert-border-2" aria-label="Close">
+                    <span class="sr-only">Dismiss</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    </button>
+                </div>
+                <?php endif; ?>
+                <!-- errors showsing ends -->
+
+     
+                <!-- Modal toggle -->
+                <form action="<?= base_url('training/'.$course['slug'].'/join_student')?>" method="post">
                         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" >
                            
                             <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
@@ -69,7 +95,8 @@ Live Batch - <?=$course['name'] ?>
                                             src="<?= file_exists(FCPATH . "cover_images/".$course['cover_image']) ? base_url("cover_images/".$course['cover_image']) : base_url("cover_images/default.png") ?>"
                                             />
 
-                                            <h1 class="text-gray-100 text-xl w-full font-bold">Joining Batch : <?=$course['name']?></h1>
+                                            <h1 class="text-gray-100 text-xl w-full font-bold" value="<?=$course['course_id']?>" name="batch_id">Joining Batch : <?=$course['name']?></h1>
+                                            <input hidden type="text" value="<?=$course['course_id']?>" name="batch_id">
                                         </div>
                                     </div>
                                    <div class="">
@@ -90,9 +117,13 @@ Live Batch - <?=$course['name'] ?>
                                         <i class="fa-solid fa-envelope fa-xl"></i>
                                         </div>
                                         <input
+                                            
+                                            name="email"
                                             type="email"
                                             class="w-full focus:outline-none focus:text-gray-600 p-2"
-                                            placeholder="email@example.com"/>
+                                            placeholder="email@example.com"
+                                           />
+                                           <span><?= isset($validation) ? $validation->getError('email') : '' ?></span><br>
                                         </div>
                                     </div>
                                     </div>
@@ -110,9 +141,13 @@ Live Batch - <?=$course['name'] ?>
                                                     <i class="fa-solid fa-user fa-xl"></i>
                                                     </div>
                                                     <input
+                                                    
+                                                    name="student_name"
                                                     type="text"
                                                     class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                                    
                                                     />
+                                                    <span><?= isset($validation) ? $validation->getError('student_name') : '' ?></span><br>
                                                 </div>
                                         </div>
                                         <div>
@@ -122,9 +157,13 @@ Live Batch - <?=$course['name'] ?>
                                             <i class="fa-solid fa-mobile fa-xl"></i>
                                             </div>
                                             <input
+                                            
+                                            name="phone_number"
                                             type="text"
                                             class="w-full focus:outline-none focus:text-gray-600 p-2"
+                                           
                                             />
+                                            <span><?= isset($validation) ? $validation->getError('phone_number') : '' ?></span><br>
                                         </div>
                                         </div>
                                     </div>
@@ -184,14 +223,14 @@ Live Batch - <?=$course['name'] ?>
                                     <!-- join buttons -->
                                     <div class="w-full p-4 item-center text-gray-500 flex justify-center">
                                       <a href="#">
-                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
-                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group- hover:bg-opacity-0">
+                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 " type="submit">
+                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-00 rounded-md group- hover:bg-opacity-0">
                                                     Pay & Join
                                                 </span>
                                         </button></a>
                                         <a href="#">
-                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
-                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group- hover:bg-opacity-0">
+                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 " type="submit">
+                                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-500 rounded-md group- hover:bg-opacity-0">
                                                     Join
                                                 </span>
                                         </button></a>
@@ -199,6 +238,7 @@ Live Batch - <?=$course['name'] ?>
                                 </div>
                             </div>
                         </div>
+                    </form>
                 <!-- main model end  -->
                   </a>
                 

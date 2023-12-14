@@ -41,6 +41,11 @@ $routes->get("training/(:any)", "PageController::course_view/$1");
 
 
 
+// Students Routes
+$routes->post("training/(:any)/join_student","StudentController::join_student");
+
+
+
 // Admin Routes
 $routes->get("/login", "AdminController::login");
 $routes->post("/login", "AdminController::login");
@@ -90,6 +95,10 @@ $routes->get('/api/get-subtopic-of-topic/(:num)',"ApiController::get_subtopic_by
 
 
 $routes->resource('trainingCourses');
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
