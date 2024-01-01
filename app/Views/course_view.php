@@ -54,6 +54,21 @@ Live Batch - <?=$course['name'] ?>
                     </h1>
                     
                 </div>
+                <!-- <div>
+                    <form id="paymentForm" action="<?= base_url('payment') ?>" method="POST">
+                       
+                        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                        
+                        <input type="text" id="payment_amount" class="my-4" placeholder="Enter amount here.." name="payment_amount">
+                    </form>
+                    
+                    <button id="pay_button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pay</button>
+                </div>
+                 -->
+                
+                
+                
+
                <!-- errors showsing starts -->
                 <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="bg-purple-500 hover:bg-purple-700 text-2xl text-white font-semibold py-1 my-4 w-56 border-b-4 border-purple-700 hover:border-purple-900 rounded" type="button">
                 Join Training<i class="fa-solid fa-arrow-right fa-beat-fade fa-sm ml-3"></i>
@@ -82,7 +97,7 @@ Live Batch - <?=$course['name'] ?>
 
      
                 <!-- Modal toggle -->
-                <form action="<?= base_url('training/'.$course['slug'].'/join_student')?>" method="post">
+                <form action="" method="post">
                         <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" >
                            
                             <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
@@ -187,6 +202,16 @@ Live Batch - <?=$course['name'] ?>
                                                     />
                                                 </div>
                                         </div> -->
+                                        
+                                            
+                                            
+                                            
+                                            <!-- <input type="text"  class="my-4" placeholder="Enter amount here.." > -->
+                                       
+                                     <!-- <form id="paymentForm" action="<?= base_url('payment') ?>" method="POST"> -->
+                                       
+                                        <!-- Note that the amount is in paisa (1 INR = 1000 Paisa) -->
+                                            <!-- Amount needs to be in paisa -->
                                         <div>
                                             <label class="text-sm text-gray-400">Fee</label>
                                             <div class="w-full inline-flex border">
@@ -194,13 +219,18 @@ Live Batch - <?=$course['name'] ?>
                                                 <i class="fa-solid fa-money-check-dollar fa-lg"></i>
                                                 </div>
                                                 <input
+                                                value="<?=$course['discounted_fee']?>"
+                                                name="payment_amount"
+                                                id="payment_amount"
                                                 type="text"
                                                 class="w-full focus:outline-none focus:text-gray-600 p-2"
-                                                placeholder="Rs. <?=$course["discounted_fee"]?>"
+                                                placeholder="Rs. <?=$course['discounted_fee']?>"
                                                 disabled
                                                 />
                                             </div>
                                         </div>
+                                        <input type="text" name="amount" value="<?=$course['discounted_fee']?>" hidden  >
+                                    <!-- </form> -->
                                         <div>
                                             <label class="text-sm text-gray-400">Starting Date</label>
                                             <div class="w-full inline-flex border">
@@ -223,17 +253,17 @@ Live Batch - <?=$course['name'] ?>
                                     <!-- join buttons -->
                                     <div class="w-full p-4 item-center text-gray-500 flex justify-center">
                                       <a href="#">
-                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 " type="submit">
+                                        <button type="submit" name="action" value="pay_and_join" formaction="<?= base_url('training/'.$course['slug'].'/payment')?>" class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-00 rounded-md group- hover:bg-opacity-0">
                                                     Pay & Join
                                                 </span>
                                         </button></a>
                                         <a href="#">
-                                        <button class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 " type="submit">
+                                        <button type="submit" name="action" value="join" formaction="<?= base_url('training/'.$course['slug'].'/join_student')?>" class="relative  inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500  hover:text-white dark:text-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 " type="submit">
                                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-500 rounded-md group- hover:bg-opacity-0">
                                                     Join
                                                 </span>
-                                        </button></a>
+                                        </button></a> 
                                     </div>
                                 </div>
                             </div>
@@ -503,6 +533,7 @@ Live Batch - <?=$course['name'] ?>
         <!-- start course section ends -->
 
         <br><br><br><br><br><br>
+        
 
 
 

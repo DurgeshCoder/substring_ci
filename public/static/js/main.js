@@ -181,6 +181,37 @@ document.getElementById("mobileMenuButton").addEventListener("click", function (
 
 
 
+// payment Integration by Rozar Pay
 
+// const paymentStart = () => {
+//     console.log("Payment started...");
+    
 
+//     let amount = $("#payment_amount").val();
 
+//     console.log(amount);
+
+//     if (amount === "" || amount === null) {
+//         alert('Amount is required !!');
+//         return;
+//     }
+
+  
+    
+
+//     $.ajax({
+        
+//         url: '/student/create_order',
+//         data: JSON.stringify({ amount: amount, info: 'order_request' }),
+//         contentType: 'application/json',
+//         type: 'POST',
+//         dataType: 'json',
+//         success: function(response) {
+//             console.log(response);
+//         },
+//         error: function(error) {
+//             console.log(error);
+//             alert("Something went wrong !!");
+//         }}
+//     )}
+    

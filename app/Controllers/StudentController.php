@@ -37,7 +37,8 @@ class StudentController extends BaseController
             $student->insert($data);
     
             // Redirect to a success page or do something else
-            return view('joined_student');
+           
+            return redirect()->back();
         }
         
         
@@ -45,5 +46,39 @@ class StudentController extends BaseController
 
        
     }
+    // public function create_order()
+    //     {
+    //         // Check if it's a POST request
+    //         if ($this->request->isAJAX() && $this->request->getMethod() === 'post') {
+    //             // Get post data
+    //             // $amount = $this->input->post('amount');
+    //             // $info = $this->input->post('info');
+    //             $amount = $this->request->getPost('amount');
+    //             $info = $this->request->getPost('info');
+
+    //             // Your logic for handling the POST request and creating an order goes here
+    //             echo 'Amount: ' . $amount . ', Info: ' . $info;
+    //             error_log('Received data: ' . print_r([$amount, $info], true));
+
+    //             error_log('This is a test - Amount: ' . $amount . ', Info: ' . $info);
+    //             print_r('This is a test');
+    //             var_dump($amount, $info);
+
+    //             // Example: Perform some actions with the data
+    //             // ...
+                
+
+    //             // Example: Return a response
+    //             $response = [
+    //                 'status' => 'success',
+    //                 'message' => 'Order created successfully!',
+    //             ];
+
+    //             return $this->response->setJSON($response);
+    //         } else {
+    //             // Handle non-POST requests (optional)
+    //             return redirect()->to(site_url());
+    //         }
+    //    }
     
 }
