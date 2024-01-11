@@ -38,12 +38,12 @@ class Razorpay extends BaseController
            
             $student =new UserDetail();
     
-            // $student->insert($data);
+            $student->insert($data);
     
             // Redirect to a success page or do something else
             // return redirect()->back();
             return view('payment_page',['data' => $data]);
-        }
+        }  
         
         // //Input items of form
         // $input = $this->request->getVar();

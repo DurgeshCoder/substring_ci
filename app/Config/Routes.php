@@ -86,6 +86,12 @@ $routes->group('admin',['filter'=>'isAdmin'], static function($routes){
     $routes->get("add_subtopic", "AdminController::add_subtopic");
     $routes->post("add_subtopic", "AdminController::add_subtopic");
 
+    // batch routes
+    $routes->get("batches", "AdminBatchController::batches");
+    $routes->get("add_batch", "AdminBatchController::add_batch");
+    $routes->post("add_batch", "AdminBatchController::add_batch");
+
+
 });
 
 

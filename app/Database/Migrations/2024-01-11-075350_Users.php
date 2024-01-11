@@ -4,51 +4,38 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class UserDetail extends Migration
+class Users extends Migration
 {
     public function up()
     {
-        $this->db->disableForeignKeyChecks();
-        // Check if the table already exists
-    if (!$this->db->tableExists('user_details')) {
         $this->forge->addField([
-            'student_id' => [
+            'user_id' => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'student_name' => [
+            'user_name' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
             'email' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
-                'unique' => true,
             ],
             'phone_number' => [
                 'type' => 'INT',
                 'constraint'=> 15,
                 'unsigned' => true,
             ],
-            'batch_id' => [
-                'type' => 'INT',
-                'constraint'=> 5,
-                'unsigned' => true,
-            ],
+            
         ]);
-
-        $this->forge->addKey('student_id', true);
-        $this->forge->addForeignKey('batch_id', 'training_courses', 'course_id');
-        $this->forge->createTable('user_details');
-        $this->db->enableForeignKeyChecks();
-    }
-        
+        $this->forge->addKey('user_id', true);
+        $this->forge->createTable('users');
     }
 
     public function down()
     {
-        $this->forge->dropTable('user_details ');
+        $this->forge->dropTable('users');
     }
 }
