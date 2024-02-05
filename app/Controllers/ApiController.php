@@ -5,6 +5,7 @@ use CodeIgniter\RESTful\ResourceController;
 use App\Models\TrainingCourses;
 use App\Models\CoursesTopics;
 use App\Models\SubTopics;
+use App\Models\BatchModel;
 class ApiController extends ResourceController{
   
 
@@ -30,6 +31,14 @@ class ApiController extends ResourceController{
         $subtopics=$subtopics_model->where("topic_id",$topic_id)->findAll();
         return $this->respond($subtopics);
 
+    }
+
+    public function get_batch_by_course_id($course_id=null)
+    {
+        $courses_batches_model=new BatchModel();
+        $batches=$courses_batches_model->where("course_id",$course_id)->findAll();
+        //var_dump($batches);
+        return $this->respond($batches);
     }
    
 

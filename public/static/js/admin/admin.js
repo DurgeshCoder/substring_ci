@@ -24,3 +24,9 @@ const get_topics_of_course=(course_id)=>{
 const get_subtopic_of_topic=(topic_id)=>{
   return fetch(`${base_url}/api/get-subtopic-of-topic/${topic_id}`).then((data)=>data.json())
 }
+
+// get batches of courses
+
+const get_batches_of_course=(course_id)=>{
+  return fetch(`${base_url}/api/get-batches-of-course/${course_id}`).then((data)=>data.json())
+}

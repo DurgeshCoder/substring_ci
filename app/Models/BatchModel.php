@@ -8,7 +8,7 @@ class BatchModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'batches';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'batch_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

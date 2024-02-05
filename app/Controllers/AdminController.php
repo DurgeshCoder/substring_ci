@@ -172,6 +172,7 @@ class AdminController extends BaseController
         $data['courses'] = [];
         $data['load_admin_js'] = true; 
         $viewData = array_merge($data, ['topics' => $topics]);
+        //var_dump($data);
         return view('admin/topic', $viewData);
         
        

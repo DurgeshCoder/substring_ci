@@ -90,6 +90,11 @@ $routes->group('admin',['filter'=>'isAdmin'], static function($routes){
     $routes->get("batches", "AdminBatchController::batches");
     $routes->get("add_batch", "AdminBatchController::add_batch");
     $routes->post("add_batch", "AdminBatchController::add_batch");
+    //batch action
+    $routes->get("batch_view/(:any)", "AdminBatchController::batch_view/$1");
+    $routes->get("edit_batch/(:any)", "AdminBatchController::edit_batch/$1");
+    $routes->post("update_batch/(:any)", "AdminBatchController::update_batch/$1");
+    $routes->get("delete_batch/(:any)", "AdminBatchController::delete_batch/$1");
 
 
 });
@@ -100,6 +105,8 @@ $routes->group('admin',['filter'=>'isAdmin'], static function($routes){
 $routes->get('/api/get-all-courses',"ApiController::get_all_courses");
 $routes->get('/api/get-topics-of-course/(:num)',"ApiController::get_topic_by_course_id/$1");
 $routes->get('/api/get-subtopic-of-topic/(:num)',"ApiController::get_subtopic_by_topic_id/$1");
+
+$routes->get('/api/get-batches-of-course/(:num)',"ApiController::get_batch_by_course_id/$1");
 
 
 $routes->resource('trainingCourses');
