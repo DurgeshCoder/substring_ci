@@ -45,6 +45,7 @@ $routes->get("training/(:any)", "PageController::course_view/$1");
 $routes->post("training/(:any)/join_student","StudentController::join_student");
 // $routes->post("/student/create_order","StudentController::create_order");
 $routes->post("training/(:any)/payment", 'Razorpay::processPayment');
+$routes->get("/success", 'Razorpay::successPayment');
 
 
 

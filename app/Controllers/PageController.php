@@ -7,6 +7,7 @@ use App\Models\Emp;
 use App\Models\TrainingCourses;
 use App\Models\CoursesTopics;
 use App\Models\SubTopics;
+use App\Models\BatchModel;
 $db      = \Config\Database::connect();
 
 
@@ -169,15 +170,13 @@ class PageController extends BaseController
         $trainingModel = new TrainingCourses();
         $courses = $trainingModel->findAll();
         $data['courses'] = $courses;
-        return view("training_view.php", $data);
+        return view("training_view", $data);
     }
     
     public function course_view($slug) {
         $coursesModel = new \App\Models\TrainingCourses();
         $course = $coursesModel->where('slug', $slug)->first();
         $db = \Config\Database::connect();
-
-
         $builder = $db->table('training_courses');
         $builder->select('*');
         $builder->join('course_topics', 'course_topics.subject_id = training_courses.course_id');
@@ -272,8 +271,12 @@ class PageController extends BaseController
         
          
         }
-      
-        return view('course_view', ['course' => $course,'newData'=> $newData]);
+       
+        $batchModel = new BatchModel();
+        $batches = $batchModel->where('course_id', $course['course_id'])->findAll();
+        // $data['batches'] = $batches;
+        //var_dump($batches);
+        return view('course_view', ['batches' => $batches,'course' => $course,'newData'=> $newData,]);
         
         
     

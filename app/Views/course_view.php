@@ -157,12 +157,12 @@ Live Batch - <?=$course['name'] ?>
                                                     </div>
                                                     <input
                                                     
-                                                    name="student_name"
+                                                    name="user_name"
                                                     type="text"
                                                     class="w-full focus:outline-none focus:text-gray-600 p-2"
                                                     
                                                     />
-                                                    <span><?= isset($validation) ? $validation->getError('student_name') : '' ?></span><br>
+                                                    <span><?= isset($validation) ? $validation->getError('user_name') : '' ?></span><br>
                                                 </div>
                                         </div>
                                         <div>
@@ -231,7 +231,7 @@ Live Batch - <?=$course['name'] ?>
                                         </div>
                                         <input type="text" name="amount" value="<?=$course['discounted_fee']?>" hidden  >
                                     <!-- </form> -->
-                                        <div>
+                                        <!-- <div>
                                             <label class="text-sm text-gray-400">Starting Date</label>
                                             <div class="w-full inline-flex border">
                                                 <div class="p-2 w-1.5/12 bg-gray-100">
@@ -244,7 +244,114 @@ Live Batch - <?=$course['name'] ?>
                                                 disabled
                                                 />
                                             </div>
+                                        </div> -->
+                                        <!-- detail of batches starts -->
+                                        <div class="relative overflow-x-auto overflow-y-auto h-44 shadow-md sm:rounded-lg">
+                                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                                    <tr>
+                                                        <th scope="col" class="p-4">
+                                                            <div class="flex items-center">
+                                                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                                            </div>
+                                                        </th>
+                                                        <th scope="col" class="px-6 py-3">
+                                                            batch name
+                                                        </th>
+                                                        <th scope="col" class="px-6 py-3">
+                                                            batch status
+                                                        </th>
+                                                        <th scope="col" class="px-6 py-3">
+                                                            starting date
+                                                        </th>
+                                                        <th scope="col" class="px-6 py-3">
+                                                            batch timing
+                                                        </th>
+                                                        <th scope="col" class="px-6 py-3">
+                                                            admission status
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                <?php foreach($batches as $batch): ?>
+                                                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                    
+                                                        <td class="w-4 p-4">
+                                                            <div class="flex items-center">
+                                                                <input id="checkbox-table-3" name="batch_id" value="<?=$batch['batch_id']?>" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <label for="checkbox-table-3" class="sr-only">checkbox</label>
+                                                            </div>
+                                                        </td>
+                                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                        <?=$batch['name']?>
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                        <?=$batch['batch_status']?>
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                        <?=$batch['start_date']?>
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                        <?=$batch['timing']?>
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                        <?=$batch['admission_status']?>
+                                                        </td>
+                                                        
+                                                        
+                                                    </tr>
+                                                    <?php endforeach ?>
+                                                    
+                                                    
+                                                    <!-- <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                        <td class="w-4 p-4">
+                                                            <div class="flex items-center">
+                                                                <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <label for="checkbox-table-3" class="sr-only">checkbox</label>
+                                                            </div>
+                                                        </td>
+                                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Apple iMac 27"
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                            Silver
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            PC Desktop
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            $3999
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                        <td class="w-4 p-4">
+                                                            <div class="flex items-center">
+                                                                <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <label for="checkbox-table-3" class="sr-only">checkbox</label>
+                                                            </div>
+                                                        </td>
+                                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Apple iMac 27"
+                                                        </th>
+                                                        <td class="px-6 py-4">
+                                                            Silver
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            PC Desktop
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            $3999
+                                                        </td>
+                                                        
+                                                    </tr> -->
+
+                                                </tbody>
+                                            </table>
                                         </div>
+                                        <!-- details of batches end -->
                                     </div>
                                     </div>
                                     <!-- batch details end -->

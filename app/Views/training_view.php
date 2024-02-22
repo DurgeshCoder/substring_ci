@@ -102,7 +102,6 @@ Live Training Batches on Substring Technologies
 
 <!-- courses section starts -->
 <section class="courses py-4" id="courses">
-
  
     <div class="container px-4 xl:px-16 mx-auto">
         <div class="grid-cols-1 sm:grid md:grid-cols-3 gap-8 ">

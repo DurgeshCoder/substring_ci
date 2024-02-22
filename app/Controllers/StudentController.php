@@ -2,7 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\UserDetail;
+use App\Models\UserModel;
+use App\Models\BatchUser;
 
 use App\Controllers\BaseController;
 
@@ -15,7 +16,7 @@ class StudentController extends BaseController
         $validation = \Config\Services::validation();
         if ($this->request->is('post')){
             $rules =[
-                'student_name' => 'required|min_length[3]|max_length[50]',
+                'user_name' => 'required|min_length[3]|max_length[50]',
                 'email' => 'required|valid_email|is_unique[user_details.email]',
                 'phone_number' => 'required|numeric'
             ];
@@ -26,15 +27,24 @@ class StudentController extends BaseController
                  return redirect()->back()->withInput()->with('errors', $errors); 
                 
             }
-            $data = [
-                'student_name' => $this->request->getPost('student_name'),
+            $data1 = [
+                'user_name' => $this->request->getPost('user_name'),
                 'email' => $this->request->getPost('email'),
                 'phone_number' => $this->request->getPost('phone_number'),
-                'batch_id' => $this->request->getPost('batch_id')
             ];
-            $student =new UserDetail();
+
+            $user_model =new UserModel();
     
-            $student->insert($data);
+            $user_model->insert($data1);
+
+            $user = $user_model->where('email', $data1['email'])->first();
+            $data2 =[
+                'batch_id_fk' => $this->request->getPost('batch_id'),
+                'user_id_fk' => $user['user_id']
+            ];
+            $batch_user_model =new BatchUser();
+    
+            $batch_user_model->insert($data2);
     
             // Redirect to a success page or do something else
            
