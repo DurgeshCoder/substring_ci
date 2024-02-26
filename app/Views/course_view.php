@@ -94,6 +94,22 @@ Live Batch - <?=$course['name'] ?>
                 </div>
                 <?php endif; ?>
                 <!-- errors showsing ends -->
+                <!-- success message showing -->
+                <?php if(session()->has('success')): ?>
+                <div id="success-alert" class="flex lg:w-6/12 items-center p-4 mb-4 text-green-800 border-t-4 rounded border-green-900 bg-green-50 dark:text-green-400 dark:bg-gray-300 dark:border-green-800" role="alert">
+                    <div>
+                        <span class="font-medium">Success:</span>
+                        <p><?= esc(session('success')) ?></p>
+                    </div>
+                    <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-green-100 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-500 dark:text-green-400 dark:hover:bg-green-500" data-dismiss-target="#success-alert" aria-label="Close">
+                        <span class="sr-only">Dismiss</span>
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+            <?php endif; ?>
+             <!-- success message showing ending -->
 
      
                 <!-- Modal toggle -->
@@ -189,29 +205,7 @@ Live Batch - <?=$course['name'] ?>
                                     <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-gray-500 items-center">
                                     <h2 class="md:w-1/3 mx-auto max-w-sm text-xl text-black">Batch Details</h2>
                                     <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
-                                        <!-- <div>
-                                            <label class="text-sm text-gray-400">Batch Name</label>
-                                                <div class="w-full inline-flex border">
-                                                    <div class="w-1.5/12 p-2 bg-gray-100">
-                                                    <i class="fa-solid fa-book-open fa-lg"></i>
-                                                    </div>
-                                                    <input
-                                                    type="text"
-                                                    class="w-10.5/12 focus:outline-none focus:text-gray-600 p-2"
-                                                    placeholder="Charly Olivas"
-                                                    />
-                                                </div>
-                                        </div> -->
                                         
-                                            
-                                            
-                                            
-                                            <!-- <input type="text"  class="my-4" placeholder="Enter amount here.." > -->
-                                       
-                                     <!-- <form id="paymentForm" action="<?= base_url('payment') ?>" method="POST"> -->
-                                       
-                                        <!-- Note that the amount is in paisa (1 INR = 1000 Paisa) -->
-                                            <!-- Amount needs to be in paisa -->
                                         <div>
                                             <label class="text-sm text-gray-400">Fee</label>
                                             <div class="w-full inline-flex border">
@@ -230,21 +224,7 @@ Live Batch - <?=$course['name'] ?>
                                             </div>
                                         </div>
                                         <input type="text" name="amount" value="<?=$course['discounted_fee']?>" hidden  >
-                                    <!-- </form> -->
-                                        <!-- <div>
-                                            <label class="text-sm text-gray-400">Starting Date</label>
-                                            <div class="w-full inline-flex border">
-                                                <div class="p-2 w-1.5/12 bg-gray-100">
-                                                <i class="fa-regular fa-calendar-days fa-lg"></i>
-                                                </div>
-                                                <input
-                                                type="text"
-                                                class="w-full focus:outline-none focus:text-gray-600 p-2"
-                                                placeholder="<?=$course["start_date"]?>"
-                                                disabled
-                                                />
-                                            </div>
-                                        </div> -->
+
                                         <!-- detail of batches starts -->
                                         <div class="relative overflow-x-auto overflow-y-auto h-44 shadow-md sm:rounded-lg">
                                             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -252,7 +232,7 @@ Live Batch - <?=$course['name'] ?>
                                                     <tr>
                                                         <th scope="col" class="p-4">
                                                             <div class="flex items-center">
-                                                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" hidden>
                                                                 <label for="checkbox-all-search" class="sr-only">checkbox</label>
                                                             </div>
                                                         </th>
@@ -280,7 +260,8 @@ Live Batch - <?=$course['name'] ?>
                                                     
                                                         <td class="w-4 p-4">
                                                             <div class="flex items-center">
-                                                                <input id="checkbox-table-3" name="batch_id" value="<?=$batch['batch_id']?>" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <input id="checkbox-table-3" name="batch_id" value="<?=$batch['batch_id']?>" type="checkbox" class="single-checkbox w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                
                                                                 <label for="checkbox-table-3" class="sr-only">checkbox</label>
                                                             </div>
                                                         </td>
@@ -303,50 +284,7 @@ Live Batch - <?=$course['name'] ?>
                                                         
                                                     </tr>
                                                     <?php endforeach ?>
-                                                    
-                                                    
-                                                    <!-- <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                            <div class="flex items-center">
-                                                                <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                <label for="checkbox-table-3" class="sr-only">checkbox</label>
-                                                            </div>
-                                                        </td>
-                                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                            Apple iMac 27"
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                            Silver
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            PC Desktop
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            $3999
-                                                        </td>
-                                                        
-                                                    </tr>
-                                                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                        <td class="w-4 p-4">
-                                                            <div class="flex items-center">
-                                                                <input id="checkbox-table-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                                <label for="checkbox-table-3" class="sr-only">checkbox</label>
-                                                            </div>
-                                                        </td>
-                                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                            Apple iMac 27"
-                                                        </th>
-                                                        <td class="px-6 py-4">
-                                                            Silver
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            PC Desktop
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            $3999
-                                                        </td>
-                                                        
-                                                    </tr> -->
+
 
                                                 </tbody>
                                             </table>
@@ -677,11 +615,20 @@ Live Batch - <?=$course['name'] ?>
             <script src="https://cdn.tailwindcss.com/3.3.0"></script> 
             <script>
                 import {
-        Tab,
-        initTE,
-        } from "tw-elements";
+                    Tab,
+                    initTE,
+                    } from "tw-elements";
 
-        initTE({ Tab });
+                    initTE({ Tab });
+                        </script>
+                        <script>
+            $(document).ready(function () {
+                // Event handler for checkbox change
+                $('input[type="checkbox"]').change(function () {
+                // Uncheck all other checkboxes except the current one
+                $('input[type="checkbox"]').not(this).prop('checked', false);
+                });
+            });
             </script>
 </body>
 <?= $this->endSection(); ?>

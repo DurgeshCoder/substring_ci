@@ -14,19 +14,24 @@ class StudentController extends BaseController
     {   
         helper(['form', 'url']);
         $validation = \Config\Services::validation();
+        $db = \Config\Database::connect(); 
+
+        try {
+            $db->transStart(); 
+
         if ($this->request->is('post')){
             $rules =[
                 'user_name' => 'required|min_length[3]|max_length[50]',
                 'email' => 'required|valid_email|is_unique[user_details.email]',
-                'phone_number' => 'required|numeric'
+                'phone_number' => 'required|numeric',
+                'batch_id' => 'required',
             ];
             if (!$this->validate($rules)) {
                 // If validation fails, return to the form with errors
                 $errors = $validation->getErrors();
-                //var_dump($errors);
-                 return redirect()->back()->withInput()->with('errors', $errors); 
-                
+                return redirect()->back()->withInput()->with('errors', $errors);
             }
+
             $data1 = [
                 'user_name' => $this->request->getPost('user_name'),
                 'email' => $this->request->getPost('email'),
@@ -38,17 +43,31 @@ class StudentController extends BaseController
             $user_model->insert($data1);
 
             $user = $user_model->where('email', $data1['email'])->first();
-            $data2 =[
-                'batch_id_fk' => $this->request->getPost('batch_id'),
-                'user_id_fk' => $user['user_id']
-            ];
-            $batch_user_model =new BatchUser();
-    
-            $batch_user_model->insert($data2);
+            if (!empty($this->request->getPost('batch_id'))) {
+                $data2 = [
+                    'batch_id_fk' => $this->request->getPost('batch_id'),
+                    'user_id_fk' => $user['user_id']
+                ];
+
+                $batch_user_model = new BatchUser();
+                $batch_user_model->insert($data2);
+            }
+        }
+        $db->transComplete(); 
+        if ($db->transStatus() === false) {
+            throw new \Exception('Transaction failed');
+        }
     
             // Redirect to a success page or do something else
-           
-            return redirect()->back();
+            $success = 'You are joined successfully!';
+            return redirect()->back()->withInput()->with('success', $success);
+        } catch (\Exception $e) {
+            // Handle the exception, log, or redirect with an error message
+            $errorData = [
+                'message' => 'Select one of the batch',
+            ];
+        
+            return redirect()->back()->withInput()->with('errors', $errorData);
         }
         
         
