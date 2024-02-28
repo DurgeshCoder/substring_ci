@@ -26,11 +26,11 @@ class StudentController extends BaseController
                 'phone_number' => 'required|numeric',
                 'batch_id' => 'required',
             ];
-            if (!$this->validate($rules)) {
-                // If validation fails, return to the form with errors
-                $errors = $validation->getErrors();
-                return redirect()->back()->withInput()->with('errors', $errors);
-            }
+            // if (!$this->validate($rules)) {
+            //     // If validation fails, return to the form with errors
+            //     $errors = $validation->getErrors();
+            //     return redirect()->back()->withInput()->with('errors', $errors);
+            // }
 
             $data1 = [
                 'user_name' => $this->request->getPost('user_name'),

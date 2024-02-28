@@ -21,6 +21,7 @@ class Razorpay extends BaseController
         $db->transStart(); // Start a transaction
 
         if ($this->request->is('post')) {
+            
             $rules = [
                 'user_name' => 'required|min_length[3]|max_length[50]',
                 'email' => 'required|valid_email|is_unique[user_details.email]',
@@ -28,11 +29,11 @@ class Razorpay extends BaseController
                 'batch_id' => 'required',
             ];
 
-            if (!$this->validate($rules)) {
-                // If validation fails, return to the form with errors
-                $errors = $validation->getErrors();
-                return redirect()->back()->withInput()->with('errors', $errors);
-            }
+            // if (!$this->validate($rules)) {
+            //     // If validation fails, return to the form with errors
+            //     $errors = $validation->getErrors();
+            //     return redirect()->back()->withInput()->with('errors', $errors);
+            // }
 
             $data1 = [
                 'user_name' => $this->request->getPost('user_name'),

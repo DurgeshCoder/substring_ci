@@ -12,7 +12,7 @@ Add Sub Topic
   course_select_box=document.getElementById("courses")
   for(let c of data){
     option_node=document.createElement("option")
-    option_node.innerHTML=`${c.course_id}  ${c.name}`
+    option_node.innerHTML=`${c.name}`
     option_node.value=c.course_id
     course_select_box.appendChild(option_node)
   }
@@ -37,7 +37,7 @@ Add Sub Topic
         // Add topics based on the selected course
         for (let t of data) {
             const optionNode = document.createElement("option");
-            optionNode.innerHTML =`${t.topic_id}  ${t.topic_name}`;
+            optionNode.innerHTML =`${t.topic_name}`;
             optionNode.value = t.topic_id;
             topicsSelectBox.appendChild(optionNode);
         }

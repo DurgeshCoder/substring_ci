@@ -55,7 +55,7 @@ class PageController extends BaseController
                 "position" => "Web Developer",
                 "about" => "Develops and maintains websites using a variety of programming languages and technologies.",
                 "linkedin_url" => "https://www.linkedin.com/in/ashutosh-sharma-727873233/",
-                "instagram_url" => "https://www.instagram.com/ashu.v.09/",
+                "instagram_url" => "https://www.instagram.com/ashu.v.11/",
                 "facebook_url" => "https://www.facebook.com/profile.php?id=100023824057259",
                 "picture_url" => "static/img/team/Ashutosh.jpg"
 
